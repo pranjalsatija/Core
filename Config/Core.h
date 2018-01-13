@@ -6,7 +6,7 @@
 //  Copyright © 2018 Pranjal Satija. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 //! Project version number for Core.
 FOUNDATION_EXPORT double CoreVersionNumber;
