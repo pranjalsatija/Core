@@ -14,7 +14,7 @@ class PFUserNotificationOpenTests: XCTestCase {
         performSetupIfNeeded()
     }
 
-    func testCreateWithUser() throws {
+    func testRegisterWithUserInfo() throws {
         var didSave = false
         let user = PFUser()
 

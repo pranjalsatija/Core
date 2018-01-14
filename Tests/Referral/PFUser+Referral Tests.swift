@@ -14,7 +14,7 @@ class PFUserReferralTests: XCTestCase {
         performSetupIfNeeded()
     }
 
-    func testCreate() throws {
+    func testRegisterFromSender() throws {
         var didSave = false
         let sender = PFUser(), receiver = PFUser()
 

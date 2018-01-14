@@ -14,7 +14,7 @@ class PFUserSessionTests: XCTestCase {
         performSetupIfNeeded()
     }
 
-    func testCreate() throws {
+    func testStart() throws {
         var didSave = false
         let user = PFUser()
 
@@ -27,7 +27,7 @@ class PFUserSessionTests: XCTestCase {
         XCTAssert(didSave)
     }
 
-    func testEndSessionWithUser() throws {
+    func testEndLatest() throws {
         let saveExpectation = expectation(description: "save"), queryExpectation = expectation(description: "query")
         var didSave = false, didQuery = false
         let user = PFUser(), session = Session(user: user, startDate: Date())
