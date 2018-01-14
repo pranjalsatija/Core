@@ -6,8 +6,8 @@
 //  Copyright © 2018 Pranjal Satija. All rights reserved.
 //
 
-@testable import Core
 import XCTest
+@testable import Core
 
 class ConvenienceTests: XCTestCase {
     func testBackground() {

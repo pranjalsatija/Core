@@ -24,6 +24,8 @@
 		AF39D950200A8FD5003564C7 /* PFUser+Session Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D94F200A8FD5003564C7 /* PFUser+Session Tests.swift */; };
 		AF39D953200A906A003564C7 /* PFACL Extension Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D952200A906A003564C7 /* PFACL Extension Tests.swift */; };
 		AF39D955200A909E003564C7 /* PFSubclassing Extension Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D954200A909E003564C7 /* PFSubclassing Extension Tests.swift */; };
+		AF39D959200A9279003564C7 /* NotificationOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D958200A9279003564C7 /* NotificationOpen.swift */; };
+		AF39D95C200A9597003564C7 /* PFUser+NotificationOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D95B200A9597003564C7 /* PFUser+NotificationOpen.swift */; };
 		AF3DAADD20085C03001A834F /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = AF3DAACF20085C03001A834F /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF3DAAEC20085CD7001A834F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3DAAEB20085CD7001A834F /* Parse.framework */; };
 		AF3DAAEE20085CDE001A834F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3DAAED20085CDD001A834F /* Bolts.framework */; };
@@ -33,6 +35,12 @@
 		AF3DAB0A200862EC001A834F /* Parse.framework in Resources */ = {isa = PBXBuildFile; fileRef = AF3DAAEB20085CD7001A834F /* Parse.framework */; };
 		AF3DAB0D2008634A001A834F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DAB0C2008634A001A834F /* Session.swift */; };
 		AF3DAB0F200864D1001A834F /* PFUser+Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DAB0E200864D1001A834F /* PFUser+Session.swift */; };
+		AF48F8C5200AE50E00725F44 /* PFUser+NotificationOpen Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48F8C3200AE50C00725F44 /* PFUser+NotificationOpen Tests.swift */; };
+		AF48F8C8200AE85500725F44 /* Referral.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48F8C7200AE85500725F44 /* Referral.swift */; };
+		AF48F8CA200AEB4600725F44 /* PFUser+Referral.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48F8C9200AEB4600725F44 /* PFUser+Referral.swift */; };
+		AFACF8CB200AC77B0091DDF5 /* NotificationOpen Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */; };
+		AFB4AAF2200BCFA8007EABCE /* Referral Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */; };
+		AFB4AAF4200BD092007EABCE /* PFUser+Referral Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4AAF3200BD092007EABCE /* PFUser+Referral Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +69,8 @@
 		AF39D94F200A8FD5003564C7 /* PFUser+Session Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Session Tests.swift"; sourceTree = "<group>"; };
 		AF39D952200A906A003564C7 /* PFACL Extension Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFACL Extension Tests.swift"; sourceTree = "<group>"; };
 		AF39D954200A909E003564C7 /* PFSubclassing Extension Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFSubclassing Extension Tests.swift"; sourceTree = "<group>"; };
+		AF39D958200A9279003564C7 /* NotificationOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationOpen.swift; sourceTree = "<group>"; };
+		AF39D95B200A9597003564C7 /* PFUser+NotificationOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+NotificationOpen.swift"; sourceTree = "<group>"; };
 		AF3DAACC20085C03001A834F /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3DAACF20085C03001A834F /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		AF3DAAD020085C03001A834F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +82,12 @@
 		AF3DAAF320085DC5001A834F /* PFACL Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFACL Extension.swift"; sourceTree = "<group>"; };
 		AF3DAB0C2008634A001A834F /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		AF3DAB0E200864D1001A834F /* PFUser+Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Session.swift"; sourceTree = "<group>"; };
+		AF48F8C3200AE50C00725F44 /* PFUser+NotificationOpen Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+NotificationOpen Tests.swift"; sourceTree = "<group>"; };
+		AF48F8C7200AE85500725F44 /* Referral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Referral.swift; sourceTree = "<group>"; };
+		AF48F8C9200AEB4600725F44 /* PFUser+Referral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Referral.swift"; sourceTree = "<group>"; };
+		AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationOpen Tests.swift"; sourceTree = "<group>"; };
+		AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Referral Tests.swift"; sourceTree = "<group>"; };
+		AFB4AAF3200BD092007EABCE /* PFUser+Referral Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Referral Tests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +153,15 @@
 			path = "Parse Extensions";
 			sourceTree = "<group>";
 		};
+		AF39D95A200A957F003564C7 /* NotificationOpen */ = {
+			isa = PBXGroup;
+			children = (
+				AF39D958200A9279003564C7 /* NotificationOpen.swift */,
+				AF39D95B200A9597003564C7 /* PFUser+NotificationOpen.swift */,
+			);
+			path = NotificationOpen;
+			sourceTree = "<group>";
+		};
 		AF3DAAC220085C03001A834F = {
 			isa = PBXGroup;
 			children = (
@@ -170,11 +195,13 @@
 		AF3DAAD920085C03001A834F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				AF39D9242009BEF6003564C7 /* MockAPI.swift */,
-				AF39D9442009CD1F003564C7 /* Setup.swift */,
 				AF39D9472009D00B003564C7 /* Convenience Tests.swift */,
+				AF39D9242009BEF6003564C7 /* MockAPI.swift */,
+				AFACF8C9200AC76C0091DDF5 /* NotificationOpen */,
 				AF39D951200A9050003564C7 /* Parse Extensions */,
+				AFB4AAF0200BCF97007EABCE /* Referral */,
 				AF39D94E200A8FC4003564C7 /* Session */,
+				AF39D9442009CD1F003564C7 /* Setup.swift */,
 				AF3DAADC20085C03001A834F /* Info.plist */,
 			);
 			path = Tests;
@@ -186,6 +213,8 @@
 				AF27DEC8200970350062F0F1 /* API */,
 				AF27DEC620096E440062F0F1 /* Convenience.swift */,
 				AF3DAAEF20085D45001A834F /* Error.swift */,
+				AF39D95A200A957F003564C7 /* NotificationOpen */,
+				AF48F8C6200AE84400725F44 /* Referral */,
 				AF39D9492009D2FA003564C7 /* Parse Extensions */,
 				AF3DAB0B2008633F001A834F /* Session */,
 			);
@@ -216,6 +245,33 @@
 				AF3DAB0E200864D1001A834F /* PFUser+Session.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		AF48F8C6200AE84400725F44 /* Referral */ = {
+			isa = PBXGroup;
+			children = (
+				AF48F8C7200AE85500725F44 /* Referral.swift */,
+				AF48F8C9200AEB4600725F44 /* PFUser+Referral.swift */,
+			);
+			path = Referral;
+			sourceTree = "<group>";
+		};
+		AFACF8C9200AC76C0091DDF5 /* NotificationOpen */ = {
+			isa = PBXGroup;
+			children = (
+				AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */,
+				AF48F8C3200AE50C00725F44 /* PFUser+NotificationOpen Tests.swift */,
+			);
+			path = NotificationOpen;
+			sourceTree = "<group>";
+		};
+		AFB4AAF0200BCF97007EABCE /* Referral */ = {
+			isa = PBXGroup;
+			children = (
+				AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */,
+				AFB4AAF3200BD092007EABCE /* PFUser+Referral Tests.swift */,
+			);
+			path = Referral;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,10 +419,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF39D95C200A9597003564C7 /* PFUser+NotificationOpen.swift in Sources */,
 				AF39D94B2009D31B003564C7 /* PFSubclassingExtension.swift in Sources */,
 				AF3DAAF420085DC5001A834F /* PFACL Extension.swift in Sources */,
+				AF39D959200A9279003564C7 /* NotificationOpen.swift in Sources */,
+				AF48F8C8200AE85500725F44 /* Referral.swift in Sources */,
 				AF27DEC720096E440062F0F1 /* Convenience.swift in Sources */,
 				AF3DAAF020085D45001A834F /* Error.swift in Sources */,
+				AF48F8CA200AEB4600725F44 /* PFUser+Referral.swift in Sources */,
 				AF39D94D2009D338003564C7 /* PFQueryExtension.swift in Sources */,
 				AF27DECA200970400062F0F1 /* APIProtocol.swift in Sources */,
 				AF3DAB0D2008634A001A834F /* Session.swift in Sources */,
@@ -381,11 +441,15 @@
 			files = (
 				AF39D9482009D00B003564C7 /* Convenience Tests.swift in Sources */,
 				AF39D953200A906A003564C7 /* PFACL Extension Tests.swift in Sources */,
+				AFACF8CB200AC77B0091DDF5 /* NotificationOpen Tests.swift in Sources */,
 				AF39D955200A909E003564C7 /* PFSubclassing Extension Tests.swift in Sources */,
 				AF39D950200A8FD5003564C7 /* PFUser+Session Tests.swift in Sources */,
+				AF48F8C5200AE50E00725F44 /* PFUser+NotificationOpen Tests.swift in Sources */,
 				AF39D9262009C2F7003564C7 /* MockAPI.swift in Sources */,
 				AF39D9232009BEDA003564C7 /* Session Tests.swift in Sources */,
 				AF39D9462009CDEC003564C7 /* Setup.swift in Sources */,
+				AFB4AAF2200BCFA8007EABCE /* Referral Tests.swift in Sources */,
+				AFB4AAF4200BD092007EABCE /* PFUser+Referral Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

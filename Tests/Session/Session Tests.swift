@@ -19,7 +19,9 @@ class SessionTests: XCTestCase {
         let user = PFUser()
 
         MockAPI.onSave {(object) in
-            guard let session = object as? Session, session.user == user else { return }
+            guard let session = object as? Session else { return }
+            XCTAssert(session.acl == .onlyAccessibleByMasterKey)
+            XCTAssert(session.user == user)
             didSave = true
         }
 
@@ -29,12 +31,11 @@ class SessionTests: XCTestCase {
 
     func testEndSessionWithUser() throws {
         let saveExpectation = expectation(description: "save"), queryExpectation = expectation(description: "query")
-        var didSave = false, didQuery = false
         let user = PFUser(), session = Session(user: user, startDate: Date())
 
         MockAPI.onSave {(object) in
-            guard let session = object as? Session, session.user == user else { return }
-            didSave = true
+            guard let session = object as? Session else { return }
+            XCTAssert(session.user == user)
             saveExpectation.fulfill()
         }
 
@@ -42,16 +43,33 @@ class SessionTests: XCTestCase {
             XCTAssert(PFQueryGetSortKeys(query)?.contains("-startDate") ?? false)
             XCTAssert(PFQueryGetConditions(query)?["user"] != nil)
             XCTAssert(PFQueryGetConditions(query)?["endDate"] != nil)
-
-            didQuery = true
             queryExpectation.fulfill()
-
             return [session]
         }
 
         Session.endLatest(belongingTo: user, api: MockAPI.self)
         waitForExpectations(timeout: 3)
-        XCTAssert(didSave)
-        XCTAssert(didQuery)
+    }
+
+    func testNegativeEndSessionWithUser() throws {
+        let queryExpectation = expectation(description: "query")
+        let user = PFUser()
+
+        MockAPI.onSave {(_) in
+            XCTFail("The session shouldn't be saved.")
+        }
+
+        MockAPI.onQuery {(query) in
+            XCTAssert(PFQueryGetSortKeys(query)?.contains("-startDate") ?? false)
+            XCTAssert(PFQueryGetConditions(query)?["user"] != nil)
+            XCTAssert(PFQueryGetConditions(query)?["endDate"] != nil)
+
+            queryExpectation.fulfill()
+
+            return []
+        }
+
+        Session.endLatest(belongingTo: user, api: MockAPI.self)
+        waitForExpectations(timeout: 3)
     }
 }

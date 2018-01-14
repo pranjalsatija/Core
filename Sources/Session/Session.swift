@@ -12,10 +12,11 @@ class Session: PFObject, PFSubclassing {
     @NSManaged private(set) var user: PFUser!
 }
 
-// MARK: Custom Initializers
+// MARK: Custom Initializer
 extension Session {
     convenience init(user: PFUser, startDate: Date) {
         self.init()
+        acl = .onlyAccessibleByMasterKey
         self.startDate = startDate
         self.user = user
     }
