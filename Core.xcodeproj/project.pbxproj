@@ -13,6 +13,10 @@
 		AF38E6B6200BD1AF006F9B02 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6B5200BD1AF006F9B02 /* Share.swift */; };
 		AF38E6B8200BD20A006F9B02 /* PFUser+Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6B7200BD20A006F9B02 /* PFUser+Share.swift */; };
 		AF38E6BB200BD269006F9B02 /* Share Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6BA200BD269006F9B02 /* Share Tests.swift */; };
+		AF38E6BE200BD3DE006F9B02 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6BD200BD3DE006F9B02 /* Location.swift */; };
+		AF38E6C0200BD41B006F9B02 /* CLLocation+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6BF200BD41B006F9B02 /* CLLocation+Location.swift */; };
+		AF38E6C2200BD50F006F9B02 /* CLLocationCoordinate2D+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6C1200BD50F006F9B02 /* CLLocationCoordinate2D+Location.swift */; };
+		AF38E6C4200BD541006F9B02 /* PFGeoPoint+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6C3200BD541006F9B02 /* PFGeoPoint+Location.swift */; };
 		AF39D9232009BEDA003564C7 /* Session Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D9212009BEC5003564C7 /* Session Tests.swift */; };
 		AF39D9262009C2F7003564C7 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D9242009BEF6003564C7 /* MockAPI.swift */; };
 		AF39D93A2009CB51003564C7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF39D92F2009C633003564C7 /* AudioToolbox.framework */; };
@@ -29,6 +33,7 @@
 		AF39D955200A909E003564C7 /* PFSubclassing Extension Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D954200A909E003564C7 /* PFSubclassing Extension Tests.swift */; };
 		AF39D959200A9279003564C7 /* NotificationOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D958200A9279003564C7 /* NotificationOpen.swift */; };
 		AF39D95C200A9597003564C7 /* PFUser+NotificationOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D95B200A9597003564C7 /* PFUser+NotificationOpen.swift */; };
+		AF3D0141200BE1E300493D39 /* Location Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D0140200BE1E300493D39 /* Location Tests.swift */; };
 		AF3DAADD20085C03001A834F /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = AF3DAACF20085C03001A834F /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF3DAAEC20085CD7001A834F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3DAAEB20085CD7001A834F /* Parse.framework */; };
 		AF3DAAEE20085CDE001A834F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3DAAED20085CDD001A834F /* Bolts.framework */; };
@@ -63,6 +68,10 @@
 		AF38E6B5200BD1AF006F9B02 /* Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		AF38E6B7200BD20A006F9B02 /* PFUser+Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Share.swift"; sourceTree = "<group>"; };
 		AF38E6BA200BD269006F9B02 /* Share Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Share Tests.swift"; sourceTree = "<group>"; };
+		AF38E6BD200BD3DE006F9B02 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		AF38E6BF200BD41B006F9B02 /* CLLocation+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Location.swift"; sourceTree = "<group>"; };
+		AF38E6C1200BD50F006F9B02 /* CLLocationCoordinate2D+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Location.swift"; sourceTree = "<group>"; };
+		AF38E6C3200BD541006F9B02 /* PFGeoPoint+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFGeoPoint+Location.swift"; sourceTree = "<group>"; };
 		AF39D9212009BEC5003564C7 /* Session Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session Tests.swift"; sourceTree = "<group>"; };
 		AF39D9242009BEF6003564C7 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
 		AF39D92B2009C625003564C7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -77,6 +86,7 @@
 		AF39D954200A909E003564C7 /* PFSubclassing Extension Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFSubclassing Extension Tests.swift"; sourceTree = "<group>"; };
 		AF39D958200A9279003564C7 /* NotificationOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationOpen.swift; sourceTree = "<group>"; };
 		AF39D95B200A9597003564C7 /* PFUser+NotificationOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+NotificationOpen.swift"; sourceTree = "<group>"; };
+		AF3D0140200BE1E300493D39 /* Location Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location Tests.swift"; sourceTree = "<group>"; };
 		AF3DAACC20085C03001A834F /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3DAACF20085C03001A834F /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		AF3DAAD020085C03001A834F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -136,6 +146,17 @@
 				AF38E6BA200BD269006F9B02 /* Share Tests.swift */,
 			);
 			path = Share;
+			sourceTree = "<group>";
+		};
+		AF38E6BC200BD3D2006F9B02 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				AF38E6BD200BD3DE006F9B02 /* Location.swift */,
+				AF38E6BF200BD41B006F9B02 /* CLLocation+Location.swift */,
+				AF38E6C1200BD50F006F9B02 /* CLLocationCoordinate2D+Location.swift */,
+				AF38E6C3200BD541006F9B02 /* PFGeoPoint+Location.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		AF39D92A2009C625003564C7 /* Frameworks */ = {
@@ -219,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				AF39D9472009D00B003564C7 /* Convenience Tests.swift */,
+				AF3D0140200BE1E300493D39 /* Location Tests.swift */,
 				AF39D9242009BEF6003564C7 /* MockAPI.swift */,
 				AFACF8C9200AC76C0091DDF5 /* NotificationOpen */,
 				AF39D951200A9050003564C7 /* Parse Extensions */,
@@ -237,6 +259,7 @@
 				AF27DEC8200970350062F0F1 /* API */,
 				AF27DEC620096E440062F0F1 /* Convenience.swift */,
 				AF3DAAEF20085D45001A834F /* Error.swift */,
+				AF38E6BC200BD3D2006F9B02 /* Location */,
 				AF39D95A200A957F003564C7 /* NotificationOpen */,
 				AF39D9492009D2FA003564C7 /* Parse Extensions */,
 				AF48F8C6200AE84400725F44 /* Referral */,
@@ -444,8 +467,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF38E6C0200BD41B006F9B02 /* CLLocation+Location.swift in Sources */,
 				AF39D95C200A9597003564C7 /* PFUser+NotificationOpen.swift in Sources */,
 				AF39D94B2009D31B003564C7 /* PFSubclassingExtension.swift in Sources */,
+				AF38E6BE200BD3DE006F9B02 /* Location.swift in Sources */,
 				AF3DAAF420085DC5001A834F /* PFACL Extension.swift in Sources */,
 				AF39D959200A9279003564C7 /* NotificationOpen.swift in Sources */,
 				AF48F8C8200AE85500725F44 /* Referral.swift in Sources */,
@@ -453,6 +478,8 @@
 				AF38E6B8200BD20A006F9B02 /* PFUser+Share.swift in Sources */,
 				AF3DAAF020085D45001A834F /* Error.swift in Sources */,
 				AF48F8CA200AEB4600725F44 /* PFUser+Referral.swift in Sources */,
+				AF38E6C4200BD541006F9B02 /* PFGeoPoint+Location.swift in Sources */,
+				AF38E6C2200BD50F006F9B02 /* CLLocationCoordinate2D+Location.swift in Sources */,
 				AF39D94D2009D338003564C7 /* PFQueryExtension.swift in Sources */,
 				AF38E6B6200BD1AF006F9B02 /* Share.swift in Sources */,
 				AF27DECA200970400062F0F1 /* APIProtocol.swift in Sources */,
@@ -467,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF39D9482009D00B003564C7 /* Convenience Tests.swift in Sources */,
+				AF3D0141200BE1E300493D39 /* Location Tests.swift in Sources */,
 				AF39D953200A906A003564C7 /* PFACL Extension Tests.swift in Sources */,
 				AF38E6BB200BD269006F9B02 /* Share Tests.swift in Sources */,
 				AFACF8CB200AC77B0091DDF5 /* NotificationOpen Tests.swift in Sources */,
