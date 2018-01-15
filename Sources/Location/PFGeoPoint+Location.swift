@@ -7,4 +7,4 @@
 //
 
 // MARK: PFGeoPoint Extension
-extension PFGeoPoint: Location { }
+extension PFGeoPoint: LocationProtocol { }

@@ -9,4 +9,4 @@
 import CoreLocation
 
 // MARK: CLLocationCoordinate2D Extension
-extension CLLocationCoordinate2D: Location { }
+extension CLLocationCoordinate2D: LocationProtocol { }

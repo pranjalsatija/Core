@@ -23,15 +23,15 @@ class LocationTests: XCTestCase {
             (29.4241, -98.4936) // San Antonio
         ]
 
-        let coordinates: [Location] = points.map {(latitude, longitude) in
+        let coordinates: [LocationProtocol] = points.map {(latitude, longitude) in
             CLLocationCoordinate2DMake(latitude, longitude)
         }
 
-        let locations: [Location] = points.map {(latitude, longitude) in
+        let locations: [LocationProtocol] = points.map {(latitude, longitude) in
             CLLocation(latitude: latitude, longitude: longitude)
         }
 
-        let geoPoints: [Location] = points.map {(latitude, longitude) in
+        let geoPoints: [LocationProtocol] = points.map {(latitude, longitude) in
             PFGeoPoint(latitude: latitude, longitude: longitude)
         }
 

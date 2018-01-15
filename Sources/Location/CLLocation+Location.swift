@@ -9,7 +9,7 @@
 import CoreLocation
 
 // MARK: CLLocation Extension
-extension CLLocation: Location {
+extension CLLocation: LocationProtocol {
     var latitude: Double {
         return coordinate.latitude
     }

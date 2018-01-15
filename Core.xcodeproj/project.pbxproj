@@ -13,7 +13,7 @@
 		AF38E6B6200BD1AF006F9B02 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6B5200BD1AF006F9B02 /* Share.swift */; };
 		AF38E6B8200BD20A006F9B02 /* PFUser+Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6B7200BD20A006F9B02 /* PFUser+Share.swift */; };
 		AF38E6BB200BD269006F9B02 /* Share Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6BA200BD269006F9B02 /* Share Tests.swift */; };
-		AF38E6BE200BD3DE006F9B02 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6BD200BD3DE006F9B02 /* Location.swift */; };
+		AF38E6BE200BD3DE006F9B02 /* LocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6BD200BD3DE006F9B02 /* LocationProtocol.swift */; };
 		AF38E6C0200BD41B006F9B02 /* CLLocation+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6BF200BD41B006F9B02 /* CLLocation+Location.swift */; };
 		AF38E6C2200BD50F006F9B02 /* CLLocationCoordinate2D+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6C1200BD50F006F9B02 /* CLLocationCoordinate2D+Location.swift */; };
 		AF38E6C4200BD541006F9B02 /* PFGeoPoint+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6C3200BD541006F9B02 /* PFGeoPoint+Location.swift */; };
@@ -33,7 +33,7 @@
 		AF39D955200A909E003564C7 /* PFSubclassing Extension Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D954200A909E003564C7 /* PFSubclassing Extension Tests.swift */; };
 		AF39D959200A9279003564C7 /* NotificationOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D958200A9279003564C7 /* NotificationOpen.swift */; };
 		AF39D95C200A9597003564C7 /* PFUser+NotificationOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D95B200A9597003564C7 /* PFUser+NotificationOpen.swift */; };
-		AF3D0141200BE1E300493D39 /* Location Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D0140200BE1E300493D39 /* Location Tests.swift */; };
+		AF3D0141200BE1E300493D39 /* LocationProtocol Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3D0140200BE1E300493D39 /* LocationProtocol Tests.swift */; };
 		AF3DAADD20085C03001A834F /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = AF3DAACF20085C03001A834F /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF3DAAEC20085CD7001A834F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3DAAEB20085CD7001A834F /* Parse.framework */; };
 		AF3DAAEE20085CDE001A834F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3DAAED20085CDD001A834F /* Bolts.framework */; };
@@ -46,6 +46,7 @@
 		AF48F8C5200AE50E00725F44 /* PFUser+NotificationOpen Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48F8C3200AE50C00725F44 /* PFUser+NotificationOpen Tests.swift */; };
 		AF48F8C8200AE85500725F44 /* Referral.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48F8C7200AE85500725F44 /* Referral.swift */; };
 		AF48F8CA200AEB4600725F44 /* PFUser+Referral.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48F8C9200AEB4600725F44 /* PFUser+Referral.swift */; };
+		AF6A257A200C4EC500C3E503 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A2579200C4EC500C3E503 /* Location.swift */; };
 		AFACF8CB200AC77B0091DDF5 /* NotificationOpen Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */; };
 		AFB4AAF2200BCFA8007EABCE /* Referral Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */; };
 		AFB4AAF4200BD092007EABCE /* PFUser+Referral Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4AAF3200BD092007EABCE /* PFUser+Referral Tests.swift */; };
@@ -68,7 +69,7 @@
 		AF38E6B5200BD1AF006F9B02 /* Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		AF38E6B7200BD20A006F9B02 /* PFUser+Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Share.swift"; sourceTree = "<group>"; };
 		AF38E6BA200BD269006F9B02 /* Share Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Share Tests.swift"; sourceTree = "<group>"; };
-		AF38E6BD200BD3DE006F9B02 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		AF38E6BD200BD3DE006F9B02 /* LocationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProtocol.swift; sourceTree = "<group>"; };
 		AF38E6BF200BD41B006F9B02 /* CLLocation+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Location.swift"; sourceTree = "<group>"; };
 		AF38E6C1200BD50F006F9B02 /* CLLocationCoordinate2D+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Location.swift"; sourceTree = "<group>"; };
 		AF38E6C3200BD541006F9B02 /* PFGeoPoint+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFGeoPoint+Location.swift"; sourceTree = "<group>"; };
@@ -86,7 +87,7 @@
 		AF39D954200A909E003564C7 /* PFSubclassing Extension Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFSubclassing Extension Tests.swift"; sourceTree = "<group>"; };
 		AF39D958200A9279003564C7 /* NotificationOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationOpen.swift; sourceTree = "<group>"; };
 		AF39D95B200A9597003564C7 /* PFUser+NotificationOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+NotificationOpen.swift"; sourceTree = "<group>"; };
-		AF3D0140200BE1E300493D39 /* Location Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location Tests.swift"; sourceTree = "<group>"; };
+		AF3D0140200BE1E300493D39 /* LocationProtocol Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationProtocol Tests.swift"; sourceTree = "<group>"; };
 		AF3DAACC20085C03001A834F /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3DAACF20085C03001A834F /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		AF3DAAD020085C03001A834F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 		AF48F8C3200AE50C00725F44 /* PFUser+NotificationOpen Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+NotificationOpen Tests.swift"; sourceTree = "<group>"; };
 		AF48F8C7200AE85500725F44 /* Referral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Referral.swift; sourceTree = "<group>"; };
 		AF48F8C9200AEB4600725F44 /* PFUser+Referral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Referral.swift"; sourceTree = "<group>"; };
+		AF6A2579200C4EC500C3E503 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationOpen Tests.swift"; sourceTree = "<group>"; };
 		AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Referral Tests.swift"; sourceTree = "<group>"; };
 		AFB4AAF3200BD092007EABCE /* PFUser+Referral Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Referral Tests.swift"; sourceTree = "<group>"; };
@@ -151,7 +153,8 @@
 		AF38E6BC200BD3D2006F9B02 /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				AF38E6BD200BD3DE006F9B02 /* Location.swift */,
+				AF38E6BD200BD3DE006F9B02 /* LocationProtocol.swift */,
+				AF6A2579200C4EC500C3E503 /* Location.swift */,
 				AF38E6BF200BD41B006F9B02 /* CLLocation+Location.swift */,
 				AF38E6C1200BD50F006F9B02 /* CLLocationCoordinate2D+Location.swift */,
 				AF38E6C3200BD541006F9B02 /* PFGeoPoint+Location.swift */,
@@ -240,7 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				AF39D9472009D00B003564C7 /* Convenience Tests.swift */,
-				AF3D0140200BE1E300493D39 /* Location Tests.swift */,
+				AF3D0140200BE1E300493D39 /* LocationProtocol Tests.swift */,
 				AF39D9242009BEF6003564C7 /* MockAPI.swift */,
 				AFACF8C9200AC76C0091DDF5 /* NotificationOpen */,
 				AF39D951200A9050003564C7 /* Parse Extensions */,
@@ -469,8 +472,9 @@
 			files = (
 				AF38E6C0200BD41B006F9B02 /* CLLocation+Location.swift in Sources */,
 				AF39D95C200A9597003564C7 /* PFUser+NotificationOpen.swift in Sources */,
+				AF6A257A200C4EC500C3E503 /* Location.swift in Sources */,
 				AF39D94B2009D31B003564C7 /* PFSubclassingExtension.swift in Sources */,
-				AF38E6BE200BD3DE006F9B02 /* Location.swift in Sources */,
+				AF38E6BE200BD3DE006F9B02 /* LocationProtocol.swift in Sources */,
 				AF3DAAF420085DC5001A834F /* PFACL Extension.swift in Sources */,
 				AF39D959200A9279003564C7 /* NotificationOpen.swift in Sources */,
 				AF48F8C8200AE85500725F44 /* Referral.swift in Sources */,
@@ -494,7 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF39D9482009D00B003564C7 /* Convenience Tests.swift in Sources */,
-				AF3D0141200BE1E300493D39 /* Location Tests.swift in Sources */,
+				AF3D0141200BE1E300493D39 /* LocationProtocol Tests.swift in Sources */,
 				AF39D953200A906A003564C7 /* PFACL Extension Tests.swift in Sources */,
 				AF38E6BB200BD269006F9B02 /* Share Tests.swift in Sources */,
 				AFACF8CB200AC77B0091DDF5 /* NotificationOpen Tests.swift in Sources */,
