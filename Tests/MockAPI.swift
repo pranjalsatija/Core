@@ -9,15 +9,17 @@
 @testable import Core
 
 struct MockAPI: APIProtocol {
-    typealias OnSaveBlock = (PFObject) throws -> Void
-    typealias OnQueryBlock<T: PFObject> = (PFQuery<T>) throws -> [T]
+    typealias FileDownloadHandler = (PFFile) throws -> Data
+    typealias SaveHandler = (PFObject) throws -> Void
+    typealias QueryHandler<T: PFObject> = (PFQuery<T>) throws -> [T]
 
-    static var onSaveBlock: OnSaveBlock?
-    static var onQueryBlock: OnQueryBlock<PFObject>?
+    static var onFileDownloadBlock: FileDownloadHandler?
+    static var onSaveBlock: SaveHandler?
+    static var onQueryBlock: QueryHandler<PFObject>?
 }
 
 extension MockAPI {
-    static func findFirstObject<T>(query: PFQuery<T>) throws -> T {
+    static func findFirstObject<T>(matching query: PFQuery<T>) throws -> T {
         if let query = query as? PFQuery<PFObject>, let objects = try onQueryBlock?(query), let first = objects.first {
             //swiftlint:disable:next force_cast
             return first as! T
@@ -26,7 +28,15 @@ extension MockAPI {
         }
     }
 
-    static func findObjects<T>(query: PFQuery<T>) throws -> [T] {
+    static func getData(from file: PFFile) throws -> Data {
+        guard let data = try onFileDownloadBlock?(file) else {
+            throw Error.unknown
+        }
+
+        return data
+    }
+
+    static func findObjects<T>(matching query: PFQuery<T>) throws -> [T] {
         if let query = query as? PFQuery<PFObject>, let objects = try onQueryBlock?(query) {
             //swiftlint:disable:next force_cast
             return objects as! [T]
@@ -45,11 +55,15 @@ extension MockAPI {
 }
 
 extension MockAPI {
-    static func onSave(_ block: @escaping OnSaveBlock) {
+    static func onFileDownload(_ block: @escaping FileDownloadHandler) {
+        onFileDownloadBlock = block
+    }
+
+    static func onSave(_ block: @escaping SaveHandler) {
         onSaveBlock = block
     }
 
-    static func onQuery(_ block: @escaping OnQueryBlock<PFObject>) {
+    static func onQuery(_ block: @escaping QueryHandler<PFObject>) {
         onQueryBlock = block
     }
 }

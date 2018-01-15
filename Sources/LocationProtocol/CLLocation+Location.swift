@@ -10,11 +10,15 @@ import CoreLocation
 
 // MARK: CLLocation Extension
 extension CLLocation: LocationProtocol {
-    var latitude: Double {
+    public var latitude: Double {
         return coordinate.latitude
     }
 
-    var longitude: Double {
+    public var longitude: Double {
         return coordinate.longitude
+    }
+
+    public convenience init(_ location: LocationProtocol) {
+        self.init(latitude: location.latitude, longitude: location.longitude)
     }
 }

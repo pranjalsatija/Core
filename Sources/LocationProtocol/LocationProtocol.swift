@@ -7,7 +7,7 @@
 //
 
 /// A protocol that can be used to represent various location types.
-protocol LocationProtocol {
+public protocol LocationProtocol {
     var latitude: Double { get }
     var longitude: Double { get }
 

@@ -9,33 +9,45 @@
 /// Defines a set of functionality for an API that can be used to save and query data in mark.
 public protocol APIProtocol {
     // MARK: Synchronous Methods
-    static func findFirstObject<T>(query: PFQuery<T>) throws -> T
-    static func findObjects<T>(query: PFQuery<T>) throws -> [T]
+    static func findFirstObject<T>(matching: PFQuery<T>) throws -> T
+    static func findObjects<T>(matching query: PFQuery<T>) throws -> [T]
+    static func getData(from file: PFFile) throws -> Data
     static func save(_ object: PFObject) throws
     static func saveEventually(_ object: PFObject)
 
     // MARK: Asynchronous Methods
-    static func findFirstObject<T>(query: PFQuery<T>, completion: @escaping (Swift.Error?, T?) -> Void)
-    static func findObjects<T>(query: PFQuery<T>, completion: @escaping (Swift.Error?, [T]?) -> Void)
+    static func findFirstObject<T>(matching query: PFQuery<T>, completion: @escaping (Swift.Error?, T?) -> Void)
+    static func findObjects<T>(matching query: PFQuery<T>, completion: @escaping (Swift.Error?, [T]?) -> Void)
+    static func getData(from file: PFFile, completion: @escaping (Swift.Error?, Data?) -> Void)
     static func save(_ object: PFObject, completion: @escaping (Swift.Error?) -> Void)
 }
 
 // MARK: Asynchronous Default Implementations
 extension APIProtocol {
-    public static func findFirstObject<T>(query: PFQuery<T>, completion: @escaping (Swift.Error?, T?) -> Void) {
+    public static func findFirstObject<T>(matching query: PFQuery<T>, completion: @escaping CompletionHandler<T>) {
         background {
             do {
-                try completion(nil, findFirstObject(query: query))
+                try completion(nil, findFirstObject(matching: query))
             } catch {
                 completion(error, nil)
             }
         }
     }
 
-    public static func findObjects<T>(query: PFQuery<T>, completion: @escaping (Swift.Error?, [T]?) -> Void) {
+    public static func findObjects<T>(matching query: PFQuery<T>, completion: @escaping CompletionHandler<[T]>) {
         background {
             do {
-                try completion(nil, findObjects(query: query))
+                try completion(nil, findObjects(matching: query))
+            } catch {
+                completion(error, nil)
+            }
+        }
+    }
+
+    public static func getData(from file: PFFile, completion: @escaping CompletionHandler<Data>) {
+        background {
+            do {
+                try completion(nil, file.getData())
             } catch {
                 completion(error, nil)
             }
