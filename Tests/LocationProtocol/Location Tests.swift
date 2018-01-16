@@ -1,8 +1,8 @@
 //
 //  Location Tests.swift
-//  CoreTests
+//  Core
 //
-//  Created by Pranjal Satija on 1/14/18.
+//  Created by Pranjal Satija on 1/15/18.
 //  Copyright © 2018 Pranjal Satija. All rights reserved.
 //
 
@@ -22,27 +22,27 @@ class LocationTests: XCTestCase {
         performSetupIfNeeded()
     }
 
-    func testLocationProtocol() {
-        let clLocations: [LocationProtocol] = points.map {(latitude, longitude) in
-            CLLocation(latitude: latitude, longitude: longitude)
-        }
-
-        let coordinates: [LocationProtocol] = points.map {(latitude, longitude) in
-            CLLocationCoordinate2DMake(latitude, longitude)
-        }
-
-        let geoPoints: [LocationProtocol] = points.map {(latitude, longitude) in
-            PFGeoPoint(latitude: latitude, longitude: longitude)
-        }
-
+    func testEquality() {
         let locations: [LocationProtocol] = points.map {(latitude, longitude) in
             Location(latitude: latitude, longitude: longitude)
         }
 
-        let enumerated = [clLocations, coordinates, geoPoints, locations].flatMap { $0.enumerated() }
-        for (index, location) in enumerated {
+        for (index, location) in locations.enumerated() {
             XCTAssert(location.latitude == points[index].latitude)
             XCTAssert(location.longitude == points[index].longitude)
+        }
+    }
+
+    func testInitializer() {
+        for (latitude, longitude) in points {
+            let fromCLLocation = Location(CLLocation(latitude: latitude, longitude: longitude))
+            let fromLocationCoordinate = Location(CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+            let fromGeoPoint = Location(PFGeoPoint(latitude: latitude, longitude: longitude))
+
+            for location in [fromCLLocation, fromLocationCoordinate, fromGeoPoint] {
+                XCTAssert(location.latitude == latitude)
+                XCTAssert(location.longitude == longitude)
+            }
         }
     }
 }

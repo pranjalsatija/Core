@@ -1,21 +1,21 @@
 //
-//  Share Tests.swift
+//  PFUser+Share Tests.swift
 //  CoreTests
 //
-//  Created by Pranjal Satija on 1/14/18.
+//  Created by Pranjal Satija on 1/15/18.
 //  Copyright © 2018 Pranjal Satija. All rights reserved.
 //
 
 import XCTest
 @testable import Core
 
-class ShareTests: XCTestCase {
+class PFUserShareTests: XCTestCase {
     override func setUp() {
         performSetupIfNeeded()
     }
 
-    func testCreate() {
-        let saveExpectation = expectation(description: "save")
+    func testRegister() throws {
+        let saveExpectation = expectation(description: "expectation")
         let user = PFUser()
 
         MockAPI.onSave {(object) in
@@ -24,7 +24,7 @@ class ShareTests: XCTestCase {
             saveExpectation.fulfill()
         }
 
-        Share.create(user: user, api: MockAPI.self)
+        user.registerShare(api: MockAPI.self)
         waitForExpectations(timeout: 3)
     }
 }

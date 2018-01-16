@@ -30,7 +30,7 @@ public class Event: PFObject {
 
     // MARK: Local Properties
     public var duration: TimeInterval {
-        return endDate.timeIntervalSince1970 - startDate.timeIntervalSince1970
+        return endDate.timeIntervalSince(startDate)
     }
 
     public var isCurrentlyOccurring: Bool {
@@ -44,7 +44,7 @@ public class Event: PFObject {
 
 // MARK: Event Data
 extension Event {
-    public func getCoverPhoto(api: APIProtocol.Type = ParseAPI.self, completion: @escaping FetchImageHandler) {
+    public func getCoverPhoto(api: APIProtocol.Type = ParseAPI.self, completion: @escaping CompletionHandler<UIImage>) {
         guard let coverPhoto = coverPhoto else {
             completion(Error.missingData(description: "This event doesn't have a cover photo."), nil)
             return
@@ -78,11 +78,6 @@ extension Event {
             completion(error, events)
         }
     }
-}
-
-// MARK: Completion Handlers
-extension Event {
-    public typealias FetchImageHandler = (Swift.Error?, UIImage?) -> Void
 }
 
 // MARK: PFSubclassing

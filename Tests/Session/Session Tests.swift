@@ -15,18 +15,18 @@ class SessionTests: XCTestCase {
     }
 
     func testCreateWithUser() throws {
-        var didSave = false
+        let saveExpectation = expectation(description: "expectation")
         let user = PFUser()
 
         MockAPI.onSave {(object) in
             guard let session = object as? Session else { return }
             XCTAssert(session.acl == .onlyAccessibleByMasterKey)
             XCTAssert(session.user == user)
-            didSave = true
+            saveExpectation.fulfill()
         }
 
         Session.create(with: user, api: MockAPI.self)
-        XCTAssert(didSave)
+        waitForExpectations(timeout: 3)
     }
 
     func testEndSessionWithUser() throws {

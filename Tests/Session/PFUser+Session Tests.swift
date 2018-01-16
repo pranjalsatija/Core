@@ -15,26 +15,24 @@ class PFUserSessionTests: XCTestCase {
     }
 
     func testStart() throws {
-        var didSave = false
+        let saveExpectation = expectation(description: "expectation")
         let user = PFUser()
 
         MockAPI.onSave {(object) in
             guard let session = object as? Session, session.user == user else { return }
-            didSave = true
+            saveExpectation.fulfill()
         }
 
         user.startSession(api: MockAPI.self)
-        XCTAssert(didSave)
+        waitForExpectations(timeout: 3)
     }
 
     func testEndLatest() throws {
         let saveExpectation = expectation(description: "save"), queryExpectation = expectation(description: "query")
-        var didSave = false, didQuery = false
         let user = PFUser(), session = Session(user: user, startDate: Date())
 
         MockAPI.onSave {(object) in
             guard let session = object as? Session, session.user == user else { return }
-            didSave = true
             saveExpectation.fulfill()
         }
 
@@ -42,16 +40,11 @@ class PFUserSessionTests: XCTestCase {
             XCTAssert(PFQueryGetSortKeys(query)?.contains("-startDate") ?? false)
             XCTAssert(PFQueryGetConditions(query)?["user"] != nil)
             XCTAssert(PFQueryGetConditions(query)?["endDate"] != nil)
-
-            didQuery = true
             queryExpectation.fulfill()
-
             return [session]
         }
 
         user.endLatestSession(api: MockAPI.self)
         waitForExpectations(timeout: 3)
-        XCTAssert(didSave)
-        XCTAssert(didQuery)
     }
 }
