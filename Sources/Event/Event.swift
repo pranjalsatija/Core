@@ -7,13 +7,13 @@
 //
 
 /// Used to represent events on mark.
-public class Event: PFObject {
+public class Event: Object {
     // MARK: Model Properties
-    @NSManaged public private(set) var coverPhoto: PFFile?
-    @NSManaged public private(set) var eventDescription: String!
-    @NSManaged public private(set) var likeCount, visitCount: NSNumber!
-    @NSManaged public private(set) var location: PFGeoPoint!
-    @NSManaged public private(set) var radius: NSNumber!
+    @NSManaged public var coverPhoto: PFFile?
+    @NSManaged public var eventDescription: String!
+    @NSManaged public var likeCount, visitCount: NSNumber!
+    @NSManaged public var location: PFGeoPoint!
+    @NSManaged public var radius: NSNumber!
 
     public var origin: Origin? {
         let originString = self["origin"] as? String
@@ -25,8 +25,8 @@ public class Event: PFObject {
         return URL(string: originURLString)
     }
 
-    @NSManaged public private(set) var startDate, endDate: Date!
-    @NSManaged public private(set) var title: String!
+    @NSManaged public var startDate, endDate: Date!
+    @NSManaged public var title: String!
 
     // MARK: Local Properties
     public var duration: TimeInterval {

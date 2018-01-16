@@ -16,15 +16,16 @@ class ShareTests: XCTestCase {
 
     func testCreate() {
         let saveExpectation = expectation(description: "save")
-        let user = PFUser()
+        let user = PFUser(), event = Event()
 
         MockAPI.onSave {(object) in
             guard let share = object as? Share else { return }
             XCTAssert(share.user == user)
+            XCTAssert(share.event == event)
             saveExpectation.fulfill()
         }
 
-        Share.create(user: user, api: MockAPI.self)
+        Share.create(user: user, event: event, api: MockAPI.self)
         waitForExpectations(timeout: 3)
     }
 }

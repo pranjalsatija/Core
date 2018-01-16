@@ -7,9 +7,9 @@
 //
 
 /// Used to represent individual usage sessions.
-class Session: PFObject, PFSubclassing {
-    @NSManaged private(set) var startDate, endDate: Date!
-    @NSManaged private(set) var user: PFUser!
+class Session: Object {
+    @NSManaged var startDate, endDate: Date!
+    @NSManaged var user: PFUser!
 }
 
 // MARK: Custom Initializer
@@ -45,7 +45,7 @@ extension Session {
 }
 
 // MARK: PFSubclassing
-extension Session {
+extension Session: PFSubclassing {
     static func parseClassName() -> String {
         return "UsageSession"
     }

@@ -25,7 +25,7 @@
 		AF39D9422009CC4A003564C7 /* Bolts.framework in Resources */ = {isa = PBXBuildFile; fileRef = AF3DAAED20085CDD001A834F /* Bolts.framework */; };
 		AF39D9432009CC4A003564C7 /* Parse.framework in Resources */ = {isa = PBXBuildFile; fileRef = AF3DAAEB20085CD7001A834F /* Parse.framework */; };
 		AF39D9462009CDEC003564C7 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D9442009CD1F003564C7 /* Setup.swift */; };
-		AF39D9482009D00B003564C7 /* Convenience Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D9472009D00B003564C7 /* Convenience Tests.swift */; };
+		AF39D9482009D00B003564C7 /* Multithreading Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D9472009D00B003564C7 /* Multithreading Tests.swift */; };
 		AF39D94B2009D31B003564C7 /* PFSubclassingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D94A2009D31B003564C7 /* PFSubclassingExtension.swift */; };
 		AF39D94D2009D338003564C7 /* PFQueryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D94C2009D338003564C7 /* PFQueryExtension.swift */; };
 		AF39D950200A8FD5003564C7 /* PFUser+Session Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D94F200A8FD5003564C7 /* PFUser+Session Tests.swift */; };
@@ -38,8 +38,6 @@
 		AF3DAAEE20085CDE001A834F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3DAAED20085CDD001A834F /* Bolts.framework */; };
 		AF3DAAF020085D45001A834F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DAAEF20085D45001A834F /* Error.swift */; };
 		AF3DAAF420085DC5001A834F /* PFACL Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DAAF320085DC5001A834F /* PFACL Extension.swift */; };
-		AF3DAB09200862EC001A834F /* Bolts.framework in Resources */ = {isa = PBXBuildFile; fileRef = AF3DAAED20085CDD001A834F /* Bolts.framework */; };
-		AF3DAB0A200862EC001A834F /* Parse.framework in Resources */ = {isa = PBXBuildFile; fileRef = AF3DAAEB20085CD7001A834F /* Parse.framework */; };
 		AF3DAB0D2008634A001A834F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DAB0C2008634A001A834F /* Session.swift */; };
 		AF3DAB0F200864D1001A834F /* PFUser+Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DAB0E200864D1001A834F /* PFUser+Session.swift */; };
 		AF4164DA200DAA4200613B27 /* Location Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4164D8200DAA0600613B27 /* Location Tests.swift */; };
@@ -52,16 +50,20 @@
 		AF48F8CA200AEB4600725F44 /* PFUser+Referral.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48F8C9200AEB4600725F44 /* PFUser+Referral.swift */; };
 		AF6A257A200C4EC500C3E503 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A2579200C4EC500C3E503 /* Location.swift */; };
 		AF6A257C200C4F3A00C3E503 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A257B200C4F3A00C3E503 /* Event.swift */; };
-		AF6A257F200C581700C3E503 /* Origin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A257E200C581700C3E503 /* Origin.swift */; };
+		AF6A257F200C581700C3E503 /* EventOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A257E200C581700C3E503 /* EventOrigin.swift */; };
 		AF6A2583200C5DE100C3E503 /* CLCircularRegion+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A2582200C5DE100C3E503 /* CLCircularRegion+Event.swift */; };
 		AF9F895A200D5E6F002059AB /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F8959200D5E6F002059AB /* CompletionHandler.swift */; };
 		AFACF8CB200AC77B0091DDF5 /* NotificationOpen Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */; };
 		AFB4AAF2200BCFA8007EABCE /* Referral Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */; };
 		AFB4AAF4200BD092007EABCE /* PFUser+Referral Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4AAF3200BD092007EABCE /* PFUser+Referral Tests.swift */; };
+		AFEC283C200DD1C5003348DF /* EventOrigin Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC283B200DD1C5003348DF /* EventOrigin Tests.swift */; };
+		AFEC283E200DD296003348DF /* CLCircularRegion+Event Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC283D200DD296003348DF /* CLCircularRegion+Event Tests.swift */; };
+		AFEC2840200DD8FA003348DF /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC283F200DD8FA003348DF /* Object.swift */; };
+		AFEC2843200DDC60003348DF /* Object Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC2842200DDC60003348DF /* Object Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AF3DAAD720085C03001A834F /* PBXContainerItemProxy */ = {
+		AFEC2838200DD137003348DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF3DAAC320085C03001A834F /* Project object */;
 			proxyType = 1;
@@ -87,7 +89,7 @@
 		AF39D92D2009C62F003564C7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AF39D92F2009C633003564C7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		AF39D9442009CD1F003564C7 /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
-		AF39D9472009D00B003564C7 /* Convenience Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Convenience Tests.swift"; sourceTree = "<group>"; };
+		AF39D9472009D00B003564C7 /* Multithreading Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Multithreading Tests.swift"; sourceTree = "<group>"; };
 		AF39D94A2009D31B003564C7 /* PFSubclassingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFSubclassingExtension.swift; sourceTree = "<group>"; };
 		AF39D94C2009D338003564C7 /* PFQueryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFQueryExtension.swift; sourceTree = "<group>"; };
 		AF39D94F200A8FD5003564C7 /* PFUser+Session Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Session Tests.swift"; sourceTree = "<group>"; };
@@ -116,12 +118,16 @@
 		AF48F8C9200AEB4600725F44 /* PFUser+Referral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Referral.swift"; sourceTree = "<group>"; };
 		AF6A2579200C4EC500C3E503 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		AF6A257B200C4F3A00C3E503 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		AF6A257E200C581700C3E503 /* Origin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origin.swift; sourceTree = "<group>"; };
+		AF6A257E200C581700C3E503 /* EventOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOrigin.swift; sourceTree = "<group>"; };
 		AF6A2582200C5DE100C3E503 /* CLCircularRegion+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLCircularRegion+Event.swift"; sourceTree = "<group>"; };
 		AF9F8959200D5E6F002059AB /* CompletionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
 		AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationOpen Tests.swift"; sourceTree = "<group>"; };
 		AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Referral Tests.swift"; sourceTree = "<group>"; };
 		AFB4AAF3200BD092007EABCE /* PFUser+Referral Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Referral Tests.swift"; sourceTree = "<group>"; };
+		AFEC283B200DD1C5003348DF /* EventOrigin Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventOrigin Tests.swift"; sourceTree = "<group>"; };
+		AFEC283D200DD296003348DF /* CLCircularRegion+Event Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLCircularRegion+Event Tests.swift"; sourceTree = "<group>"; };
+		AFEC283F200DD8FA003348DF /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		AFEC2842200DDC60003348DF /* Object Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Object Tests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +158,8 @@
 		AF38E6B4200BD197006F9B02 /* Share */ = {
 			isa = PBXGroup;
 			children = (
-				AF38E6B5200BD1AF006F9B02 /* Share.swift */,
 				AF38E6B7200BD20A006F9B02 /* PFUser+Share.swift */,
+				AF38E6B5200BD1AF006F9B02 /* Share.swift */,
 			);
 			path = Share;
 			sourceTree = "<group>";
@@ -161,8 +167,8 @@
 		AF38E6B9200BD25A006F9B02 /* Share */ = {
 			isa = PBXGroup;
 			children = (
-				AF38E6BA200BD269006F9B02 /* Share Tests.swift */,
 				AF4164E1200DB02B00613B27 /* PFUser+Share Tests.swift */,
+				AF38E6BA200BD269006F9B02 /* Share Tests.swift */,
 			);
 			path = Share;
 			sourceTree = "<group>";
@@ -170,10 +176,10 @@
 		AF38E6BC200BD3D2006F9B02 /* LocationProtocol */ = {
 			isa = PBXGroup;
 			children = (
-				AF38E6BD200BD3DE006F9B02 /* LocationProtocol.swift */,
-				AF6A2579200C4EC500C3E503 /* Location.swift */,
 				AF38E6BF200BD41B006F9B02 /* CLLocation+LocationProtocol.swift */,
 				AF38E6C1200BD50F006F9B02 /* CLLocationCoordinate2D+LocationProtocol.swift */,
+				AF6A2579200C4EC500C3E503 /* Location.swift */,
+				AF38E6BD200BD3DE006F9B02 /* LocationProtocol.swift */,
 				AF38E6C3200BD541006F9B02 /* PFGeoPoint+LocationProtocol.swift */,
 			);
 			path = LocationProtocol;
@@ -202,8 +208,8 @@
 		AF39D94E200A8FC4003564C7 /* Session */ = {
 			isa = PBXGroup;
 			children = (
-				AF39D9212009BEC5003564C7 /* Session Tests.swift */,
 				AF39D94F200A8FD5003564C7 /* PFUser+Session Tests.swift */,
+				AF39D9212009BEC5003564C7 /* Session Tests.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -259,15 +265,16 @@
 		AF3DAAD920085C03001A834F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				AF39D9472009D00B003564C7 /* Convenience Tests.swift */,
-				AF4164D7200DA9F600613B27 /* LocationProtocol */,
 				AF39D9242009BEF6003564C7 /* MockAPI.swift */,
+				AF39D9442009CD1F003564C7 /* Setup.swift */,
+				AFEC2841200DDC4D003348DF /* Convenience Tests */,
+				AFEC283A200DD1AC003348DF /* Event Tests */,
+				AF4164D7200DA9F600613B27 /* LocationProtocol */,
 				AFACF8C9200AC76C0091DDF5 /* NotificationOpen */,
 				AF39D951200A9050003564C7 /* Parse Extensions */,
 				AFB4AAF0200BCF97007EABCE /* Referral */,
 				AF39D94E200A8FC4003564C7 /* Session */,
 				AF38E6B9200BD25A006F9B02 /* Share */,
-				AF39D9442009CD1F003564C7 /* Setup.swift */,
 				AF3DAADC20085C03001A834F /* Info.plist */,
 			);
 			path = Tests;
@@ -310,8 +317,8 @@
 		AF3DAB0B2008633F001A834F /* Session */ = {
 			isa = PBXGroup;
 			children = (
-				AF3DAB0C2008634A001A834F /* Session.swift */,
 				AF3DAB0E200864D1001A834F /* PFUser+Session.swift */,
+				AF3DAB0C2008634A001A834F /* Session.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -319,9 +326,9 @@
 		AF4164D7200DA9F600613B27 /* LocationProtocol */ = {
 			isa = PBXGroup;
 			children = (
-				AF4164D8200DAA0600613B27 /* Location Tests.swift */,
 				AF4164DD200DACCB00613B27 /* CLLocation+LocationProtocol Tests.swift */,
 				AF4164DB200DAAD100613B27 /* CLLocationCoordinate2D+LocationProtocol Tests.swift */,
+				AF4164D8200DAA0600613B27 /* Location Tests.swift */,
 				AF4164DF200DAD3F00613B27 /* PFGeoPoint+LocationProtocol.swift */,
 			);
 			path = LocationProtocol;
@@ -330,8 +337,8 @@
 		AF48F8C6200AE84400725F44 /* Referral */ = {
 			isa = PBXGroup;
 			children = (
-				AF48F8C7200AE85500725F44 /* Referral.swift */,
 				AF48F8C9200AEB4600725F44 /* PFUser+Referral.swift */,
+				AF48F8C7200AE85500725F44 /* Referral.swift */,
 			);
 			path = Referral;
 			sourceTree = "<group>";
@@ -339,9 +346,9 @@
 		AF6A257D200C580A00C3E503 /* Event */ = {
 			isa = PBXGroup;
 			children = (
-				AF6A257B200C4F3A00C3E503 /* Event.swift */,
-				AF6A257E200C581700C3E503 /* Origin.swift */,
 				AF6A2582200C5DE100C3E503 /* CLCircularRegion+Event.swift */,
+				AF6A257B200C4F3A00C3E503 /* Event.swift */,
+				AF6A257E200C581700C3E503 /* EventOrigin.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -351,6 +358,7 @@
 			children = (
 				AF9F8959200D5E6F002059AB /* CompletionHandler.swift */,
 				AF27DEC620096E440062F0F1 /* Multithreading.swift */,
+				AFEC283F200DD8FA003348DF /* Object.swift */,
 			);
 			path = Convenience;
 			sourceTree = "<group>";
@@ -367,10 +375,28 @@
 		AFB4AAF0200BCF97007EABCE /* Referral */ = {
 			isa = PBXGroup;
 			children = (
-				AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */,
 				AFB4AAF3200BD092007EABCE /* PFUser+Referral Tests.swift */,
+				AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */,
 			);
 			path = Referral;
+			sourceTree = "<group>";
+		};
+		AFEC283A200DD1AC003348DF /* Event Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AFEC283D200DD296003348DF /* CLCircularRegion+Event Tests.swift */,
+				AFEC283B200DD1C5003348DF /* EventOrigin Tests.swift */,
+			);
+			path = "Event Tests";
+			sourceTree = "<group>";
+		};
+		AFEC2841200DDC4D003348DF /* Convenience Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AF39D9472009D00B003564C7 /* Multithreading Tests.swift */,
+				AFEC2842200DDC60003348DF /* Object Tests.swift */,
+			);
+			path = "Convenience Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,13 +437,11 @@
 			buildConfigurationList = AF3DAAE320085C03001A834F /* Build configuration list for PBXNativeTarget "CoreTests" */;
 			buildPhases = (
 				AF3DAAD120085C03001A834F /* Sources */,
-				AF3DAAD320085C03001A834F /* Resources */,
-				AF3DAB152008783F001A834F /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AF3DAAD820085C03001A834F /* PBXTargetDependency */,
+				AFEC2839200DD137003348DF /* PBXTargetDependency */,
 			);
 			name = CoreTests;
 			productName = CoreTests;
@@ -473,32 +497,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF3DAAD320085C03001A834F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF3DAB09200862EC001A834F /* Bolts.framework in Resources */,
-				AF3DAB0A200862EC001A834F /* Parse.framework in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		AF3DAB0620086224001A834F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-		AF3DAB152008783F001A834F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -523,7 +525,7 @@
 				AF6A257A200C4EC500C3E503 /* Location.swift in Sources */,
 				AF39D94B2009D31B003564C7 /* PFSubclassingExtension.swift in Sources */,
 				AF38E6BE200BD3DE006F9B02 /* LocationProtocol.swift in Sources */,
-				AF6A257F200C581700C3E503 /* Origin.swift in Sources */,
+				AF6A257F200C581700C3E503 /* EventOrigin.swift in Sources */,
 				AF3DAAF420085DC5001A834F /* PFACL Extension.swift in Sources */,
 				AF39D959200A9279003564C7 /* NotificationOpen.swift in Sources */,
 				AF48F8C8200AE85500725F44 /* Referral.swift in Sources */,
@@ -532,6 +534,7 @@
 				AF38E6B8200BD20A006F9B02 /* PFUser+Share.swift in Sources */,
 				AF3DAAF020085D45001A834F /* Error.swift in Sources */,
 				AF48F8CA200AEB4600725F44 /* PFUser+Referral.swift in Sources */,
+				AFEC2840200DD8FA003348DF /* Object.swift in Sources */,
 				AF38E6C4200BD541006F9B02 /* PFGeoPoint+LocationProtocol.swift in Sources */,
 				AF38E6C2200BD50F006F9B02 /* CLLocationCoordinate2D+LocationProtocol.swift in Sources */,
 				AF39D94D2009D338003564C7 /* PFQueryExtension.swift in Sources */,
@@ -549,15 +552,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF39D9482009D00B003564C7 /* Convenience Tests.swift in Sources */,
+				AF39D9482009D00B003564C7 /* Multithreading Tests.swift in Sources */,
 				AF39D953200A906A003564C7 /* PFACL Extension Tests.swift in Sources */,
 				AF38E6BB200BD269006F9B02 /* Share Tests.swift in Sources */,
 				AFACF8CB200AC77B0091DDF5 /* NotificationOpen Tests.swift in Sources */,
 				AF39D955200A909E003564C7 /* PFSubclassing Extension Tests.swift in Sources */,
+				AFEC283E200DD296003348DF /* CLCircularRegion+Event Tests.swift in Sources */,
 				AF39D950200A8FD5003564C7 /* PFUser+Session Tests.swift in Sources */,
+				AFEC2843200DDC60003348DF /* Object Tests.swift in Sources */,
 				AF48F8C5200AE50E00725F44 /* PFUser+NotificationOpen Tests.swift in Sources */,
 				AF39D9262009C2F7003564C7 /* MockAPI.swift in Sources */,
 				AF39D9232009BEDA003564C7 /* Session Tests.swift in Sources */,
+				AFEC283C200DD1C5003348DF /* EventOrigin Tests.swift in Sources */,
 				AF4164DC200DAAD100613B27 /* CLLocationCoordinate2D+LocationProtocol Tests.swift in Sources */,
 				AF39D9462009CDEC003564C7 /* Setup.swift in Sources */,
 				AF4164DA200DAA4200613B27 /* Location Tests.swift in Sources */,
@@ -572,10 +578,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AF3DAAD820085C03001A834F /* PBXTargetDependency */ = {
+		AFEC2839200DD137003348DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AF3DAACB20085C03001A834F /* Core */;
-			targetProxy = AF3DAAD720085C03001A834F /* PBXContainerItemProxy */;
+			targetProxy = AFEC2838200DD137003348DF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -632,6 +638,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -685,6 +692,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;

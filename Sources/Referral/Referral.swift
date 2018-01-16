@@ -7,16 +7,17 @@
 //
 
 /// Used to represent referrals (when a user opens a link to mark).
-class Referral: PFObject {
-    @NSManaged private(set) var sender, receiver: PFUser!
-    //TODO: @NSManaged private(set) var event: Event!
+class Referral: Object {
+    @NSManaged var sender, receiver: PFUser!
+    @NSManaged var event: Event!
 }
 
 // MARK: Custom Initializer
 extension Referral {
-    convenience init(sender: PFUser, receiver: PFUser) {
+    convenience init(sender: PFUser, receiver: PFUser, event: Event) {
         self.init()
         acl = .onlyAccessibleByMasterKey
+        self.event = event
         self.sender = sender
         self.receiver = receiver
     }
@@ -25,8 +26,8 @@ extension Referral {
 // MARK: API
 extension Referral {
     /// Creates and eventually saves a new referral with the given sender and receiver.
-    static func create(sender: PFUser, receiver: PFUser, api: APIProtocol.Type = ParseAPI.self) {
-        let referral = Referral(sender: sender, receiver: receiver)
+    static func create(sender: PFUser, receiver: PFUser, event: Event, api: APIProtocol.Type = ParseAPI.self) {
+        let referral = Referral(sender: sender, receiver: receiver, event: event)
         api.saveEventually(referral)
     }
 }

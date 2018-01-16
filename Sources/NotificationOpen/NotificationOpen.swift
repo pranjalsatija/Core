@@ -7,10 +7,10 @@
 //
 
 /// Used to represent the fact that the user opened a notification.
-class NotificationOpen: PFObject {
-    @NSManaged private(set) var category: String!
-    //TODO: @NSManaged private(set) var event: Event!
-    @NSManaged private(set) var user: PFUser!
+class NotificationOpen: Object {
+    @NSManaged var category: String!
+    @NSManaged var event: Event!
+    @NSManaged var user: PFUser!
 }
 
 // MARK: Custom Initializer
@@ -25,13 +25,12 @@ extension NotificationOpen {
         // If that key is present, we use it to query the notification's info.
         let notificationInfo = userInfo["aps"] as? [String: Any] ?? userInfo
 
-        /*if let eventID = notificationInfo["event"] as? String {
+        if let eventID = notificationInfo["event"] as? String {
             event = Event(pointerWithObjectID: eventID)
-        }*/
+        }
 
         acl = .onlyAccessibleByMasterKey
         category = notificationInfo["category"] as? String
-        //event = Event(pointerWithObjectID: eventID)
         self.user = user
     }
 }

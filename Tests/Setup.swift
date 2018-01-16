@@ -7,6 +7,7 @@
 //
 
 @testable import Core
+import Parse
 
 private var setupWasPerformed = false
 func performSetupIfNeeded() {

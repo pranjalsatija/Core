@@ -9,7 +9,7 @@
 import XCTest
 @testable import Core
 
-class ConvenienceTests: XCTestCase {
+class MultithreadingTests: XCTestCase {
     func testBackground() {
         let e = expectation(description: "expectation")
 

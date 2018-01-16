@@ -9,7 +9,7 @@
 // MARK: PFUser Extension
 extension PFUser {
     /// Registers that a specified user referred this user to an event on mark.
-    public func registerReferral(from user: PFUser, api: APIProtocol.Type = ParseAPI.self) {
-        Referral.create(sender: user, receiver: self, api: api)
+    public func registerReferral(from user: PFUser, with event: Event, api: APIProtocol.Type = ParseAPI.self) {
+        Referral.create(sender: user, receiver: self, event: event, api: api)
     }
 }

@@ -7,25 +7,26 @@
 //
 
 /// Used to represent shares.
-class Share: PFObject {
-    @NSManaged private(set) var user: PFUser!
-    //TODO: @NSManaged private(set) var event: Event!
+class Share: Object {
+    @NSManaged var user: PFUser!
+    @NSManaged var event: Event!
 }
 
 // MARK: Custom Initializer
 extension Share {
-    convenience init(user: PFUser) {
+    convenience init(user: PFUser, event: Event) {
         self.init()
         acl = .onlyAccessibleByMasterKey
         self.user = user
+        self.event = event
     }
 }
 
 // MARK: API
 extension Share {
     /// Creates and eventually saves a new referral with the given sender and receiver.
-    static func create(user: PFUser, api: APIProtocol.Type = ParseAPI.self) {
-        let share = Share(user: user)
+    static func create(user: PFUser, event: Event, api: APIProtocol.Type = ParseAPI.self) {
+        let share = Share(user: user, event: event)
         api.saveEventually(share)
     }
 }

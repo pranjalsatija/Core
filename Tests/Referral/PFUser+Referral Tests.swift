@@ -17,15 +17,18 @@ class PFUserReferralTests: XCTestCase {
     func testRegisterFromSender() throws {
         let saveExpectation = expectation(description: "expectation")
         let sender = PFUser(), receiver = PFUser()
+        let event = Event()
 
         MockAPI.onSave {(object) in
             guard let referral = object as? Referral else { return }
+            XCTAssert(referral.acl == .onlyAccessibleByMasterKey)
             XCTAssert(referral.sender == sender)
             XCTAssert(referral.receiver == receiver)
+            XCTAssert(referral.event == event)
             saveExpectation.fulfill()
         }
 
-        receiver.registerReferral(from: sender, api: MockAPI.self)
+        receiver.registerReferral(from: sender, with: event, api: MockAPI.self)
         waitForExpectations(timeout: 3)
     }
 }

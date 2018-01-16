@@ -19,7 +19,9 @@ class PFUserSessionTests: XCTestCase {
         let user = PFUser()
 
         MockAPI.onSave {(object) in
-            guard let session = object as? Session, session.user == user else { return }
+            guard let session = object as? Session else { return }
+            XCTAssert(session.acl == .onlyAccessibleByMasterKey)
+            XCTAssert(session.user == user)
             saveExpectation.fulfill()
         }
 

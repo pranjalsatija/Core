@@ -13,4 +13,8 @@ extension PFSubclassing where Self: PFObject {
     static func baseQuery() -> PFQuery<Self> {
         return PFQuery<Self>(className: parseClassName())
     }
+
+    init(pointerWithObjectID objectID: String) {
+        self.init(withoutDataWithObjectId: objectID)
+    }
 }

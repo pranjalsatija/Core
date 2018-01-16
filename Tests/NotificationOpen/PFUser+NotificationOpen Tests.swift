@@ -16,16 +16,20 @@ class PFUserNotificationOpenTests: XCTestCase {
 
     func testRegisterWithUserInfo() throws {
         let saveExpectation = expectation(description: "expectation")
-        let user = PFUser()
+        let user = PFUser(), event = Event(pointerWithObjectID: "abcxyz")
 
         MockAPI.onSave {(object) in
             guard let notificationOpen = object as? NotificationOpen else { return }
             XCTAssert(notificationOpen.acl == .onlyAccessibleByMasterKey)
             XCTAssert(notificationOpen.user == user)
+            XCTAssert(notificationOpen.event == event)
             saveExpectation.fulfill()
         }
 
-        user.registerNotificationOpen(userInfo: [:], api: MockAPI.self)
+        user.registerNotificationOpen(userInfo: [
+            "event": "abcxyz"
+        ], api: MockAPI.self)
+
         waitForExpectations(timeout: 3)
     }
 }

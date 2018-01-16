@@ -16,15 +16,16 @@ class PFUserShareTests: XCTestCase {
 
     func testRegister() throws {
         let saveExpectation = expectation(description: "expectation")
-        let user = PFUser()
+        let user = PFUser(), event = Event()
 
         MockAPI.onSave {(object) in
             guard let share = object as? Share else { return }
             XCTAssert(share.user == user)
+            XCTAssert(share.event == event)
             saveExpectation.fulfill()
         }
 
-        user.registerShare(api: MockAPI.self)
+        user.registerShare(with: event, api: MockAPI.self)
         waitForExpectations(timeout: 3)
     }
 }
