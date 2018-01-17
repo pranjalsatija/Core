@@ -62,6 +62,7 @@
 		AFACF8CB200AC77B0091DDF5 /* NotificationOpen Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */; };
 		AFB4AAF2200BCFA8007EABCE /* Referral Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */; };
 		AFB4AAF4200BD092007EABCE /* PFUser+Referral Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4AAF3200BD092007EABCE /* PFUser+Referral Tests.swift */; };
+		AFDEEFE8200F05AD0053869A /* Event Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDEEFE7200F05AD0053869A /* Event Tests.swift */; };
 		AFEC283C200DD1C5003348DF /* EventOrigin Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC283B200DD1C5003348DF /* EventOrigin Tests.swift */; };
 		AFEC283E200DD296003348DF /* CLCircularRegion+Event Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC283D200DD296003348DF /* CLCircularRegion+Event Tests.swift */; };
 		AFEC2840200DD8FA003348DF /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC283F200DD8FA003348DF /* Object.swift */; };
@@ -136,6 +137,7 @@
 		AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationOpen Tests.swift"; sourceTree = "<group>"; };
 		AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Referral Tests.swift"; sourceTree = "<group>"; };
 		AFB4AAF3200BD092007EABCE /* PFUser+Referral Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Referral Tests.swift"; sourceTree = "<group>"; };
+		AFDEEFE7200F05AD0053869A /* Event Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event Tests.swift"; sourceTree = "<group>"; };
 		AFEC283B200DD1C5003348DF /* EventOrigin Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventOrigin Tests.swift"; sourceTree = "<group>"; };
 		AFEC283D200DD296003348DF /* CLCircularRegion+Event Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLCircularRegion+Event Tests.swift"; sourceTree = "<group>"; };
 		AFEC283F200DD8FA003348DF /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				AFEC283D200DD296003348DF /* CLCircularRegion+Event Tests.swift */,
+				AFDEEFE7200F05AD0053869A /* Event Tests.swift */,
 				AF46A1BF200ED01E00CA47BE /* EventCategory Tests.swift */,
 				AFEC283B200DD1C5003348DF /* EventOrigin Tests.swift */,
 			);
@@ -595,6 +598,7 @@
 				AF38E6BB200BD269006F9B02 /* Share Tests.swift in Sources */,
 				AFACF8CB200AC77B0091DDF5 /* NotificationOpen Tests.swift in Sources */,
 				AF39D955200A909E003564C7 /* PFSubclassing Extension Tests.swift in Sources */,
+				AFDEEFE8200F05AD0053869A /* Event Tests.swift in Sources */,
 				AF46A1C0200ED01E00CA47BE /* EventCategory Tests.swift in Sources */,
 				AFEC283E200DD296003348DF /* CLCircularRegion+Event Tests.swift in Sources */,
 				AF39D950200A8FD5003564C7 /* PFUser+Session Tests.swift in Sources */,

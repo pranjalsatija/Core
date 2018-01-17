@@ -37,20 +37,20 @@ class MultithreadingTests: XCTestCase {
     func testBackgroundWithCompletionHandlerAndError() {
         //swiftlint:disable:next nesting
         enum TestError: Swift.Error {
-            case testError
+            case error
         }
 
         let e = expectation(description: "expectation")
 
         background({
-            throw TestError.testError
+            throw TestError.error
         }, completionHandler: {(error) in
             guard let error = error as? TestError else {
                 XCTFail()
                 return
             }
 
-            XCTAssert(error == .testError)
+            XCTAssert(error == .error)
             e.fulfill()
         })
 
