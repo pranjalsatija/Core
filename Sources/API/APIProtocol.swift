@@ -47,7 +47,7 @@ extension APIProtocol {
     public static func getData(from file: PFFile, completion: @escaping CompletionHandler<Data>) {
         background {
             do {
-                try completion(nil, file.getData())
+                try completion(nil, getData(from: file))
             } catch {
                 completion(error, nil)
             }

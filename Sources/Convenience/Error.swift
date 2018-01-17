@@ -8,6 +8,7 @@
 
 /// A general purpose error enumeration.
 public enum Error: Swift.Error {
-    case missingData(description: String?)
+    case invalidResponseFormat
+    case missingData
     case unknown
 }

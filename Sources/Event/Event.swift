@@ -9,6 +9,7 @@
 /// Used to represent events on mark.
 public class Event: Object {
     // MARK: Model Properties
+    @NSManaged public var category: Category!
     @NSManaged public var coverPhoto: PFFile?
     @NSManaged public var eventDescription: String!
     @NSManaged public var likeCount, visitCount: NSNumber!
@@ -25,6 +26,7 @@ public class Event: Object {
         return URL(string: originURLString)
     }
 
+    @NSManaged public var score: NSNumber!
     @NSManaged public var startDate, endDate: Date!
     @NSManaged public var title: String!
 
@@ -40,13 +42,15 @@ public class Event: Object {
     public var isEndingSoon: Bool {
         return endDate > Date() && endDate.timeIntervalSinceNow < duration * 0.2
     }
+
+    public var relevance = 0.0
 }
 
 // MARK: Event Data
 extension Event {
     public func getCoverPhoto(api: APIProtocol.Type = ParseAPI.self, completion: @escaping CompletionHandler<UIImage>) {
         guard let coverPhoto = coverPhoto else {
-            completion(Error.missingData(description: "This event doesn't have a cover photo."), nil)
+            completion(Error.missingData, nil)
             return
         }
 
@@ -56,7 +60,7 @@ extension Event {
             } else if let data = data, let image = UIImage(data: data) {
                 completion(nil, image)
             } else {
-                completion(Error.unknown, nil)
+                completion(Error.invalidResponseFormat, nil)
             }
         }
     }
@@ -76,6 +80,40 @@ extension Event {
         query.limit = limit
         api.findObjects(matching: query) {(error, events) in
             completion(error, events)
+        }
+    }
+
+    public static func getRelevantEvents(in geoBox: GeoBox,
+                                         categories: [Category],
+                                         limit: Int = 50,
+                                         api: APIProtocol.Type = ParseAPI.self,
+                                         completion: @escaping CompletionHandler<[Event]>) {
+
+        //swiftlint:disable:next force_cast
+        let currentlyOccuringQuery = baseQuery() as! PFQuery<PFObject>
+        currentlyOccuringQuery.whereKey("startDate", lessThan: Date())
+        currentlyOccuringQuery.whereKey("endDate", greaterThan: Date())
+
+        //swiftlint:disable:next force_cast
+        let upcomingQuery = baseQuery() as! PFQuery<PFObject>
+        upcomingQuery.whereKey("startDate", greaterThan: Date())
+        upcomingQuery.whereKey("startDate", lessThan: Date().addingTimeInterval(24.hours))
+
+        let southwest = PFGeoPoint(geoBox.southwest), northeast = PFGeoPoint(geoBox.northeast)
+        let combinedQuery = PFQuery.orQuery(withSubqueries: [currentlyOccuringQuery, upcomingQuery])
+        combinedQuery.whereKey("category", containedIn: categories)
+        combinedQuery.whereKey("location", withinGeoBoxFromSouthwest: southwest, toNortheast: northeast)
+        combinedQuery.addDescendingOrder("score")
+        combinedQuery.limit = limit
+
+        api.findObjects(matching: combinedQuery) {(error, objects) in
+            if let error = error {
+                completion(error, nil)
+            } else if let events = objects as? [Event] {
+                completion(nil, events)
+            } else {
+                completion(Error.invalidResponseFormat, nil)
+            }
         }
     }
 }

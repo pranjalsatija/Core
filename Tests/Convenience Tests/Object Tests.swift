@@ -22,26 +22,28 @@ class ObjectTests: XCTestCase {
             }
         }
 
+        let object1 = TestObject(pointerWithObjectID: "foobar")
+        let object2 = TestObject(pointerWithObjectID: "foobar")
+        XCTAssert(object1 == object2)
+
+        object1["someKey"] = "someOtherValue"
+        object2["someKey"] = "someValue"
+        XCTAssert(object1 == object2)
+
+        object2.objectId = "foobaz"
+        XCTAssert(object1 != object2)
+    }
+
+    func testNegativeEquality() {
         //swiftlint:disable:next nesting
-        class TestObject2: Object, PFSubclassing {
+        class TestObject: Object, PFSubclassing {
             static func parseClassName() -> String {
                 return "TestObject2"
             }
         }
 
-        let object1 = TestObject()
-        let object2 = TestObject()
-        XCTAssert(object1 == object2)
-
-        object1.objectId = "foobar"
-        object2.objectId = "foobar"
-        XCTAssert(object1 == object2)
-
-        object2.objectId = "foobaz"
+        let object1 = TestObject(pointerWithObjectID: "foobar")
+        let object2 = PFObject(withoutDataWithClassName: "SomeObject", objectId: "foobar")
         XCTAssert(object1 != object2)
-
-        let object3 = TestObject2()
-        XCTAssert(object1 != object3)
-        XCTAssert(object2 != object3)
     }
 }

@@ -29,11 +29,12 @@ extension MockAPI {
     }
 
     static func getData(from file: PFFile) throws -> Data {
-        guard let data = try onFileDownloadBlock?(file) else {
-            throw Error.unknown
+        if let block = onFileDownloadBlock {
+            return try block(file)
+        } else {
+            print("Warning: MockAPI.getData(from:) was called, but there's no handler for file downloads.")
+            throw Error.missingData
         }
-
-        return data
     }
 
     static func findObjects<T>(matching query: PFQuery<T>) throws -> [T] {

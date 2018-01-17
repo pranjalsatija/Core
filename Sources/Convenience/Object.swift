@@ -16,4 +16,8 @@ extension Object {
         guard let object = object as? Object else { return false }
         return object.objectId == self.objectId
     }
+
+    public convenience init(pointerWithObjectID objectID: String) {
+        self.init(withoutDataWithObjectId: objectID)
+    }
 }

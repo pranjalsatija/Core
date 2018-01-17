@@ -21,7 +21,7 @@ public struct ParseAPI: APIProtocol {
     }
 
     public static func getObject<T: PFObject>(objectID: String) throws -> T {
-        guard let query = T.query() as? PFQuery<T> else { throw Error.missingData(description: nil) }
+        guard let query = T.query() as? PFQuery<T> else { throw Error.missingData }
         query.whereKey("objectId", equalTo: objectID)
         return try findFirstObject(matching: query)
     }
