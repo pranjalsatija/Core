@@ -39,10 +39,7 @@ class SessionTests: XCTestCase {
             saveExpectation.fulfill()
         }
 
-        MockAPI.onQuery {(query) in
-            XCTAssert(PFQueryGetSortKeys(query)?.contains("-startDate") ?? false)
-            XCTAssert(PFQueryGetConditions(query)?["user"] != nil)
-            XCTAssert(PFQueryGetConditions(query)?["endDate"] != nil)
+        MockAPI.onQuery {(_) in
             queryExpectation.fulfill()
             return [session]
         }
@@ -59,13 +56,8 @@ class SessionTests: XCTestCase {
             XCTFail("The session shouldn't be saved.")
         }
 
-        MockAPI.onQuery {(query) in
-            XCTAssert(PFQueryGetSortKeys(query)?.contains("-startDate") ?? false)
-            XCTAssert(PFQueryGetConditions(query)?["user"] != nil)
-            XCTAssert(PFQueryGetConditions(query)?["endDate"] != nil)
-
+        MockAPI.onQuery {(_) in
             queryExpectation.fulfill()
-
             return []
         }
 

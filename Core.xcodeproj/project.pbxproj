@@ -27,7 +27,6 @@
 		AF39D9462009CDEC003564C7 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D9442009CD1F003564C7 /* Setup.swift */; };
 		AF39D9482009D00B003564C7 /* Multithreading Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D9472009D00B003564C7 /* Multithreading Tests.swift */; };
 		AF39D94B2009D31B003564C7 /* PFSubclassingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D94A2009D31B003564C7 /* PFSubclassingExtension.swift */; };
-		AF39D94D2009D338003564C7 /* PFQueryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D94C2009D338003564C7 /* PFQueryExtension.swift */; };
 		AF39D950200A8FD5003564C7 /* PFUser+Session Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D94F200A8FD5003564C7 /* PFUser+Session Tests.swift */; };
 		AF39D953200A906A003564C7 /* PFACL Extension Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D952200A906A003564C7 /* PFACL Extension Tests.swift */; };
 		AF39D955200A909E003564C7 /* PFSubclassing Extension Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D954200A909E003564C7 /* PFSubclassing Extension Tests.swift */; };
@@ -98,7 +97,6 @@
 		AF39D9442009CD1F003564C7 /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
 		AF39D9472009D00B003564C7 /* Multithreading Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Multithreading Tests.swift"; sourceTree = "<group>"; };
 		AF39D94A2009D31B003564C7 /* PFSubclassingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFSubclassingExtension.swift; sourceTree = "<group>"; };
-		AF39D94C2009D338003564C7 /* PFQueryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFQueryExtension.swift; sourceTree = "<group>"; };
 		AF39D94F200A8FD5003564C7 /* PFUser+Session Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Session Tests.swift"; sourceTree = "<group>"; };
 		AF39D952200A906A003564C7 /* PFACL Extension Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFACL Extension Tests.swift"; sourceTree = "<group>"; };
 		AF39D954200A909E003564C7 /* PFSubclassing Extension Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFSubclassing Extension Tests.swift"; sourceTree = "<group>"; };
@@ -214,7 +212,6 @@
 			children = (
 				AF3DAAF320085DC5001A834F /* PFACL Extension.swift */,
 				AF39D94A2009D31B003564C7 /* PFSubclassingExtension.swift */,
-				AF39D94C2009D338003564C7 /* PFQueryExtension.swift */,
 			);
 			path = "Parse Extensions";
 			sourceTree = "<group>";
@@ -578,7 +575,6 @@
 				AF46A1B6200EC5F900CA47BE /* GeoBox.swift in Sources */,
 				AF38E6C4200BD541006F9B02 /* PFGeoPoint+LocationProtocol.swift in Sources */,
 				AF38E6C2200BD50F006F9B02 /* CLLocationCoordinate2D+LocationProtocol.swift in Sources */,
-				AF39D94D2009D338003564C7 /* PFQueryExtension.swift in Sources */,
 				AF38E6B6200BD1AF006F9B02 /* Share.swift in Sources */,
 				AF9F895A200D5E6F002059AB /* CompletionHandler.swift in Sources */,
 				AF27DECA200970400062F0F1 /* APIProtocol.swift in Sources */,

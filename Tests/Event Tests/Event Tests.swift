@@ -95,6 +95,90 @@ class EventTests: XCTestCase {
         }
     }
 
+    func testGetCurrentlyOccurringEventsNearLocation() {
+        let dallas = Location(latitude: 32.7767, longitude: -96.7970)
+
+        let testEvents = [
+            Event(pointerWithObjectID: "testEvent1"),
+            Event(pointerWithObjectID: "testEvent2"),
+            Event(pointerWithObjectID: "testEvent3")
+        ]
+
+        MockAPI.onQuery {(_) in
+            return testEvents
+        }
+
+        Event.getCurrentlyOccurringEvents(near: dallas, maxDistance: 50, api: MockAPI.self) {(_, events) in
+            guard let events = events else {
+                XCTFail()
+                return
+            }
+
+            XCTAssert(events == testEvents)
+        }
+    }
+
+    func testGetRelevantEventsInBox() {
+        //swiftlint:disable:next nesting
+        struct Box: GeoBox {
+            let northeast: LocationProtocol, southwest: LocationProtocol
+        }
+
+        let dallas = Location(latitude: 32.7767, longitude: -96.7970)
+        let northeast = Location(latitude: dallas.latitude * 1.1, longitude: dallas.longitude * 1.1)
+        let southwest = Location(latitude: dallas.latitude * 0.9, longitude: dallas.longitude * 0.9)
+        let box = Box(northeast: northeast, southwest: southwest)
+
+        let testEvents = [
+            Event(pointerWithObjectID: "testEvent1"),
+            Event(pointerWithObjectID: "testEvent2"),
+            Event(pointerWithObjectID: "testEvent3")
+        ]
+
+        MockAPI.onQuery {(_) in
+            return testEvents
+        }
+
+        Event.getRelevantEvents(in: box, categories: [], api: MockAPI.self) {(_, events) in
+            guard let events = events else {
+                XCTFail()
+                return
+            }
+
+            XCTAssert(events == testEvents)
+        }
+    }
+
+    func testGetRelevantEventsInBoxWithError() {
+        //swiftlint:disable:next nesting
+        struct Box: GeoBox {
+            let northeast: LocationProtocol, southwest: LocationProtocol
+        }
+
+        //swiftlint:disable:next nesting
+        enum TestError: Swift.Error {
+            case testError
+        }
+
+        let dallas = Location(latitude: 32.7767, longitude: -96.7970)
+        let northeast = Location(latitude: dallas.latitude * 1.1, longitude: dallas.longitude * 1.1)
+        let southwest = Location(latitude: dallas.latitude * 0.9, longitude: dallas.longitude * 0.9)
+        let box = Box(northeast: northeast, southwest: southwest)
+
+        MockAPI.onQuery {(_) in
+            throw TestError.testError
+        }
+
+        Event.getRelevantEvents(in: box, categories: [], api: MockAPI.self) {(error, _) in
+            guard let error = error as? TestError else {
+                XCTFail()
+                return
+            }
+
+            XCTAssert(error == .testError)
+        }
+    }
+
     func testIsCurrentlyOccurring() {
         let event = Event(), now = Date()
         event.startDate = now.addingTimeInterval(-30.minutes)

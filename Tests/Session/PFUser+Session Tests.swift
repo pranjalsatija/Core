@@ -38,10 +38,7 @@ class PFUserSessionTests: XCTestCase {
             saveExpectation.fulfill()
         }
 
-        MockAPI.onQuery {(query) in
-            XCTAssert(PFQueryGetSortKeys(query)?.contains("-startDate") ?? false)
-            XCTAssert(PFQueryGetConditions(query)?["user"] != nil)
-            XCTAssert(PFQueryGetConditions(query)?["endDate"] != nil)
+        MockAPI.onQuery {(_) in
             queryExpectation.fulfill()
             return [session]
         }
