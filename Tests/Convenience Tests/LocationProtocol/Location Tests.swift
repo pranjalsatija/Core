@@ -6,9 +6,9 @@
 //  Copyright © 2018 Pranjal Satija. All rights reserved.
 //
 
+@testable import Core
 import CoreLocation
 import XCTest
-@testable import Core
 
 class LocationTests: XCTestCase {
     let points: [(latitude: Double, longitude: Double)] = [

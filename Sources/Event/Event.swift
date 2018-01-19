@@ -22,7 +22,10 @@ public class Event: Object {
     }
 
     public var originURL: URL? {
-        guard let originURLString = self["originURL"] as? String else { return nil }
+        guard let originURLString = self["originURL"] as? String else {
+            return nil
+        }
+
         return URL(string: originURLString)
     }
 
@@ -47,8 +50,8 @@ public class Event: Object {
 }
 
 // MARK: Event Data
-extension Event {
-    public func getCoverPhoto(api: APIProtocol.Type = ParseAPI.self, completion: @escaping CompletionHandler<UIImage>) {
+public extension Event {
+    func getCoverPhoto(api: APIProtocol.Type = ParseAPI.self, completion: @escaping CompletionHandler<UIImage>) {
         guard let coverPhoto = coverPhoto else {
             completion(Error.missingData, nil)
             return
@@ -67,12 +70,12 @@ extension Event {
 }
 
 // MARK: Queries
-extension Event {
-    public static func getCurrentlyOccurringEvents(near location: LocationType,
-                                                   maxDistance: Double,
-                                                   limit: Int = 20,
-                                                   api: APIProtocol.Type = ParseAPI.self,
-                                                   completion: @escaping CompletionHandler<[Event]>) {
+public extension Event {
+    static func getCurrentlyOccurringEvents(near location: LocationType,
+                                            maxDistance: Double,
+                                            limit: Int = 20,
+                                            api: APIProtocol.Type = ParseAPI.self,
+                                            completion: @escaping CompletionHandler<[Event]>) {
         let query = baseQuery()
         query.whereKey("location", nearGeoPoint: PFGeoPoint(location), withinKilometers: maxDistance)
         query.whereKey("startDate", lessThan: Date())
@@ -83,11 +86,11 @@ extension Event {
         }
     }
 
-    public static func getRelevantEvents(in geoBox: GeoBox,
-                                         categories: [Category],
-                                         limit: Int = 50,
-                                         api: APIProtocol.Type = ParseAPI.self,
-                                         completion: @escaping CompletionHandler<[Event]>) {
+    static func getRelevantEvents(in geoBox: GeoBox,
+                                  categories: [Category],
+                                  limit: Int = 50,
+                                  api: APIProtocol.Type = ParseAPI.self,
+                                  completion: @escaping CompletionHandler<[Event]>) {
 
         //swiftlint:disable:next force_cast
         let currentlyOccuringQuery = baseQuery() as! PFQuery<PFObject>

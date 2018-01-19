@@ -307,6 +307,7 @@
 				AF9F8958200D4EEF002059AB /* Convenience */,
 				AF6A257D200C580A00C3E503 /* Event */,
 				AFF8AD7D20118B4F00CFC16B /* Like */,
+				AFF8AD8B2011B61100CFC16B /* NotificationManager */,
 				AF39D95A200A957F003564C7 /* NotificationOpen */,
 				AF39D9492009D2FA003564C7 /* Parse Extensions */,
 				AF48F8C6200AE84400725F44 /* Referral */,
@@ -451,6 +452,13 @@
 				AFF8AD862011B22800CFC16B /* PFUser+Like Tests.swift */,
 			);
 			path = "Like Tests";
+			sourceTree = "<group>";
+		};
+		AFF8AD8B2011B61100CFC16B /* NotificationManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NotificationManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

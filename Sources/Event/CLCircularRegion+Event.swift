@@ -9,8 +9,8 @@
 import CoreLocation
 
 // MARK: CLCircularRegion Extension
-extension CLCircularRegion {
-    convenience public init(event: Event, identifier: String? = nil) {
+public extension CLCircularRegion {
+    convenience init(event: Event, identifier: String? = nil) {
         self.init(
             center: CLLocationCoordinate2D.init(event.location),
             radius: event.radius.doubleValue,

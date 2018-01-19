@@ -23,8 +23,8 @@ public protocol APIProtocol {
 }
 
 // MARK: Asynchronous Default Implementations
-extension APIProtocol {
-    public static func findFirstObject<T>(matching query: PFQuery<T>, completion: @escaping CompletionHandler<T>) {
+public extension APIProtocol {
+    static func findFirstObject<T>(matching query: PFQuery<T>, completion: @escaping CompletionHandler<T>) {
         background {
             do {
                 try completion(nil, findFirstObject(matching: query))
@@ -34,7 +34,7 @@ extension APIProtocol {
         }
     }
 
-    public static func findObjects<T>(matching query: PFQuery<T>, completion: @escaping CompletionHandler<[T]>) {
+    static func findObjects<T>(matching query: PFQuery<T>, completion: @escaping CompletionHandler<[T]>) {
         background {
             do {
                 try completion(nil, findObjects(matching: query))
@@ -44,7 +44,7 @@ extension APIProtocol {
         }
     }
 
-    public static func getData(from file: PFFile, completion: @escaping CompletionHandler<Data>) {
+    static func getData(from file: PFFile, completion: @escaping CompletionHandler<Data>) {
         background {
             do {
                 try completion(nil, getData(from: file))
@@ -54,7 +54,7 @@ extension APIProtocol {
         }
     }
 
-    public static func save(_ object: PFObject, completion: @escaping (Swift.Error?) -> Void) {
+    static func save(_ object: PFObject, completion: @escaping (Swift.Error?) -> Void) {
         background {
             do {
                 try save(object)

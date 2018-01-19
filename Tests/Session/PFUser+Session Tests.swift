@@ -6,8 +6,8 @@
 //  Copyright © 2018 Pranjal Satija. All rights reserved.
 //
 
-import XCTest
 @testable import Core
+import XCTest
 
 class PFUserSessionTests: XCTestCase {
     override func setUp() {
@@ -19,7 +19,11 @@ class PFUserSessionTests: XCTestCase {
         let user = PFUser()
 
         MockAPI.onSave {(object) in
-            guard let session = object as? Session else { return }
+            guard let session = object as? Session else {
+                XCTFail()
+                return
+            }
+
             XCTAssert(session.acl == .onlyAccessibleByMasterKey)
             XCTAssert(session.user == user)
             saveExpectation.fulfill()
@@ -34,7 +38,12 @@ class PFUserSessionTests: XCTestCase {
         let user = PFUser(), session = Session(user: user, startDate: Date())
 
         MockAPI.onSave {(object) in
-            guard let session = object as? Session, session.user == user else { return }
+            guard let session = object as? Session else {
+                XCTFail()
+                return
+            }
+
+            XCTAssert(session.user == user)
             saveExpectation.fulfill()
         }
 

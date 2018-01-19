@@ -15,10 +15,10 @@ public class EventCategory: PFObject {
 }
 
 // MARK: Images
-extension EventCategory {
+public extension EventCategory {
     /// Downloads this category's icon image.
-    public func getIconImage(api: APIProtocol.Type = ParseAPI.self,
-                             _ completion: @escaping CompletionHandler<UIImage>) {
+    func getIconImage(api: APIProtocol.Type = ParseAPI.self,
+                      completion: @escaping CompletionHandler<UIImage>) {
         api.getData(from: iconFile) {(error, data) in
             if let error = error {
                 completion(error, nil)

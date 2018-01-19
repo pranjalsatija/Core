@@ -37,7 +37,10 @@ extension Session {
         query.whereKeyDoesNotExist("endDate")
         query.addDescendingOrder("startDate")
         api.findFirstObject(matching: query) {(_, session) in
-            guard let session = session else { return }
+            guard let session = session else {
+                return
+            }
+
             session.endDate = Date()
             api.saveEventually(session)
         }

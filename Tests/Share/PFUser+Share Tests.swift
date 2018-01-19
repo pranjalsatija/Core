@@ -6,8 +6,8 @@
 //  Copyright © 2018 Pranjal Satija. All rights reserved.
 //
 
-import XCTest
 @testable import Core
+import XCTest
 
 class PFUserShareTests: XCTestCase {
     override func setUp() {
@@ -19,7 +19,11 @@ class PFUserShareTests: XCTestCase {
         let user = PFUser(), event = Event()
 
         MockAPI.onSave {(object) in
-            guard let share = object as? Share else { return }
+            guard let share = object as? Share else {
+                XCTFail()
+                return
+            }
+
             XCTAssert(share.user == user)
             XCTAssert(share.event == event)
             saveExpectation.fulfill()

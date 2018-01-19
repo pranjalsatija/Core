@@ -11,13 +11,16 @@
 public class Object: PFObject { }
 
 // MARK: Equality
-extension Object {
-    public override func isEqual(_ object: Any?) -> Bool {
-        guard let object = object as? Object else { return false }
+public extension Object {
+    override func isEqual(_ object: Any?) -> Bool {
+        guard let object = object as? Object else {
+            return false
+        }
+
         return object.objectId == self.objectId
     }
 
-    public convenience init(pointerWithObjectID objectID: String) {
+    convenience init(pointerWithObjectID objectID: String) {
         self.init(withoutDataWithObjectId: objectID)
     }
 }

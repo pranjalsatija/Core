@@ -6,8 +6,8 @@
 //  Copyright © 2018 Pranjal Satija. All rights reserved.
 //
 
-import XCTest
 @testable import Core
+import XCTest
 
 class PFUserNotificationOpenTests: XCTestCase {
     override func setUp() {
@@ -19,7 +19,11 @@ class PFUserNotificationOpenTests: XCTestCase {
         let user = PFUser(), event = Event(pointerWithObjectID: "abcxyz")
 
         MockAPI.onSave {(object) in
-            guard let notificationOpen = object as? NotificationOpen else { return }
+            guard let notificationOpen = object as? NotificationOpen else {
+                XCTFail()
+                return
+            }
+
             XCTAssert(notificationOpen.acl == .onlyAccessibleByMasterKey)
             XCTAssert(notificationOpen.user == user)
             XCTAssert(notificationOpen.event == event)

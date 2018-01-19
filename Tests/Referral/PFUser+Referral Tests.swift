@@ -6,8 +6,8 @@
 //  Copyright © 2018 Pranjal Satija. All rights reserved.
 //
 
-import XCTest
 @testable import Core
+import XCTest
 
 class PFUserReferralTests: XCTestCase {
     override func setUp() {
@@ -20,7 +20,11 @@ class PFUserReferralTests: XCTestCase {
         let event = Event()
 
         MockAPI.onSave {(object) in
-            guard let referral = object as? Referral else { return }
+            guard let referral = object as? Referral else {
+                XCTFail()
+                return
+            }
+
             XCTAssert(referral.acl == .onlyAccessibleByMasterKey)
             XCTAssert(referral.sender == sender)
             XCTAssert(referral.receiver == receiver)

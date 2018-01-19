@@ -6,8 +6,8 @@
 //  Copyright © 2018 Pranjal Satija. All rights reserved.
 //
 
-import XCTest
 @testable import Core
+import XCTest
 
 class EventCategoryTests: XCTestCase {
     override func setUp() {

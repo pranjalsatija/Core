@@ -7,14 +7,14 @@
 //
 
 // MARK: PFUser Extension
-extension PFUser {
+public extension PFUser {
     /// Starts a session and assigns it to this user.
-    public func startSession(api: APIProtocol.Type = ParseAPI.self) {
+    func startSession(api: APIProtocol.Type = ParseAPI.self) {
         Session.create(with: self, api: api)
     }
 
     /// Ends the latest session belonging to this user.
-    public func endLatestSession(api: APIProtocol.Type = ParseAPI.self) {
+    func endLatestSession(api: APIProtocol.Type = ParseAPI.self) {
         Session.endLatest(belongingTo: self, api: api)
     }
 }

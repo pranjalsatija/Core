@@ -11,7 +11,9 @@ import Parse
 
 private var setupWasPerformed = false
 func performSetupIfNeeded() {
-    guard !setupWasPerformed else { return }
+    guard !setupWasPerformed else {
+        return
+    }
 
     let config = ParseClientConfiguration {(config) in
         config.applicationId = "mark"
