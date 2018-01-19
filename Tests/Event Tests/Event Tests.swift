@@ -121,7 +121,7 @@ class EventTests: XCTestCase {
     func testGetRelevantEventsInBox() {
         //swiftlint:disable:next nesting
         struct Box: GeoBox {
-            let northeast: LocationProtocol, southwest: LocationProtocol
+            let northeast: LocationType, southwest: LocationType
         }
 
         let dallas = Location(latitude: 32.7767, longitude: -96.7970)
@@ -152,7 +152,7 @@ class EventTests: XCTestCase {
     func testGetRelevantEventsInBoxWithError() {
         //swiftlint:disable:next nesting
         struct Box: GeoBox {
-            let northeast: LocationProtocol, southwest: LocationProtocol
+            let northeast: LocationType, southwest: LocationType
         }
 
         //swiftlint:disable:next nesting

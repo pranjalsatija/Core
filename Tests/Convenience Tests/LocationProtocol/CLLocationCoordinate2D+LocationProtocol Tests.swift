@@ -23,7 +23,7 @@ class CLLocationCoordinate2DTests: XCTestCase {
     }
 
     func testEquality() {
-        let locations: [LocationProtocol] = points.map {(latitude, longitude) in
+        let locations: [LocationType] = points.map {(latitude, longitude) in
             CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         }
 

@@ -23,7 +23,7 @@ class CLLocationLocationProtocolTests: XCTestCase {
     }
 
     func testEquality() {
-        let locations: [LocationProtocol] = points.map {(latitude, longitude) in
+        let locations: [LocationType] = points.map {(latitude, longitude) in
             CLLocation(latitude: latitude, longitude: longitude)
         }
 

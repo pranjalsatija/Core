@@ -68,7 +68,7 @@ extension Event {
 
 // MARK: Queries
 extension Event {
-    public static func getCurrentlyOccurringEvents(near location: LocationProtocol,
+    public static func getCurrentlyOccurringEvents(near location: LocationType,
                                                    maxDistance: Double,
                                                    limit: Int = 20,
                                                    api: APIProtocol.Type = ParseAPI.self,

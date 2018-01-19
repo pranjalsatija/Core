@@ -13,7 +13,7 @@
 		AF38E6B6200BD1AF006F9B02 /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6B5200BD1AF006F9B02 /* Share.swift */; };
 		AF38E6B8200BD20A006F9B02 /* PFUser+Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6B7200BD20A006F9B02 /* PFUser+Share.swift */; };
 		AF38E6BB200BD269006F9B02 /* Share Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6BA200BD269006F9B02 /* Share Tests.swift */; };
-		AF38E6BE200BD3DE006F9B02 /* LocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6BD200BD3DE006F9B02 /* LocationProtocol.swift */; };
+		AF38E6BE200BD3DE006F9B02 /* LocationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6BD200BD3DE006F9B02 /* LocationType.swift */; };
 		AF38E6C0200BD41B006F9B02 /* CLLocation+LocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6BF200BD41B006F9B02 /* CLLocation+LocationProtocol.swift */; };
 		AF38E6C2200BD50F006F9B02 /* CLLocationCoordinate2D+LocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6C1200BD50F006F9B02 /* CLLocationCoordinate2D+LocationProtocol.swift */; };
 		AF38E6C4200BD541006F9B02 /* PFGeoPoint+LocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF38E6C3200BD541006F9B02 /* PFGeoPoint+LocationProtocol.swift */; };
@@ -89,7 +89,7 @@
 		AF38E6B5200BD1AF006F9B02 /* Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		AF38E6B7200BD20A006F9B02 /* PFUser+Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Share.swift"; sourceTree = "<group>"; };
 		AF38E6BA200BD269006F9B02 /* Share Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Share Tests.swift"; sourceTree = "<group>"; };
-		AF38E6BD200BD3DE006F9B02 /* LocationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProtocol.swift; sourceTree = "<group>"; };
+		AF38E6BD200BD3DE006F9B02 /* LocationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationType.swift; sourceTree = "<group>"; };
 		AF38E6BF200BD41B006F9B02 /* CLLocation+LocationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+LocationProtocol.swift"; sourceTree = "<group>"; };
 		AF38E6C1200BD50F006F9B02 /* CLLocationCoordinate2D+LocationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+LocationProtocol.swift"; sourceTree = "<group>"; };
 		AF38E6C3200BD541006F9B02 /* PFGeoPoint+LocationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFGeoPoint+LocationProtocol.swift"; sourceTree = "<group>"; };
@@ -193,16 +193,16 @@
 			path = Share;
 			sourceTree = "<group>";
 		};
-		AF38E6BC200BD3D2006F9B02 /* LocationProtocol */ = {
+		AF38E6BC200BD3D2006F9B02 /* LocationType */ = {
 			isa = PBXGroup;
 			children = (
 				AF38E6BF200BD41B006F9B02 /* CLLocation+LocationProtocol.swift */,
 				AF38E6C1200BD50F006F9B02 /* CLLocationCoordinate2D+LocationProtocol.swift */,
 				AF6A2579200C4EC500C3E503 /* Location.swift */,
-				AF38E6BD200BD3DE006F9B02 /* LocationProtocol.swift */,
+				AF38E6BD200BD3DE006F9B02 /* LocationType.swift */,
 				AF38E6C3200BD541006F9B02 /* PFGeoPoint+LocationProtocol.swift */,
 			);
-			path = LocationProtocol;
+			path = LocationType;
 			sourceTree = "<group>";
 		};
 		AF39D92A2009C625003564C7 /* Frameworks */ = {
@@ -388,7 +388,7 @@
 				AF46A1B7200EC8D200CA47BE /* Date Extensions.swift */,
 				AF3DAAEF20085D45001A834F /* Error.swift */,
 				AF46A1B5200EC5F900CA47BE /* GeoBox.swift */,
-				AF38E6BC200BD3D2006F9B02 /* LocationProtocol */,
+				AF38E6BC200BD3D2006F9B02 /* LocationType */,
 				AF27DEC620096E440062F0F1 /* Multithreading.swift */,
 				AFEC283F200DD8FA003348DF /* Object.swift */,
 			);
@@ -588,7 +588,7 @@
 				AF46A1B8200EC8D200CA47BE /* Date Extensions.swift in Sources */,
 				AF6A257A200C4EC500C3E503 /* Location.swift in Sources */,
 				AF39D94B2009D31B003564C7 /* PFSubclassingExtension.swift in Sources */,
-				AF38E6BE200BD3DE006F9B02 /* LocationProtocol.swift in Sources */,
+				AF38E6BE200BD3DE006F9B02 /* LocationType.swift in Sources */,
 				AF6A257F200C581700C3E503 /* EventOrigin.swift in Sources */,
 				AF46A1B4200EC20E00CA47BE /* EventCategory.swift in Sources */,
 				AF3DAAF420085DC5001A834F /* PFACL Extension.swift in Sources */,

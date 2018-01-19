@@ -7,8 +7,8 @@
 //
 
 // MARK: PFGeoPoint Extension
-extension PFGeoPoint: LocationProtocol {
-    public convenience init(_ location: LocationProtocol) {
+extension PFGeoPoint: LocationType {
+    public convenience init(_ location: LocationType) {
         self.init(latitude: location.latitude, longitude: location.longitude)
     }
 }

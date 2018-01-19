@@ -6,7 +6,7 @@
 //  Copyright © 2018 Pranjal Satija. All rights reserved.
 //
 
-public struct Location: LocationProtocol {
+public struct Location: LocationType {
     public let latitude, longitude: Double
 
     public init(latitude: Double, longitude: Double) {
@@ -14,7 +14,7 @@ public struct Location: LocationProtocol {
         self.longitude = longitude
     }
 
-    public init(_ location: LocationProtocol) {
+    public init(_ location: LocationType) {
         self = Location(latitude: location.latitude, longitude: location.longitude)
     }
 }

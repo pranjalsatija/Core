@@ -8,6 +8,6 @@
 
 /// A protocol used to represent types that can be used for geospatial queries.
 public protocol GeoBox {
-    var northeast: LocationProtocol { get }
-    var southwest: LocationProtocol { get }
+    var northeast: LocationType { get }
+    var southwest: LocationType { get }
 }

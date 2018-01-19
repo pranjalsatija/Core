@@ -23,7 +23,7 @@ class PFGeoPointLocationProtocolTests: XCTestCase {
     }
 
     func testEquality() {
-        let locations: [LocationProtocol] = points.map {(latitude, longitude) in
+        let locations: [LocationType] = points.map {(latitude, longitude) in
             PFGeoPoint(latitude: latitude, longitude: longitude)
         }
 

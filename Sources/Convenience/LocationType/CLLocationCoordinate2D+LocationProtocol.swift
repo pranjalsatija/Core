@@ -9,8 +9,8 @@
 import CoreLocation
 
 // MARK: CLLocationCoordinate2D Extension
-extension CLLocationCoordinate2D: LocationProtocol {
-    public init(_ location: LocationProtocol) {
+extension CLLocationCoordinate2D: LocationType {
+    public init(_ location: LocationType) {
         self.init(latitude: location.latitude, longitude: location.longitude)
     }
 }

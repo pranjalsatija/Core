@@ -9,7 +9,7 @@
 import CoreLocation
 
 // MARK: CLLocation Extension
-extension CLLocation: LocationProtocol {
+extension CLLocation: LocationType {
     public var latitude: Double {
         return coordinate.latitude
     }
@@ -18,7 +18,7 @@ extension CLLocation: LocationProtocol {
         return coordinate.longitude
     }
 
-    public convenience init(_ location: LocationProtocol) {
+    public convenience init(_ location: LocationType) {
         self.init(latitude: location.latitude, longitude: location.longitude)
     }
 }
