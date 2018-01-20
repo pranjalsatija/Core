@@ -8,6 +8,10 @@
 
 /// An implementation of `APIProtocol` that uses Parse as the backing API.
 public struct ParseAPI: APIProtocol {
+    public static func call(_ function: CloudFunction, parameters: [AnyHashable : Any]?) throws -> Any {
+        return try PFCloud.callFunction(function.name, withParameters: parameters)
+    }
+
     public static func findFirstObject<T>(matching query: PFQuery<T>) throws -> T {
         return try query.getFirstObject()
     }
@@ -24,6 +28,14 @@ public struct ParseAPI: APIProtocol {
         guard let query = T.query() as? PFQuery<T> else { throw Error.missingData }
         query.whereKey("objectId", equalTo: objectID)
         return try findFirstObject(matching: query)
+    }
+
+    public static func logIn(withUsername username: String, password: String) throws -> PFUser {
+        return try PFUser.logIn(withUsername: username, password: password)
+    }
+
+    public static func logOut() {
+        return User.logOut()
     }
 
     public static func save(_ object: PFObject) throws {

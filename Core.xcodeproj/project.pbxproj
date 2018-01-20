@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF1727C52013C1AE00DBDF33 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1727C42013C1AE00DBDF33 /* User.swift */; };
+		AF1727C72013C88A00DBDF33 /* CloudFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1727C62013C88A00DBDF33 /* CloudFunction.swift */; };
 		AF27DEC520096D680062F0F1 /* ParseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27DEC420096D680062F0F1 /* ParseAPI.swift */; };
 		AF27DEC720096E440062F0F1 /* Multithreading.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27DEC620096E440062F0F1 /* Multithreading.swift */; };
 		AF27DECA200970400062F0F1 /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27DEC9200970400062F0F1 /* APIProtocol.swift */; };
@@ -61,6 +63,7 @@
 		AF9F895A200D5E6F002059AB /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F8959200D5E6F002059AB /* CompletionHandler.swift */; };
 		AFA3334B2013258400DECD80 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA333492013258400DECD80 /* Bolts.framework */; };
 		AFA3334C2013258400DECD80 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA3334A2013258400DECD80 /* Parse.framework */; };
+		AFAB40692013F41B00891CDF /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB40682013F41B00891CDF /* UserError.swift */; };
 		AFACF8CB200AC77B0091DDF5 /* NotificationOpen Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */; };
 		AFB4AAF2200BCFA8007EABCE /* Referral Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */; };
 		AFB4AAF4200BD092007EABCE /* PFUser+Referral Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4AAF3200BD092007EABCE /* PFUser+Referral Tests.swift */; };
@@ -91,6 +94,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF1727C42013C1AE00DBDF33 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AF1727C62013C88A00DBDF33 /* CloudFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFunction.swift; sourceTree = "<group>"; };
 		AF27DEC420096D680062F0F1 /* ParseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseAPI.swift; sourceTree = "<group>"; };
 		AF27DEC620096E440062F0F1 /* Multithreading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multithreading.swift; sourceTree = "<group>"; };
 		AF27DEC9200970400062F0F1 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
@@ -149,6 +154,7 @@
 		AF9F8959200D5E6F002059AB /* CompletionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
 		AFA333492013258400DECD80 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../Common Frameworks/Bolts.framework"; sourceTree = "<group>"; };
 		AFA3334A2013258400DECD80 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../Common Frameworks/Parse.framework"; sourceTree = "<group>"; };
+		AFAB40682013F41B00891CDF /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationOpen Tests.swift"; sourceTree = "<group>"; };
 		AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Referral Tests.swift"; sourceTree = "<group>"; };
 		AFB4AAF3200BD092007EABCE /* PFUser+Referral Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Referral Tests.swift"; sourceTree = "<group>"; };
@@ -184,6 +190,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF1727C32013C19600DBDF33 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				AF1727C42013C1AE00DBDF33 /* User.swift */,
+				AFAB40682013F41B00891CDF /* UserError.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		AF27DEC8200970350062F0F1 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +351,7 @@
 				AFC12E502013198700F396E3 /* Report */,
 				AF3DAB0B2008633F001A834F /* Session */,
 				AF38E6B4200BD197006F9B02 /* Share */,
+				AF1727C32013C19600DBDF33 /* User */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -399,6 +415,7 @@
 		AF9F8958200D4EEF002059AB /* Convenience */ = {
 			isa = PBXGroup;
 			children = (
+				AF1727C62013C88A00DBDF33 /* CloudFunction.swift */,
 				AF9F8959200D5E6F002059AB /* CompletionHandler.swift */,
 				AF46A1B7200EC8D200CA47BE /* Date Extensions.swift */,
 				AF3DAAEF20085D45001A834F /* Error.swift */,
@@ -628,6 +645,7 @@
 				AF38E6C0200BD41B006F9B02 /* CLLocation+LocationProtocol.swift in Sources */,
 				AFC12E54201319BB00F396E3 /* ReportReason.swift in Sources */,
 				AF39D95C200A9597003564C7 /* PFUser+NotificationOpen.swift in Sources */,
+				AFAB40692013F41B00891CDF /* UserError.swift in Sources */,
 				AF46A1B8200EC8D200CA47BE /* Date Extensions.swift in Sources */,
 				AF6A257A200C4EC500C3E503 /* Location.swift in Sources */,
 				AF39D94B2009D31B003564C7 /* PFSubclassingExtension.swift in Sources */,
@@ -639,6 +657,7 @@
 				AF48F8C8200AE85500725F44 /* Referral.swift in Sources */,
 				AFC12E522013199600F396E3 /* Report.swift in Sources */,
 				AF6A2583200C5DE100C3E503 /* CLCircularRegion+Event.swift in Sources */,
+				AF1727C72013C88A00DBDF33 /* CloudFunction.swift in Sources */,
 				AF27DEC720096E440062F0F1 /* Multithreading.swift in Sources */,
 				AF38E6B8200BD20A006F9B02 /* PFUser+Share.swift in Sources */,
 				AF3DAAF020085D45001A834F /* Error.swift in Sources */,
@@ -657,6 +676,7 @@
 				AF27DECA200970400062F0F1 /* APIProtocol.swift in Sources */,
 				AF3DAB0D2008634A001A834F /* Session.swift in Sources */,
 				AF3DAB0F200864D1001A834F /* PFUser+Session.swift in Sources */,
+				AF1727C52013C1AE00DBDF33 /* User.swift in Sources */,
 				AFC12E5620131AD900F396E3 /* PFUser+Report.swift in Sources */,
 				AF6A257C200C4F3A00C3E503 /* Event.swift in Sources */,
 				AF27DEC520096D680062F0F1 /* ParseAPI.swift in Sources */,
