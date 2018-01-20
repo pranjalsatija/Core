@@ -22,8 +22,6 @@
 		AF39D93A2009CB51003564C7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF39D92F2009C633003564C7 /* AudioToolbox.framework */; };
 		AF39D93B2009CB55003564C7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF39D92D2009C62F003564C7 /* SystemConfiguration.framework */; };
 		AF39D93C2009CB5B003564C7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AF39D92B2009C625003564C7 /* libsqlite3.tbd */; };
-		AF39D9422009CC4A003564C7 /* Bolts.framework in Resources */ = {isa = PBXBuildFile; fileRef = AF3DAAED20085CDD001A834F /* Bolts.framework */; };
-		AF39D9432009CC4A003564C7 /* Parse.framework in Resources */ = {isa = PBXBuildFile; fileRef = AF3DAAEB20085CD7001A834F /* Parse.framework */; };
 		AF39D9462009CDEC003564C7 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D9442009CD1F003564C7 /* Setup.swift */; };
 		AF39D9482009D00B003564C7 /* Multithreading Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D9472009D00B003564C7 /* Multithreading Tests.swift */; };
 		AF39D94B2009D31B003564C7 /* PFSubclassingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D94A2009D31B003564C7 /* PFSubclassingExtension.swift */; };
@@ -33,8 +31,6 @@
 		AF39D959200A9279003564C7 /* NotificationOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D958200A9279003564C7 /* NotificationOpen.swift */; };
 		AF39D95C200A9597003564C7 /* PFUser+NotificationOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D95B200A9597003564C7 /* PFUser+NotificationOpen.swift */; };
 		AF3DAADD20085C03001A834F /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = AF3DAACF20085C03001A834F /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF3DAAEC20085CD7001A834F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3DAAEB20085CD7001A834F /* Parse.framework */; };
-		AF3DAAEE20085CDE001A834F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF3DAAED20085CDD001A834F /* Bolts.framework */; };
 		AF3DAAF020085D45001A834F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DAAEF20085D45001A834F /* Error.swift */; };
 		AF3DAAF420085DC5001A834F /* PFACL Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DAAF320085DC5001A834F /* PFACL Extension.swift */; };
 		AF3DAB0D2008634A001A834F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DAB0C2008634A001A834F /* Session.swift */; };
@@ -63,6 +59,8 @@
 		AF9EA5BB20125F4E000BAE78 /* NotificationCenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9EA5BA20125F4E000BAE78 /* NotificationCenterType.swift */; };
 		AF9EA5BD20126053000BAE78 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9EA5BC20126053000BAE78 /* NotificationManager.swift */; };
 		AF9F895A200D5E6F002059AB /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F8959200D5E6F002059AB /* CompletionHandler.swift */; };
+		AFA3334B2013258400DECD80 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA333492013258400DECD80 /* Bolts.framework */; };
+		AFA3334C2013258400DECD80 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA3334A2013258400DECD80 /* Parse.framework */; };
 		AFACF8CB200AC77B0091DDF5 /* NotificationOpen Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */; };
 		AFB4AAF2200BCFA8007EABCE /* Referral Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */; };
 		AFB4AAF4200BD092007EABCE /* PFUser+Referral Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4AAF3200BD092007EABCE /* PFUser+Referral Tests.swift */; };
@@ -121,8 +119,6 @@
 		AF3DAAD020085C03001A834F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF3DAAD520085C03001A834F /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3DAADC20085C03001A834F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF3DAAEB20085CD7001A834F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		AF3DAAED20085CDD001A834F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		AF3DAAEF20085D45001A834F /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		AF3DAAF320085DC5001A834F /* PFACL Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFACL Extension.swift"; sourceTree = "<group>"; };
 		AF3DAB0C2008634A001A834F /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -151,6 +147,8 @@
 		AF9EA5BA20125F4E000BAE78 /* NotificationCenterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterType.swift; sourceTree = "<group>"; };
 		AF9EA5BC20126053000BAE78 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		AF9F8959200D5E6F002059AB /* CompletionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
+		AFA333492013258400DECD80 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../Common Frameworks/Bolts.framework"; sourceTree = "<group>"; };
+		AFA3334A2013258400DECD80 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../Common Frameworks/Parse.framework"; sourceTree = "<group>"; };
 		AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationOpen Tests.swift"; sourceTree = "<group>"; };
 		AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Referral Tests.swift"; sourceTree = "<group>"; };
 		AFB4AAF3200BD092007EABCE /* PFUser+Referral Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Referral Tests.swift"; sourceTree = "<group>"; };
@@ -175,11 +173,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA3334B2013258400DECD80 /* Bolts.framework in Frameworks */,
+				AFA3334C2013258400DECD80 /* Parse.framework in Frameworks */,
 				AF39D93B2009CB55003564C7 /* SystemConfiguration.framework in Frameworks */,
 				AF39D93C2009CB5B003564C7 /* libsqlite3.tbd in Frameworks */,
 				AF39D93A2009CB51003564C7 /* AudioToolbox.framework in Frameworks */,
-				AF3DAAEE20085CDE001A834F /* Bolts.framework in Frameworks */,
-				AF3DAAEC20085CD7001A834F /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +226,8 @@
 		AF39D92A2009C625003564C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFA333492013258400DECD80 /* Bolts.framework */,
+				AFA3334A2013258400DECD80 /* Parse.framework */,
 				AF39D92F2009C633003564C7 /* AudioToolbox.framework */,
 				AF39D92D2009C62F003564C7 /* SystemConfiguration.framework */,
 				AF39D92B2009C625003564C7 /* libsqlite3.tbd */,
@@ -275,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				AF3DAAE620085C32001A834F /* Sources */,
-				AF3DAAE720085C3E001A834F /* Resources */,
 				AF3DAAD920085C03001A834F /* Tests */,
 				AF3DAACE20085C03001A834F /* Config */,
 				AF3DAACD20085C03001A834F /* Products */,
@@ -339,23 +338,6 @@
 				AF38E6B4200BD197006F9B02 /* Share */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		AF3DAAE720085C3E001A834F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				AF3DAAE820085C45001A834F /* Frameworks */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		AF3DAAE820085C45001A834F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AF3DAAED20085CDD001A834F /* Bolts.framework */,
-				AF3DAAEB20085CD7001A834F /* Parse.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		AF3DAB0B2008633F001A834F /* Session */ = {
@@ -609,8 +591,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF39D9422009CC4A003564C7 /* Bolts.framework in Resources */,
-				AF39D9432009CC4A003564C7 /* Parse.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,8 +839,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Resources/Frameworks/**",
-					"$(PROJECT_DIR)/Resources/Frameworks",
+					"../Common\\ Frameworks",
 				);
 				INFOPLIST_FILE = Config/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -889,8 +868,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Resources/Frameworks/**",
-					"$(PROJECT_DIR)/Resources/Frameworks",
+					"../Common\\ Frameworks",
 				);
 				INFOPLIST_FILE = Config/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -910,10 +888,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X872NB7KGG;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Resources/Frameworks/**",
-					"$(PROJECT_DIR)/Resources/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "../Common\\ Frameworks";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = events.mark.CoreTests;
@@ -929,10 +904,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X872NB7KGG;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/Resources/Frameworks/**",
-					"$(PROJECT_DIR)/Resources/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "../Common\\ Frameworks";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = events.mark.CoreTests;
