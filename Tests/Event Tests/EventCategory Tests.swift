@@ -15,6 +15,7 @@ class EventCategoryTests: XCTestCase {
     }
 
     func testGetIconImage() {
+        let downloadExpectation = expectation(description: "Download")
         let bundle = Bundle(for: EventCategoryTests.self)
         let bundleImage = UIImage(named: "testImage.jpg", in: bundle, compatibleWith: nil)
         guard let image = bundleImage, let imageData = UIImageJPEGRepresentation(image, 1.0) else {
@@ -22,7 +23,6 @@ class EventCategoryTests: XCTestCase {
             return
         }
 
-        let downloadExpectation = expectation(description: "download")
         let category = Event.Category()
         category.iconFile = PFFile(data: imageData)
 
@@ -40,13 +40,14 @@ class EventCategoryTests: XCTestCase {
     }
 
     func testGetIconImageWithError() {
+        let downloadExpectation = expectation(description: "Download")
+
         //swiftlint:disable:next nesting
         enum TestError: Swift.Error {
             case error
         }
 
         let data = Data()
-        let downloadExpectation = expectation(description: "download")
         let category = Event.Category()
         category.iconFile = PFFile(data: data)
 
@@ -69,8 +70,8 @@ class EventCategoryTests: XCTestCase {
     }
 
     func testGetIconImageWithInvalidImage() {
+        let downloadExpectation = expectation(description: "Download")
         let data = Data()
-        let downloadExpectation = expectation(description: "download")
         let category = Event.Category()
         category.iconFile = PFFile(data: data)
 

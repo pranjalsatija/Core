@@ -15,6 +15,7 @@ class LikeTests: XCTestCase {
     }
 
     func testCreate() {
+        let saveExpectation = expectation(description: "Save")
         let event = Event()
         let user = PFUser()
 
@@ -26,9 +27,11 @@ class LikeTests: XCTestCase {
 
             XCTAssert(like.event == event)
             XCTAssert(like.user == user)
+            saveExpectation.fulfill()
         }
 
         Like.create(event: event, user: user, using: MockAPI.self)
+        waitForExpectations(timeout: 3)
     }
 
     func testExists() {

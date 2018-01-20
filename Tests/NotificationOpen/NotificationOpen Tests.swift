@@ -23,6 +23,7 @@ class NotificationOpenTests: XCTestCase {
                 XCTFail()
                 return
             }
+
             XCTAssert(notificationOpen.acl == .onlyAccessibleByMasterKey)
             XCTAssert(notificationOpen.user == user)
             XCTAssert(notificationOpen.event == event)

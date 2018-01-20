@@ -29,6 +29,7 @@ class NotificationManagerTests: XCTestCase {
     }
 
     func testGetAuthorizationStatus() {
+        let authExpectation = expectation(description: "Authorization")
         let expectedStatus = UNAuthorizationStatus.authorized
         notificationCenter.onGetAuthorizationStatus {
             return expectedStatus
@@ -37,10 +38,15 @@ class NotificationManagerTests: XCTestCase {
         NotificationManager.getAuthorizationStatus(from: notificationCenter) {(status) in
             XCTAssert(status == expectedStatus)
             XCTAssert(Thread.isMainThread)
+            authExpectation.fulfill()
         }
+
+        waitForExpectations(timeout: 3)
     }
 
     func testRemoveRequestsMatchingPredicate() {
+        let removeExpecation = expectation(description: "Remove")
+
         let titles = [
             "#remove Test Notification 1",
             "#include Test Notification 2",
@@ -64,12 +70,16 @@ class NotificationManagerTests: XCTestCase {
         notificationCenter.onRemoveRequests {(requestsBeingRemoved) in
             XCTAssert(requestsBeingRemoved == requests.filter(predicate))
             XCTAssert(Thread.isMainThread)
+            removeExpecation.fulfill()
         }
 
         NotificationManager.removeAllRequests(where: predicate, from: notificationCenter)
+        waitForExpectations(timeout: 3)
     }
 
     func testRemoveRequestWithID() {
+        let removeExpectation = expectation(description: "Remove")
+
         let titles = [
             "#removeThisRequest",
             "Test Notification 2",
@@ -93,9 +103,11 @@ class NotificationManagerTests: XCTestCase {
         notificationCenter.onRemoveRequests {(requestsBeingRemoved) in
             XCTAssert(requestsBeingRemoved == requests.filter(predicate))
             XCTAssert(Thread.isMainThread)
+            removeExpectation.fulfill()
         }
 
         NotificationManager.removeRequest(withID: "#removeThisRequest", from: notificationCenter)
+        waitForExpectations(timeout: 3)
     }
 
     func testRequestAuthorization() {
@@ -138,6 +150,7 @@ class NotificationManagerTests: XCTestCase {
     }
 
     func testScheduleAtDate() {
+        let scheduleExpectation = expectation(description: "Schedule")
         let now = Date(), triggerDate = now.addingTimeInterval(15.seconds)
         let content = UNMutableNotificationContent()
         content.title = "Test Notification"
@@ -156,12 +169,14 @@ class NotificationManagerTests: XCTestCase {
             let correctIntervalRange = (0.99 * correctInterval)...(1.01 * correctInterval)
             XCTAssert(correctIntervalRange.contains(trigger.timeInterval))
             XCTAssert(Thread.isMainThread)
+            scheduleExpectation.fulfill()
         }
 
         NotificationManager.schedule(content,
                                      at: triggerDate,
                                      withID: "testSchedule",
                                      using: notificationCenter)
+        waitForExpectations(timeout: 3)
     }
 
     func testScheduleAtDateWithInvalidDate() {
@@ -180,6 +195,7 @@ class NotificationManagerTests: XCTestCase {
     }
 
     func testScheduleAtRegion() {
+        let scheduleExpectation = expectation(description: "Schedule")
         let content = UNMutableNotificationContent()
         content.title = "Test Notification"
         content.body = "This is a test notification."
@@ -197,8 +213,10 @@ class NotificationManagerTests: XCTestCase {
             XCTAssert(request.identifier == "testSchedule")
             XCTAssert(trigger.region == region)
             XCTAssert(Thread.isMainThread)
+            scheduleExpectation.fulfill()
         }
 
         NotificationManager.schedule(content, at: region, withID: "testSchedule", using: notificationCenter)
+        waitForExpectations(timeout: 3)
     }
 }
