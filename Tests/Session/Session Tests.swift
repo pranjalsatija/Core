@@ -29,7 +29,7 @@ class SessionTests: XCTestCase {
             saveExpectation.fulfill()
         }
 
-        Session.create(with: user, api: MockAPI.self)
+        Session.create(with: user, using: MockAPI.self)
         waitForExpectations(timeout: 3)
     }
 
@@ -52,7 +52,7 @@ class SessionTests: XCTestCase {
             return [session]
         }
 
-        Session.endLatest(belongingTo: user, api: MockAPI.self)
+        Session.endLatest(belongingTo: user, using: MockAPI.self)
         waitForExpectations(timeout: 3)
     }
 
@@ -69,7 +69,7 @@ class SessionTests: XCTestCase {
             return []
         }
 
-        Session.endLatest(belongingTo: user, api: MockAPI.self)
+        Session.endLatest(belongingTo: user, using: MockAPI.self)
         waitForExpectations(timeout: 3)
     }
 }

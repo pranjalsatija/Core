@@ -26,7 +26,7 @@ extension Referral {
 // MARK: API
 extension Referral {
     /// Creates and eventually saves a new referral with the given sender and receiver.
-    static func create(sender: PFUser, receiver: PFUser, event: Event, api: APIProtocol.Type = ParseAPI.self) {
+    static func create(sender: PFUser, receiver: PFUser, event: Event, using api: APIProtocol.Type = ParseAPI.self) {
         let referral = Referral(sender: sender, receiver: receiver, event: event)
         api.saveEventually(referral)
     }

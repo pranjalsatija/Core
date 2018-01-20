@@ -30,7 +30,7 @@ class EventCategoryTests: XCTestCase {
             return imageData
         }
 
-        category.getIconImage(api: MockAPI.self) {(_, loadedImage) in
+        category.getIconImage(from: MockAPI.self) {(_, loadedImage) in
             XCTAssert(loadedImage?.size == image.size)
             downloadExpectation.fulfill()
         }
@@ -53,7 +53,7 @@ class EventCategoryTests: XCTestCase {
             throw TestError.error
         }
 
-        category.getIconImage(api: MockAPI.self) {(error, _) in
+        category.getIconImage(from: MockAPI.self) {(error, _) in
             guard let error = error as? TestError else {
                 XCTFail()
                 return
@@ -76,7 +76,7 @@ class EventCategoryTests: XCTestCase {
             return data
         }
 
-        category.getIconImage(api: MockAPI.self) {(error, _) in
+        category.getIconImage(from: MockAPI.self) {(error, _) in
             guard let error = error as? Core.Error else {
                 XCTFail()
                 return

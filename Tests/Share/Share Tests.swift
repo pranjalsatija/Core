@@ -29,7 +29,7 @@ class ShareTests: XCTestCase {
             saveExpectation.fulfill()
         }
 
-        Share.create(user: user, event: event, api: MockAPI.self)
+        Share.create(user: user, event: event, using: MockAPI.self)
         waitForExpectations(timeout: 3)
     }
 }

@@ -36,7 +36,7 @@ class EventTests: XCTestCase {
             return imageData
         }
 
-        event.getCoverPhoto(api: MockAPI.self) {(_, coverPhoto) in
+        event.getCoverPhoto(from: MockAPI.self) {(_, coverPhoto) in
             XCTAssert(coverPhoto?.size == image.size)
         }
     }
@@ -61,7 +61,7 @@ class EventTests: XCTestCase {
             throw TestError.error
         }
 
-        event.getCoverPhoto(api: MockAPI.self) {(error, _) in
+        event.getCoverPhoto(from: MockAPI.self) {(error, _) in
             guard let error = error as? TestError else {
                 XCTFail()
                 return
@@ -85,7 +85,7 @@ class EventTests: XCTestCase {
             return imageData
         }
 
-        event.getCoverPhoto(api: MockAPI.self) {(error, _) in
+        event.getCoverPhoto(from: MockAPI.self) {(error, _) in
             guard let error = error as? Core.Error else {
                 XCTFail()
                 return
@@ -108,7 +108,7 @@ class EventTests: XCTestCase {
             return testEvents
         }
 
-        Event.getCurrentlyOccurringEvents(near: dallas, maxDistance: 50, api: MockAPI.self) {(_, events) in
+        Event.getCurrentlyOccurringEvents(near: dallas, maxDistance: 50, from: MockAPI.self) {(_, events) in
             guard let events = events else {
                 XCTFail()
                 return
@@ -139,7 +139,7 @@ class EventTests: XCTestCase {
             return testEvents
         }
 
-        Event.getRelevantEvents(in: box, categories: [], api: MockAPI.self) {(_, events) in
+        Event.getRelevantEvents(in: box, categories: [], from: MockAPI.self) {(_, events) in
             guard let events = events else {
                 XCTFail()
                 return
@@ -169,7 +169,7 @@ class EventTests: XCTestCase {
             throw TestError.testError
         }
 
-        Event.getRelevantEvents(in: box, categories: [], api: MockAPI.self) {(error, _) in
+        Event.getRelevantEvents(in: box, categories: [], from: MockAPI.self) {(error, _) in
             guard let error = error as? TestError else {
                 XCTFail()
                 return

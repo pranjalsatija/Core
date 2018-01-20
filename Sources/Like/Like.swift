@@ -24,7 +24,7 @@ extension Like {
 // MARK: API
 extension Like {
     /// Creates and eventually saves a new like with the specified event and user.
-    static func create(event: Event, user: PFUser, api: APIProtocol.Type = ParseAPI.self) {
+    static func create(event: Event, user: PFUser, using api: APIProtocol.Type = ParseAPI.self) {
         let like = Like(event: event, user: user)
         api.saveEventually(like)
     }
@@ -32,7 +32,7 @@ extension Like {
     /// Checks whether or not the specifed user has liked the specified event.
     static func exists(user: PFUser,
                        event: Event,
-                       api: APIProtocol.Type,
+                       using api: APIProtocol.Type,
                        completion: @escaping CompletionHandler<Bool>) {
         let query = baseQuery()
         query.whereKey("event", equalTo: event)

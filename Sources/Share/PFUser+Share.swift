@@ -9,7 +9,7 @@
 // MARK: PFUser Extension
 public extension PFUser {
     /// Registers that this user shared an event.
-    func registerShare(with event: Event, api: APIProtocol.Type = ParseAPI.self) {
-        Share.create(user: self, event: event, api: api)
+    func registerShare(with event: Event, using api: APIProtocol.Type = ParseAPI.self) {
+        Share.create(user: self, event: event, using: api)
     }
 }

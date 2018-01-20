@@ -9,7 +9,7 @@
 // MARK: PFUser Extension
 public extension PFUser {
     /// Registers the fact that this user opened the specified notification.
-    func registerNotificationOpen(userInfo: [String: Any], api: APIProtocol.Type = ParseAPI.self) {
-        NotificationOpen.create(with: self, userInfo: userInfo, api: api)
+    func registerNotificationOpen(userInfo: [String: Any], using api: APIProtocol.Type = ParseAPI.self) {
+        NotificationOpen.create(with: self, userInfo: userInfo, using: api)
     }
 }

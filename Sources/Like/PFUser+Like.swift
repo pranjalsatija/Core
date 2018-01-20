@@ -9,13 +9,13 @@
 public extension PFUser {
     /// Registers that this user liked a specified event.
     func like(event: Event, api: APIProtocol.Type = ParseAPI.self) {
-        Like.create(event: event, user: self, api: api)
+        Like.create(event: event, user: self, using: api)
     }
 
     /// Checks if this user has liked a specified event.
     func hasLiked(event: Event,
                   api: APIProtocol.Type = ParseAPI.self,
                   completion: @escaping CompletionHandler<Bool>) {
-        Like.exists(user: self, event: event, api: api, completion: completion)
+        Like.exists(user: self, event: event, using: api, completion: completion)
     }
 }

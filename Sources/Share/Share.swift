@@ -25,7 +25,7 @@ extension Share {
 // MARK: API
 extension Share {
     /// Creates and eventually saves a new referral with the given sender and receiver.
-    static func create(user: PFUser, event: Event, api: APIProtocol.Type = ParseAPI.self) {
+    static func create(user: PFUser, event: Event, using api: APIProtocol.Type = ParseAPI.self) {
         let share = Share(user: user, event: event)
         api.saveEventually(share)
     }

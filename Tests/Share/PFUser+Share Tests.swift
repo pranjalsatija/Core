@@ -29,7 +29,7 @@ class PFUserShareTests: XCTestCase {
             saveExpectation.fulfill()
         }
 
-        user.registerShare(with: event, api: MockAPI.self)
+        user.registerShare(with: event, using: MockAPI.self)
         waitForExpectations(timeout: 3)
     }
 }

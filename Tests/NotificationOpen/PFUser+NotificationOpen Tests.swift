@@ -32,7 +32,7 @@ class PFUserNotificationOpenTests: XCTestCase {
 
         user.registerNotificationOpen(userInfo: [
             "event": "abcxyz"
-        ], api: MockAPI.self)
+        ], using: MockAPI.self)
 
         waitForExpectations(timeout: 3)
     }

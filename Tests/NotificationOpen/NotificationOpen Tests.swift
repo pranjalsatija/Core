@@ -31,7 +31,7 @@ class NotificationOpenTests: XCTestCase {
 
         NotificationOpen.create(with: user, userInfo: [
             "event": "abcxyz"
-        ], api: MockAPI.self)
+        ], using: MockAPI.self)
         waitForExpectations(timeout: 3)
     }
 }

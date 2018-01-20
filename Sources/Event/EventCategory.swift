@@ -17,7 +17,7 @@ public class EventCategory: Object {
 // MARK: Images
 public extension EventCategory {
     /// Downloads this category's icon image.
-    func getIconImage(api: APIProtocol.Type = ParseAPI.self,
+    func getIconImage(from api: APIProtocol.Type = ParseAPI.self,
                       completion: @escaping CompletionHandler<UIImage>) {
         api.getData(from: iconFile) {(error, data) in
             if let error = error {

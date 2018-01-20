@@ -25,13 +25,13 @@ extension Session {
 // MARK: API
 extension Session {
     /// Creates and eventually saves a new session belonging to the specified user.
-    static func create(with user: PFUser, api: APIProtocol.Type = ParseAPI.self) {
+    static func create(with user: PFUser, using api: APIProtocol.Type = ParseAPI.self) {
         let session = Session(user: user, startDate: Date())
         api.saveEventually(session)
     }
 
     /// Ends the latest session belonging to the specified user.
-    static func endLatest(belongingTo user: PFUser, api: APIProtocol.Type = ParseAPI.self) {
+    static func endLatest(belongingTo user: PFUser, using api: APIProtocol.Type = ParseAPI.self) {
         let query = baseQuery()
         query.whereKey("user", equalTo: user)
         query.whereKeyDoesNotExist("endDate")

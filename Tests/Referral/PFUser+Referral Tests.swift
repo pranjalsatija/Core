@@ -32,7 +32,7 @@ class PFUserReferralTests: XCTestCase {
             saveExpectation.fulfill()
         }
 
-        receiver.registerReferral(from: sender, with: event, api: MockAPI.self)
+        receiver.registerReferral(from: sender, with: event, using: MockAPI.self)
         waitForExpectations(timeout: 3)
     }
 }

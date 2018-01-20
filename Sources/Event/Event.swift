@@ -51,7 +51,7 @@ public class Event: Object {
 
 // MARK: Event Data
 public extension Event {
-    func getCoverPhoto(api: APIProtocol.Type = ParseAPI.self, completion: @escaping CompletionHandler<UIImage>) {
+    func getCoverPhoto(from api: APIProtocol.Type = ParseAPI.self, completion: @escaping CompletionHandler<UIImage>) {
         guard let coverPhoto = coverPhoto else {
             completion(Error.missingData, nil)
             return
@@ -74,7 +74,7 @@ public extension Event {
     static func getCurrentlyOccurringEvents(near location: LocationType,
                                             maxDistance: Double,
                                             limit: Int = 20,
-                                            api: APIProtocol.Type = ParseAPI.self,
+                                            from api: APIProtocol.Type = ParseAPI.self,
                                             completion: @escaping CompletionHandler<[Event]>) {
         let query = baseQuery()
         query.whereKey("location", nearGeoPoint: PFGeoPoint(location), withinKilometers: maxDistance)
@@ -89,7 +89,7 @@ public extension Event {
     static func getRelevantEvents(in geoBox: GeoBox,
                                   categories: [Category],
                                   limit: Int = 50,
-                                  api: APIProtocol.Type = ParseAPI.self,
+                                  from api: APIProtocol.Type = ParseAPI.self,
                                   completion: @escaping CompletionHandler<[Event]>) {
 
         //swiftlint:disable:next force_cast

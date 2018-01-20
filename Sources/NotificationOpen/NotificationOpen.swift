@@ -38,7 +38,7 @@ extension NotificationOpen {
 // MARK: API
 extension NotificationOpen {
     /// Creates and eventually saves a new notification open object with the specified information.
-    static func create(with user: PFUser, userInfo: [String: Any], api: APIProtocol.Type = ParseAPI.self) {
+    static func create(with user: PFUser, userInfo: [String: Any], using api: APIProtocol.Type = ParseAPI.self) {
         let notificationOpen = NotificationOpen(user: user, userInfo: userInfo)
         api.saveEventually(notificationOpen)
     }

@@ -29,7 +29,7 @@ class PFUserSessionTests: XCTestCase {
             saveExpectation.fulfill()
         }
 
-        user.startSession(api: MockAPI.self)
+        user.startSession(using: MockAPI.self)
         waitForExpectations(timeout: 3)
     }
 
@@ -52,7 +52,7 @@ class PFUserSessionTests: XCTestCase {
             return [session]
         }
 
-        user.endLatestSession(api: MockAPI.self)
+        user.endLatestSession(using: MockAPI.self)
         waitForExpectations(timeout: 3)
     }
 }

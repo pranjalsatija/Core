@@ -26,7 +26,7 @@ extension Report {
 
 // MARK: API
 extension Report {
-    static func create(withEvent event: Event, reason: Reason, user: PFUser, api: APIProtocol.Type) {
+    static func create(withEvent event: Event, reason: Reason, user: PFUser, using api: APIProtocol.Type) {
         let report = Report(event: event, reason: reason, user: user)
         api.saveEventually(report)
     }

@@ -9,7 +9,7 @@
 // MARK: PFUser Extension
 public extension PFUser {
     /// Reports a specified event.
-    func report(_ event: Event, reason: Report.Reason, api: APIProtocol.Type = ParseAPI.self) {
-        Report.create(withEvent: event, reason: reason, user: self, api: api)
+    func report(_ event: Event, reason: Report.Reason, using api: APIProtocol.Type = ParseAPI.self) {
+        Report.create(withEvent: event, reason: reason, user: self, using: api)
     }
 }

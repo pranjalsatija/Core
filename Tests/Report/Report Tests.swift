@@ -31,7 +31,7 @@ class ReportTests: XCTestCase {
             saveExpectation.fulfill()
         }
 
-        Report.create(withEvent: event, reason: reason, user: user, api: MockAPI.self)
+        Report.create(withEvent: event, reason: reason, user: user, using: MockAPI.self)
         waitForExpectations(timeout: 3)
     }
 }

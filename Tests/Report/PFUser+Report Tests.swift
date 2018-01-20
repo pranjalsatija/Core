@@ -31,7 +31,7 @@ class PFUserReportTests: XCTestCase {
             saveExpectation.fulfill()
         }
 
-        user.report(event, reason: reason, api: MockAPI.self)
+        user.report(event, reason: reason, using: MockAPI.self)
         waitForExpectations(timeout: 3)
     }
 }

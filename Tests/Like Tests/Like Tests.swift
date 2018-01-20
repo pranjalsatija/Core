@@ -28,7 +28,7 @@ class LikeTests: XCTestCase {
             XCTAssert(like.user == user)
         }
 
-        Like.create(event: event, user: user, api: MockAPI.self)
+        Like.create(event: event, user: user, using: MockAPI.self)
     }
 
     func testExists() {
@@ -39,7 +39,7 @@ class LikeTests: XCTestCase {
             return [Like(event: event, user: user)]
         }
 
-        Like.exists(user: user, event: event, api: MockAPI.self) {(_, exists) in
+        Like.exists(user: user, event: event, using: MockAPI.self) {(_, exists) in
             guard let exists = exists else {
                 XCTFail()
                 return

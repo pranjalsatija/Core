@@ -31,7 +31,7 @@ class ReferralTests: XCTestCase {
             saveExpectation.fulfill()
         }
 
-        Referral.create(sender: sender, receiver: receiver, event: event, api: MockAPI.self)
+        Referral.create(sender: sender, receiver: receiver, event: event, using: MockAPI.self)
         waitForExpectations(timeout: 3)
     }
 }
