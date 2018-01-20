@@ -148,7 +148,7 @@ class NotificationManagerTests: XCTestCase {
             XCTAssert(request.identifier == "testSchedule")
 
             let correctInterval = triggerDate.timeIntervalSince(now)
-            let correctIntervalRange = 0.99 * correctInterval...1.01 * correctInterval
+            let correctIntervalRange = (0.99 * correctInterval)...(1.01 * correctInterval)
             XCTAssert(correctIntervalRange.contains(trigger.timeInterval))
         }
 

@@ -66,6 +66,11 @@
 		AFACF8CB200AC77B0091DDF5 /* NotificationOpen Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */; };
 		AFB4AAF2200BCFA8007EABCE /* Referral Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */; };
 		AFB4AAF4200BD092007EABCE /* PFUser+Referral Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4AAF3200BD092007EABCE /* PFUser+Referral Tests.swift */; };
+		AFC12E522013199600F396E3 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC12E512013199600F396E3 /* Report.swift */; };
+		AFC12E54201319BB00F396E3 /* ReportReason.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC12E53201319BB00F396E3 /* ReportReason.swift */; };
+		AFC12E5620131AD900F396E3 /* PFUser+Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC12E5520131AD900F396E3 /* PFUser+Report.swift */; };
+		AFC12E5920131C6000F396E3 /* Report Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC12E5820131C6000F396E3 /* Report Tests.swift */; };
+		AFC12E5B20131CFF00F396E3 /* PFUser+Report Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC12E5A20131CFF00F396E3 /* PFUser+Report Tests.swift */; };
 		AFDEEFE8200F05AD0053869A /* Event Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDEEFE7200F05AD0053869A /* Event Tests.swift */; };
 		AFEC283C200DD1C5003348DF /* EventOrigin Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC283B200DD1C5003348DF /* EventOrigin Tests.swift */; };
 		AFEC283E200DD296003348DF /* CLCircularRegion+Event Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC283D200DD296003348DF /* CLCircularRegion+Event Tests.swift */; };
@@ -149,6 +154,11 @@
 		AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationOpen Tests.swift"; sourceTree = "<group>"; };
 		AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Referral Tests.swift"; sourceTree = "<group>"; };
 		AFB4AAF3200BD092007EABCE /* PFUser+Referral Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Referral Tests.swift"; sourceTree = "<group>"; };
+		AFC12E512013199600F396E3 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		AFC12E53201319BB00F396E3 /* ReportReason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportReason.swift; sourceTree = "<group>"; };
+		AFC12E5520131AD900F396E3 /* PFUser+Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Report.swift"; sourceTree = "<group>"; };
+		AFC12E5820131C6000F396E3 /* Report Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Report Tests.swift"; sourceTree = "<group>"; };
+		AFC12E5A20131CFF00F396E3 /* PFUser+Report Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Report Tests.swift"; sourceTree = "<group>"; };
 		AFDEEFE7200F05AD0053869A /* Event Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event Tests.swift"; sourceTree = "<group>"; };
 		AFEC283B200DD1C5003348DF /* EventOrigin Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventOrigin Tests.swift"; sourceTree = "<group>"; };
 		AFEC283D200DD296003348DF /* CLCircularRegion+Event Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLCircularRegion+Event Tests.swift"; sourceTree = "<group>"; };
@@ -305,6 +315,7 @@
 				AF5E087620126CF40085F76A /* NotificationManager */,
 				AF39D951200A9050003564C7 /* Parse Extensions */,
 				AFB4AAF0200BCF97007EABCE /* Referral */,
+				AFC12E5720131C5100F396E3 /* Report */,
 				AF39D94E200A8FC4003564C7 /* Session */,
 				AF38E6B9200BD25A006F9B02 /* Share */,
 				AF3DAADC20085C03001A834F /* Info.plist */,
@@ -323,6 +334,7 @@
 				AF39D95A200A957F003564C7 /* NotificationOpen */,
 				AF39D9492009D2FA003564C7 /* Parse Extensions */,
 				AF48F8C6200AE84400725F44 /* Referral */,
+				AFC12E502013198700F396E3 /* Report */,
 				AF3DAB0B2008633F001A834F /* Session */,
 				AF38E6B4200BD197006F9B02 /* Share */,
 			);
@@ -432,6 +444,25 @@
 				AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */,
 			);
 			path = Referral;
+			sourceTree = "<group>";
+		};
+		AFC12E502013198700F396E3 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				AFC12E5520131AD900F396E3 /* PFUser+Report.swift */,
+				AFC12E512013199600F396E3 /* Report.swift */,
+				AFC12E53201319BB00F396E3 /* ReportReason.swift */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
+		AFC12E5720131C5100F396E3 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				AFC12E5A20131CFF00F396E3 /* PFUser+Report Tests.swift */,
+				AFC12E5820131C6000F396E3 /* Report Tests.swift */,
+			);
+			path = Report;
 			sourceTree = "<group>";
 		};
 		AFEC283A200DD1AC003348DF /* Event Tests */ = {
@@ -615,6 +646,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF38E6C0200BD41B006F9B02 /* CLLocation+LocationProtocol.swift in Sources */,
+				AFC12E54201319BB00F396E3 /* ReportReason.swift in Sources */,
 				AF39D95C200A9597003564C7 /* PFUser+NotificationOpen.swift in Sources */,
 				AF46A1B8200EC8D200CA47BE /* Date Extensions.swift in Sources */,
 				AF6A257A200C4EC500C3E503 /* Location.swift in Sources */,
@@ -625,6 +657,7 @@
 				AF3DAAF420085DC5001A834F /* PFACL Extension.swift in Sources */,
 				AF39D959200A9279003564C7 /* NotificationOpen.swift in Sources */,
 				AF48F8C8200AE85500725F44 /* Referral.swift in Sources */,
+				AFC12E522013199600F396E3 /* Report.swift in Sources */,
 				AF6A2583200C5DE100C3E503 /* CLCircularRegion+Event.swift in Sources */,
 				AF27DEC720096E440062F0F1 /* Multithreading.swift in Sources */,
 				AF38E6B8200BD20A006F9B02 /* PFUser+Share.swift in Sources */,
@@ -644,6 +677,7 @@
 				AF27DECA200970400062F0F1 /* APIProtocol.swift in Sources */,
 				AF3DAB0D2008634A001A834F /* Session.swift in Sources */,
 				AF3DAB0F200864D1001A834F /* PFUser+Session.swift in Sources */,
+				AFC12E5620131AD900F396E3 /* PFUser+Report.swift in Sources */,
 				AF6A257C200C4F3A00C3E503 /* Event.swift in Sources */,
 				AF27DEC520096D680062F0F1 /* ParseAPI.swift in Sources */,
 			);
@@ -653,6 +687,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC12E5B20131CFF00F396E3 /* PFUser+Report Tests.swift in Sources */,
+				AFC12E5920131C6000F396E3 /* Report Tests.swift in Sources */,
 				AF39D9482009D00B003564C7 /* Multithreading Tests.swift in Sources */,
 				AF39D953200A906A003564C7 /* PFACL Extension Tests.swift in Sources */,
 				AF38E6BB200BD269006F9B02 /* Share Tests.swift in Sources */,
