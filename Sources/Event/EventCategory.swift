@@ -21,11 +21,11 @@ public extension EventCategory {
                       completion: @escaping CompletionHandler<UIImage>) {
         api.getData(from: iconFile) {(error, data) in
             if let error = error {
-                completion(error, nil)
+                main { completion(error, nil) }
             } else if let data = data, let image = UIImage(data: data) {
-                completion(nil, image)
+                main { completion(nil, image) }
             } else {
-                completion(Error.invalidResponseFormat, nil)
+                main { completion(Error.invalidResponseFormat, nil) }
             }
         }
     }

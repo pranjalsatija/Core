@@ -39,9 +39,10 @@ public extension APIProtocol {
 
         background {
             do {
-                try completion(nil, call(function, parameters: parameters))
+                let result = try call(function, parameters: parameters)
+                main { completion(nil, result) }
             } catch {
-                completion(error, nil)
+                main { completion(error, nil) }
             }
         }
     }
@@ -49,9 +50,10 @@ public extension APIProtocol {
     static func findFirstObject<T>(matching query: PFQuery<T>, completion: @escaping CompletionHandler<T>) {
         background {
             do {
-                try completion(nil, findFirstObject(matching: query))
+                let result = try findFirstObject(matching: query)
+                main { completion(nil, result) }
             } catch {
-                completion(error, nil)
+                main { completion(error, nil) }
             }
         }
     }
@@ -59,9 +61,10 @@ public extension APIProtocol {
     static func findObjects<T>(matching query: PFQuery<T>, completion: @escaping CompletionHandler<[T]>) {
         background {
             do {
-                try completion(nil, findObjects(matching: query))
+                let result = try findObjects(matching: query)
+                main { completion(nil, result) }
             } catch {
-                completion(error, nil)
+                main { completion(error, nil) }
             }
         }
     }
@@ -69,9 +72,10 @@ public extension APIProtocol {
     static func getData(from file: PFFile, completion: @escaping CompletionHandler<Data>) {
         background {
             do {
-                try completion(nil, getData(from: file))
+                let result = try getData(from: file)
+                main { completion(nil, result) }
             } catch {
-                completion(error, nil)
+                main { completion(error, nil) }
             }
         }
     }
@@ -82,9 +86,10 @@ public extension APIProtocol {
 
         background {
             do {
-                try completion(nil, logIn(withUsername: username, password: password))
+                let result = try logIn(withUsername: username, password: password)
+                main { completion(nil, result) }
             } catch {
-                completion(error, nil)
+                main { completion(error, nil) }
             }
         }
     }
@@ -93,9 +98,9 @@ public extension APIProtocol {
         background {
             do {
                 try logOut()
-                completion(nil)
+                main { completion(nil) }
             } catch {
-                completion(error)
+                main { completion(error) }
             }
         }
     }
@@ -104,9 +109,9 @@ public extension APIProtocol {
         background {
             do {
                 try save(object)
-                completion(nil)
+                main { completion(nil) }
             } catch {
-                completion(error)
+                main { completion(error) }
             }
         }
     }

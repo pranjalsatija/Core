@@ -53,17 +53,17 @@ public class Event: Object {
 public extension Event {
     func getCoverPhoto(from api: APIProtocol.Type = ParseAPI.self, completion: @escaping CompletionHandler<UIImage>) {
         guard let coverPhoto = coverPhoto else {
-            completion(Error.missingData, nil)
+            main { completion(Error.missingData, nil) }
             return
         }
 
         api.getData(from: coverPhoto) {(error, data) in
             if let error = error {
-                completion(error, nil)
+                main { completion(error, nil) }
             } else if let data = data, let image = UIImage(data: data) {
-                completion(nil, image)
+                main { completion(nil, image) }
             } else {
-                completion(Error.invalidResponseFormat, nil)
+                main { completion(Error.invalidResponseFormat, nil) }
             }
         }
     }
@@ -82,7 +82,7 @@ public extension Event {
         query.whereKey("endDate", greaterThan: Date())
         query.limit = limit
         api.findObjects(matching: query) {(error, events) in
-            completion(error, events)
+            main { completion(error, events) }
         }
     }
 
@@ -111,11 +111,11 @@ public extension Event {
 
         api.findObjects(matching: combinedQuery) {(error, objects) in
             if let error = error {
-                completion(error, nil)
+                main { completion(error, nil) }
             } else if let events = objects as? [Event] {
-                completion(nil, events)
+                main { completion(nil, events) }
             } else {
-                completion(Error.invalidResponseFormat, nil)
+                main { completion(Error.invalidResponseFormat, nil) }
             }
         }
     }

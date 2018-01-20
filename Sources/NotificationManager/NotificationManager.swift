@@ -52,7 +52,7 @@ public extension NotificationManager {
                               completion: @escaping (Bool) -> Void) {
 
         notificationCenter.getPendingNotificationRequests {(requests) in
-            completion(requests.contains { $0.identifier == id })
+            main { completion(requests.contains { $0.identifier == id }) }
         }
     }
 

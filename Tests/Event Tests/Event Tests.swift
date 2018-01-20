@@ -22,6 +22,7 @@ class EventTests: XCTestCase {
     }
 
     func testGetCoverPhotoSuccessfully() {
+        let downloadExpectation = expectation(description: "Download")
         let bundle = Bundle(for: EventCategoryTests.self)
         let bundleImage = UIImage(named: "testImage.jpg", in: bundle, compatibleWith: nil)
         guard let image = bundleImage, let imageData = UIImageJPEGRepresentation(image, 1.0) else {
@@ -38,10 +39,15 @@ class EventTests: XCTestCase {
 
         event.getCoverPhoto(from: MockAPI.self) {(_, coverPhoto) in
             XCTAssert(coverPhoto?.size == image.size)
+            XCTAssert(Thread.isMainThread)
+            downloadExpectation.fulfill()
         }
+
+        waitForExpectations(timeout: 3)
     }
 
     func testGetCoverPhotoWithFailedImageLoad() {
+        let downloadExpectation = expectation(description: "Download")
         let bundle = Bundle(for: EventCategoryTests.self)
         let bundleImage = UIImage(named: "testImage.jpg", in: bundle, compatibleWith: nil)
         guard let image = bundleImage, let imageData = UIImageJPEGRepresentation(image, 1.0) else {
@@ -68,10 +74,15 @@ class EventTests: XCTestCase {
             }
 
             XCTAssert(error == .error)
+            XCTAssert(Thread.isMainThread)
+            downloadExpectation.fulfill()
         }
+
+        waitForExpectations(timeout: 3)
     }
 
     func testGetCoverPhotoWithNoCoverPhoto() {
+        let downloadExpectation = expectation(description: "Download")
         let bundle = Bundle(for: EventCategoryTests.self)
         let bundleImage = UIImage(named: "testImage.jpg", in: bundle, compatibleWith: nil)
         guard let image = bundleImage, let imageData = UIImageJPEGRepresentation(image, 1.0) else {
@@ -92,10 +103,15 @@ class EventTests: XCTestCase {
             }
 
             XCTAssert(error == .missingData)
+            XCTAssert(Thread.isMainThread)
+            downloadExpectation.fulfill()
         }
+
+        waitForExpectations(timeout: 3)
     }
 
     func testGetCurrentlyOccurringEventsNearLocation() {
+        let queryExpectation = expectation(description: "Query")
         let dallas = Location(latitude: 32.7767, longitude: -96.7970)
 
         let testEvents = [
@@ -115,10 +131,16 @@ class EventTests: XCTestCase {
             }
 
             XCTAssert(events == testEvents)
+            XCTAssert(Thread.isMainThread)
+            queryExpectation.fulfill()
         }
+
+        waitForExpectations(timeout: 3)
     }
 
     func testGetRelevantEventsInBox() {
+        let queryExpectation = expectation(description: "Query")
+
         //swiftlint:disable:next nesting
         struct Box: GeoBox {
             let northeast: LocationType, southwest: LocationType
@@ -146,10 +168,16 @@ class EventTests: XCTestCase {
             }
 
             XCTAssert(events == testEvents)
+            XCTAssert(Thread.isMainThread)
+            queryExpectation.fulfill()
         }
+
+        waitForExpectations(timeout: 3)
     }
 
     func testGetRelevantEventsInBoxWithError() {
+        let queryExpectation = expectation(description: "Query")
+
         //swiftlint:disable:next nesting
         struct Box: GeoBox {
             let northeast: LocationType, southwest: LocationType
@@ -176,7 +204,11 @@ class EventTests: XCTestCase {
             }
 
             XCTAssert(error == .testError)
+            XCTAssert(Thread.isMainThread)
+            queryExpectation.fulfill()
         }
+
+        waitForExpectations(timeout: 3)
     }
 
     func testIsCurrentlyOccurring() {

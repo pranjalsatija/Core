@@ -38,7 +38,7 @@ extension Like {
         query.whereKey("event", equalTo: event)
         query.whereKey("user", equalTo: user)
         api.findFirstObject(matching: query) {(error, like) in
-            completion(error, like != nil)
+            main { completion(error, like != nil) }
         }
     }
 }

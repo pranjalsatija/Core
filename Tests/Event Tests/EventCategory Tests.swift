@@ -32,6 +32,7 @@ class EventCategoryTests: XCTestCase {
 
         category.getIconImage(from: MockAPI.self) {(_, loadedImage) in
             XCTAssert(loadedImage?.size == image.size)
+            XCTAssert(Thread.isMainThread)
             downloadExpectation.fulfill()
         }
 
@@ -60,6 +61,7 @@ class EventCategoryTests: XCTestCase {
             }
 
             XCTAssert(error == .error)
+            XCTAssert(Thread.isMainThread)
             downloadExpectation.fulfill()
         }
 
@@ -83,6 +85,7 @@ class EventCategoryTests: XCTestCase {
             }
 
             XCTAssert(error == .invalidResponseFormat)
+            XCTAssert(Thread.isMainThread)
             downloadExpectation.fulfill()
         }
 

@@ -37,6 +37,10 @@ extension MockAPI {
 
 // MARK: APIProtocol
 extension MockAPI: APIProtocol {
+    static func call(_ function: CloudFunction, parameters: [AnyHashable : Any]?) throws -> Any {
+        throw Core.Error.unknown
+    }
+
     static func findFirstObject<T>(matching query: PFQuery<T>) throws -> T {
         if let query = query as? PFQuery<PFObject>, let objects = try queryHandler?(query), let first = objects.first {
             //swiftlint:disable:next force_cast
@@ -62,6 +66,14 @@ extension MockAPI: APIProtocol {
         } else {
             throw Error.unknown
         }
+    }
+
+    static func logIn(withUsername username: String, password: String) throws -> PFUser {
+        throw Core.Error.unknown
+    }
+
+    static func logOut() throws {
+
     }
 
     static func save(_ object: PFObject) throws {

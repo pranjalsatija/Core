@@ -32,6 +32,8 @@ class LikeTests: XCTestCase {
     }
 
     func testExists() {
+        let queryExpectation = expectation(description: "Query")
+
         let event = Event()
         let user = PFUser()
 
@@ -46,6 +48,10 @@ class LikeTests: XCTestCase {
             }
 
             XCTAssert(exists)
+            XCTAssert(Thread.isMainThread)
+            queryExpectation.fulfill()
         }
+
+        waitForExpectations(timeout: 3)
     }
 }

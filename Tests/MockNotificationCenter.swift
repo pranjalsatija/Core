@@ -61,7 +61,7 @@ extension MockNotificationCenter: NotificationCenterType {
 
     func getPendingNotificationRequests(completion: @escaping ([UNNotificationRequest]) -> Void) {
         if let requests = getRequestsHandler?() {
-            completion(requests)
+            main { completion(requests) }
         } else {
             print("MockNotificationCenter.getPendingNotificationRequests was called, but no handler was provided.")
         }
@@ -69,7 +69,7 @@ extension MockNotificationCenter: NotificationCenterType {
 
     func getAuthorizationStatus(completion: @escaping (UNAuthorizationStatus) -> Void) {
         if let settings = getAuthorizationStatusHandler?() {
-            completion(settings)
+            main { completion(settings) }
         } else {
             print("MockNotificationCenter.getNotificationSettings was called, but no handler was provided.")
         }
@@ -85,6 +85,6 @@ extension MockNotificationCenter: NotificationCenterType {
             return
         }
 
-        completion(error, wasAuthorized)
+        main { completion(error, wasAuthorized) }
     }
 }

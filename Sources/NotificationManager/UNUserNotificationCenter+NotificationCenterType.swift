@@ -19,7 +19,7 @@ extension UNUserNotificationCenter: NotificationCenterType {
 
     public func getAuthorizationStatus(completion: @escaping (UNAuthorizationStatus) -> Void) {
         getNotificationSettings {(settings) in
-            completion(settings.authorizationStatus)
+            main { completion(settings.authorizationStatus) }
         }
     }
 
@@ -29,8 +29,9 @@ extension UNUserNotificationCenter: NotificationCenterType {
 
     public func requestAuthorization(options: UNAuthorizationOptions,
                                      completion: @escaping (Swift.Error?, Bool) -> Void) {
+
         requestAuthorization(options: options) {(wasAuthorized, error) in
-            completion(error, wasAuthorized)
+            main { completion(error, wasAuthorized) }
         }
     }
 }

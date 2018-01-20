@@ -36,6 +36,7 @@ class NotificationManagerTests: XCTestCase {
 
         NotificationManager.getAuthorizationStatus(from: notificationCenter) {(status) in
             XCTAssert(status == expectedStatus)
+            XCTAssert(Thread.isMainThread)
         }
     }
 
@@ -62,6 +63,7 @@ class NotificationManagerTests: XCTestCase {
 
         notificationCenter.onRemoveRequests {(requestsBeingRemoved) in
             XCTAssert(requestsBeingRemoved == requests.filter(predicate))
+            XCTAssert(Thread.isMainThread)
         }
 
         NotificationManager.removeAllRequests(where: predicate, from: notificationCenter)
@@ -90,6 +92,7 @@ class NotificationManagerTests: XCTestCase {
 
         notificationCenter.onRemoveRequests {(requestsBeingRemoved) in
             XCTAssert(requestsBeingRemoved == requests.filter(predicate))
+            XCTAssert(Thread.isMainThread)
         }
 
         NotificationManager.removeRequest(withID: "#removeThisRequest", from: notificationCenter)
@@ -105,6 +108,7 @@ class NotificationManagerTests: XCTestCase {
         NotificationManager.requestAuthorization(from: notificationCenter) {(error, wasAuthorized) in
             XCTAssert(error == nil)
             XCTAssert(wasAuthorized)
+            XCTAssert(Thread.isMainThread)
             requestExpectation.fulfill()
         }
 
@@ -126,6 +130,7 @@ class NotificationManagerTests: XCTestCase {
 
         NotificationManager.requestExists(withID: "testID", in: notificationCenter) {(exists) in
             XCTAssert(exists)
+            XCTAssert(Thread.isMainThread)
             queryExpectation.fulfill()
         }
 
@@ -150,6 +155,7 @@ class NotificationManagerTests: XCTestCase {
             let correctInterval = triggerDate.timeIntervalSince(now)
             let correctIntervalRange = (0.99 * correctInterval)...(1.01 * correctInterval)
             XCTAssert(correctIntervalRange.contains(trigger.timeInterval))
+            XCTAssert(Thread.isMainThread)
         }
 
         NotificationManager.schedule(content,
@@ -190,6 +196,7 @@ class NotificationManagerTests: XCTestCase {
             XCTAssert(request.content == content)
             XCTAssert(request.identifier == "testSchedule")
             XCTAssert(trigger.region == region)
+            XCTAssert(Thread.isMainThread)
         }
 
         NotificationManager.schedule(content, at: region, withID: "testSchedule", using: notificationCenter)
