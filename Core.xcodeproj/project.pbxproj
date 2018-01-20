@@ -53,10 +53,15 @@
 		AF48F8C5200AE50E00725F44 /* PFUser+NotificationOpen Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48F8C3200AE50C00725F44 /* PFUser+NotificationOpen Tests.swift */; };
 		AF48F8C8200AE85500725F44 /* Referral.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48F8C7200AE85500725F44 /* Referral.swift */; };
 		AF48F8CA200AEB4600725F44 /* PFUser+Referral.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48F8C9200AEB4600725F44 /* PFUser+Referral.swift */; };
+		AF5E0875201261170085F76A /* UNUserNotificationCenter+NotificationCenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E0874201261170085F76A /* UNUserNotificationCenter+NotificationCenterType.swift */; };
+		AF5E087820126D070085F76A /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E087720126D070085F76A /* MockNotificationCenter.swift */; };
+		AF5E087A2012A02C0085F76A /* NotificationManager Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E08792012A02C0085F76A /* NotificationManager Tests.swift */; };
 		AF6A257A200C4EC500C3E503 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A2579200C4EC500C3E503 /* Location.swift */; };
 		AF6A257C200C4F3A00C3E503 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A257B200C4F3A00C3E503 /* Event.swift */; };
 		AF6A257F200C581700C3E503 /* EventOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A257E200C581700C3E503 /* EventOrigin.swift */; };
 		AF6A2583200C5DE100C3E503 /* CLCircularRegion+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A2582200C5DE100C3E503 /* CLCircularRegion+Event.swift */; };
+		AF9EA5BB20125F4E000BAE78 /* NotificationCenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9EA5BA20125F4E000BAE78 /* NotificationCenterType.swift */; };
+		AF9EA5BD20126053000BAE78 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9EA5BC20126053000BAE78 /* NotificationManager.swift */; };
 		AF9F895A200D5E6F002059AB /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F8959200D5E6F002059AB /* CompletionHandler.swift */; };
 		AFACF8CB200AC77B0091DDF5 /* NotificationOpen Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */; };
 		AFB4AAF2200BCFA8007EABCE /* Referral Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */; };
@@ -131,10 +136,15 @@
 		AF48F8C3200AE50C00725F44 /* PFUser+NotificationOpen Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+NotificationOpen Tests.swift"; sourceTree = "<group>"; };
 		AF48F8C7200AE85500725F44 /* Referral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Referral.swift; sourceTree = "<group>"; };
 		AF48F8C9200AEB4600725F44 /* PFUser+Referral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Referral.swift"; sourceTree = "<group>"; };
+		AF5E0874201261170085F76A /* UNUserNotificationCenter+NotificationCenterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UNUserNotificationCenter+NotificationCenterType.swift"; sourceTree = "<group>"; };
+		AF5E087720126D070085F76A /* MockNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNotificationCenter.swift; sourceTree = "<group>"; };
+		AF5E08792012A02C0085F76A /* NotificationManager Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationManager Tests.swift"; sourceTree = "<group>"; };
 		AF6A2579200C4EC500C3E503 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		AF6A257B200C4F3A00C3E503 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		AF6A257E200C581700C3E503 /* EventOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOrigin.swift; sourceTree = "<group>"; };
 		AF6A2582200C5DE100C3E503 /* CLCircularRegion+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLCircularRegion+Event.swift"; sourceTree = "<group>"; };
+		AF9EA5BA20125F4E000BAE78 /* NotificationCenterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterType.swift; sourceTree = "<group>"; };
+		AF9EA5BC20126053000BAE78 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		AF9F8959200D5E6F002059AB /* CompletionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
 		AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationOpen Tests.swift"; sourceTree = "<group>"; };
 		AFB4AAF1200BCFA8007EABCE /* Referral Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Referral Tests.swift"; sourceTree = "<group>"; };
@@ -285,12 +295,14 @@
 			isa = PBXGroup;
 			children = (
 				AF39D9242009BEF6003564C7 /* MockAPI.swift */,
+				AF5E087720126D070085F76A /* MockNotificationCenter.swift */,
 				AF39D9442009CD1F003564C7 /* Setup.swift */,
 				AF46A1C1200ED2F000CA47BE /* Resources */,
 				AFEC2841200DDC4D003348DF /* Convenience Tests */,
 				AFF8AD82201191BE00CFC16B /* Like Tests */,
 				AFEC283A200DD1AC003348DF /* Event Tests */,
 				AFACF8C9200AC76C0091DDF5 /* NotificationOpen */,
+				AF5E087620126CF40085F76A /* NotificationManager */,
 				AF39D951200A9050003564C7 /* Parse Extensions */,
 				AFB4AAF0200BCF97007EABCE /* Referral */,
 				AF39D94E200A8FC4003564C7 /* Session */,
@@ -369,6 +381,14 @@
 				AF48F8C7200AE85500725F44 /* Referral.swift */,
 			);
 			path = Referral;
+			sourceTree = "<group>";
+		};
+		AF5E087620126CF40085F76A /* NotificationManager */ = {
+			isa = PBXGroup;
+			children = (
+				AF5E08792012A02C0085F76A /* NotificationManager Tests.swift */,
+			);
+			path = NotificationManager;
 			sourceTree = "<group>";
 		};
 		AF6A257D200C580A00C3E503 /* Event */ = {
@@ -457,6 +477,9 @@
 		AFF8AD8B2011B61100CFC16B /* NotificationManager */ = {
 			isa = PBXGroup;
 			children = (
+				AF9EA5BA20125F4E000BAE78 /* NotificationCenterType.swift */,
+				AF9EA5BC20126053000BAE78 /* NotificationManager.swift */,
+				AF5E0874201261170085F76A /* UNUserNotificationCenter+NotificationCenterType.swift */,
 			);
 			path = NotificationManager;
 			sourceTree = "<group>";
@@ -606,6 +629,7 @@
 				AF27DEC720096E440062F0F1 /* Multithreading.swift in Sources */,
 				AF38E6B8200BD20A006F9B02 /* PFUser+Share.swift in Sources */,
 				AF3DAAF020085D45001A834F /* Error.swift in Sources */,
+				AF5E0875201261170085F76A /* UNUserNotificationCenter+NotificationCenterType.swift in Sources */,
 				AFF8AD812011907800CFC16B /* PFUser+Like.swift in Sources */,
 				AF48F8CA200AEB4600725F44 /* PFUser+Referral.swift in Sources */,
 				AFEC2840200DD8FA003348DF /* Object.swift in Sources */,
@@ -613,7 +637,9 @@
 				AF38E6C4200BD541006F9B02 /* PFGeoPoint+LocationProtocol.swift in Sources */,
 				AF38E6C2200BD50F006F9B02 /* CLLocationCoordinate2D+LocationProtocol.swift in Sources */,
 				AF38E6B6200BD1AF006F9B02 /* Share.swift in Sources */,
+				AF9EA5BD20126053000BAE78 /* NotificationManager.swift in Sources */,
 				AF9F895A200D5E6F002059AB /* CompletionHandler.swift in Sources */,
+				AF9EA5BB20125F4E000BAE78 /* NotificationCenterType.swift in Sources */,
 				AFF8AD7F20118B6100CFC16B /* Like.swift in Sources */,
 				AF27DECA200970400062F0F1 /* APIProtocol.swift in Sources */,
 				AF3DAB0D2008634A001A834F /* Session.swift in Sources */,
@@ -645,6 +671,7 @@
 				AFF8AD872011B22800CFC16B /* PFUser+Like Tests.swift in Sources */,
 				AF4164DC200DAAD100613B27 /* CLLocationCoordinate2D+LocationProtocol Tests.swift in Sources */,
 				AF39D9462009CDEC003564C7 /* Setup.swift in Sources */,
+				AF5E087A2012A02C0085F76A /* NotificationManager Tests.swift in Sources */,
 				AF4164DA200DAA4200613B27 /* Location Tests.swift in Sources */,
 				AF4164E2200DB02B00613B27 /* PFUser+Share Tests.swift in Sources */,
 				AFF8AD852011B0F200CFC16B /* Like Tests.swift in Sources */,
@@ -652,6 +679,7 @@
 				AFB4AAF4200BD092007EABCE /* PFUser+Referral Tests.swift in Sources */,
 				AF4164E0200DAD3F00613B27 /* PFGeoPoint+LocationProtocol.swift in Sources */,
 				AF4164DE200DACCB00613B27 /* CLLocation+LocationProtocol Tests.swift in Sources */,
+				AF5E087820126D070085F76A /* MockNotificationCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

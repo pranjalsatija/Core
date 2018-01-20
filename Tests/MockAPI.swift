@@ -8,19 +8,37 @@
 
 @testable import Core
 
-struct MockAPI: APIProtocol {
+/// Used as a mock for the Parse API during unit testing.
+/// Use `MockAPI.onFileDownload`, `onSave`, and `onQuery` to catch and respond to API requests.
+struct MockAPI {
     typealias FileDownloadHandler = (PFFile) throws -> Data
     typealias SaveHandler = (PFObject) throws -> Void
     typealias QueryHandler<T: PFObject> = (PFQuery<T>) throws -> [T]
 
-    static var onFileDownloadBlock: FileDownloadHandler?
-    static var onSaveBlock: SaveHandler?
-    static var onQueryBlock: QueryHandler<PFObject>?
+    static var fileDownloadHandler: FileDownloadHandler?
+    static var saveHandler: SaveHandler?
+    static var queryHandler: QueryHandler<PFObject>?
 }
 
+// MARK: Catching API Requests
 extension MockAPI {
+    static func onFileDownload(_ block: @escaping FileDownloadHandler) {
+        fileDownloadHandler = block
+    }
+
+    static func onSave(_ block: @escaping SaveHandler) {
+        saveHandler = block
+    }
+
+    static func onQuery(_ block: @escaping QueryHandler<PFObject>) {
+        queryHandler = block
+    }
+}
+
+// MARK: APIProtocol
+extension MockAPI: APIProtocol {
     static func findFirstObject<T>(matching query: PFQuery<T>) throws -> T {
-        if let query = query as? PFQuery<PFObject>, let objects = try onQueryBlock?(query), let first = objects.first {
+        if let query = query as? PFQuery<PFObject>, let objects = try queryHandler?(query), let first = objects.first {
             //swiftlint:disable:next force_cast
             return first as! T
         } else {
@@ -29,7 +47,7 @@ extension MockAPI {
     }
 
     static func getData(from file: PFFile) throws -> Data {
-        if let block = onFileDownloadBlock {
+        if let block = fileDownloadHandler {
             return try block(file)
         } else {
             print("Warning: MockAPI.getData(from:) was called, but there's no handler for file downloads.")
@@ -38,7 +56,7 @@ extension MockAPI {
     }
 
     static func findObjects<T>(matching query: PFQuery<T>) throws -> [T] {
-        if let query = query as? PFQuery<PFObject>, let objects = try onQueryBlock?(query) {
+        if let query = query as? PFQuery<PFObject>, let objects = try queryHandler?(query) {
             //swiftlint:disable:next force_cast
             return objects as! [T]
         } else {
@@ -47,24 +65,10 @@ extension MockAPI {
     }
 
     static func save(_ object: PFObject) throws {
-        try onSaveBlock?(object)
+        try saveHandler?(object)
     }
 
     static func saveEventually(_ object: PFObject) {
-        try? onSaveBlock?(object)
-    }
-}
-
-extension MockAPI {
-    static func onFileDownload(_ block: @escaping FileDownloadHandler) {
-        onFileDownloadBlock = block
-    }
-
-    static func onSave(_ block: @escaping SaveHandler) {
-        onSaveBlock = block
-    }
-
-    static func onQuery(_ block: @escaping QueryHandler<PFObject>) {
-        onQueryBlock = block
+        try? saveHandler?(object)
     }
 }

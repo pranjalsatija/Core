@@ -1,0 +1,17 @@
+opt_in_rules:
+  - array_init
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - conditional_returns_on_newline
+  - contains_over_first_not_nil
+  - empty_count
+  - explicit_acl
+  - extension_access_modifier
+  - fatal_error_message
+  - first_where
+  - sorted_imports
+
+identifier_name:
+  excluded:
+    - id
