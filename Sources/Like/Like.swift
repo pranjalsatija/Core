@@ -7,7 +7,7 @@
 //
 
 /// Used to represent the act of liking an event.
-class Like: PFObject {
+class Like: Object {
     @NSManaged var event: Event!
     @NSManaged var user: PFUser!
 }

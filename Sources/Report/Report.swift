@@ -7,7 +7,7 @@
 //
 
 /// Used to allow users to report events on mark.
-public class Report: PFObject {
+public class Report: Object {
     @NSManaged var event: Event!
     @NSManaged var reason: String!
     @NSManaged var user: PFUser!

@@ -9,7 +9,7 @@
 import UIKit
 
 /// Represents the various categories that events can have.
-public class EventCategory: PFObject {
+public class EventCategory: Object {
     @NSManaged public var iconFile: PFFile!
     @NSManaged public var name: String!
 }
