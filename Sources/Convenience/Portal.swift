@@ -15,6 +15,7 @@ import Foundation
 /// all of the portals that currently exist in memory that have the same name will receive the update.
 public class Portal<Value> {
     public let name: String
+    public private(set) var value: Value!
 
 
     var notificationCenter = NotificationCenter.default
@@ -49,6 +50,7 @@ public extension Portal {
             }
 
             block(value)
+            self.value = value
         }
 
         observationTokens.append(observer)
@@ -56,5 +58,6 @@ public extension Portal {
 
     func postUpdate(value: Value) {
         notificationCenter.post(name: Notification.Name(name), object: value)
+        self.value = value
     }
 }
