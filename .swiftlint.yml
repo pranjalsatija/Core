@@ -15,3 +15,6 @@ opt_in_rules:
 identifier_name:
   excluded:
     - id
+
+vertical_whitespace:
+  max_empty_lines: 2
