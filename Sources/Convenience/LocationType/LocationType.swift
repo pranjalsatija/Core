@@ -12,4 +12,13 @@ public protocol LocationType {
     var longitude: Double { get }
 
     init(latitude: Double, longitude: Double)
+
+    func distance(from otherLocation: LocationType) -> Double
+}
+
+// MARK: Default Implementation
+public extension LocationType {
+    func distance(from otherLocation: LocationType) -> Double {
+        return CLLocation(otherLocation).distance(from: CLLocation(self))
+    }
 }
