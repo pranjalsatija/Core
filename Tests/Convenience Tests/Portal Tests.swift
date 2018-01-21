@@ -15,13 +15,13 @@ class PortalTests: XCTestCase {
     }
 
     func testInitializer() {
-        let testName = "TestPortal"
+        let testName = "testInitializer Portal"
         let portal = Portal<Void>(name: testName)
         XCTAssert(portal.name == testName)
     }
 
     func testInvalidUpdate() {
-        let testName = "TestPortal"
+        let testName = "testInvalidUpdate portal"
         let portal = Portal<String>(name: testName)
 
         portal.observeUpdates {(_) in
@@ -32,7 +32,7 @@ class PortalTests: XCTestCase {
     }
 
     func testOpeningMultiplePortals() {
-        let testName = "TestPortal", testUpdate = "TestUpdate"
+        let testName = "testOpeningMultiplePortals Portal", testUpdate = "TestUpdate"
         let portal1Expectation = expectation(description: "Portal 1")
         let portal2Expectation = expectation(description: "Portal 2")
 

@@ -49,7 +49,7 @@ public class Event: Object {
     public var relevance = 0.0
 }
 
-// MARK: Event Data
+// MARK: Additional Information
 public extension Event {
     func getCoverPhoto(from api: APIProtocol.Type = ParseAPI.self, completion: @escaping CompletionHandler<UIImage>) {
         guard let coverPhoto = coverPhoto else {
@@ -66,6 +66,17 @@ public extension Event {
                 main { completion(Error.invalidResponseFormat, nil) }
             }
         }
+    }
+}
+
+// MARK: User API
+extension Event {
+    func userIsPresent(_ user: User) -> Bool {
+        guard let location = user.location.value else {
+            return false
+        }
+
+        return location.distance(from: self.location) < radius.doubleValue
     }
 }
 
@@ -107,6 +118,7 @@ public extension Event {
         combinedQuery.whereKey("category", containedIn: categories)
         combinedQuery.whereKey("location", withinGeoBoxFromSouthwest: southwest, toNortheast: northeast)
         combinedQuery.addDescendingOrder("score")
+        combinedQuery.includeKey("category")
         combinedQuery.limit = limit
 
         api.findObjects(matching: combinedQuery) {(error, objects) in

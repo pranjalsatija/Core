@@ -10,6 +10,14 @@ public class User: PFUser {
     static var current: User? {
         return PFUser.current() as? User
     }
+
+    var location: Portal<LocationType>! {
+        guard let username = username else {
+            return nil
+        }
+
+        return Portal(name: "User.\(username).location")
+    }
 }
 
 // MARK: Authentication

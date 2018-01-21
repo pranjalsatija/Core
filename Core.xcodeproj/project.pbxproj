@@ -51,6 +51,7 @@
 		AF48F8C5200AE50E00725F44 /* PFUser+NotificationOpen Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48F8C3200AE50C00725F44 /* PFUser+NotificationOpen Tests.swift */; };
 		AF48F8C8200AE85500725F44 /* Referral.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48F8C7200AE85500725F44 /* Referral.swift */; };
 		AF48F8CA200AEB4600725F44 /* PFUser+Referral.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48F8C9200AEB4600725F44 /* PFUser+Referral.swift */; };
+		AF558E91201420DD00C8573E /* User+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF558E90201420DD00C8573E /* User+Event.swift */; };
 		AF5E0875201261170085F76A /* UNUserNotificationCenter+NotificationCenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E0874201261170085F76A /* UNUserNotificationCenter+NotificationCenterType.swift */; };
 		AF5E087820126D070085F76A /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E087720126D070085F76A /* MockNotificationCenter.swift */; };
 		AF5E087A2012A02C0085F76A /* NotificationManager Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E08792012A02C0085F76A /* NotificationManager Tests.swift */; };
@@ -144,6 +145,7 @@
 		AF48F8C3200AE50C00725F44 /* PFUser+NotificationOpen Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+NotificationOpen Tests.swift"; sourceTree = "<group>"; };
 		AF48F8C7200AE85500725F44 /* Referral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Referral.swift; sourceTree = "<group>"; };
 		AF48F8C9200AEB4600725F44 /* PFUser+Referral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Referral.swift"; sourceTree = "<group>"; };
+		AF558E90201420DD00C8573E /* User+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Event.swift"; sourceTree = "<group>"; };
 		AF5E0874201261170085F76A /* UNUserNotificationCenter+NotificationCenterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UNUserNotificationCenter+NotificationCenterType.swift"; sourceTree = "<group>"; };
 		AF5E087720126D070085F76A /* MockNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNotificationCenter.swift; sourceTree = "<group>"; };
 		AF5E08792012A02C0085F76A /* NotificationManager Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationManager Tests.swift"; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 				AF6A257B200C4F3A00C3E503 /* Event.swift */,
 				AF46A1B3200EC20E00CA47BE /* EventCategory.swift */,
 				AF6A257E200C581700C3E503 /* EventOrigin.swift */,
+				AF558E90201420DD00C8573E /* User+Event.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 				AF9F895A200D5E6F002059AB /* CompletionHandler.swift in Sources */,
 				AF9EA5BB20125F4E000BAE78 /* NotificationCenterType.swift in Sources */,
 				AFF8AD7F20118B6100CFC16B /* Like.swift in Sources */,
+				AF558E91201420DD00C8573E /* User+Event.swift in Sources */,
 				AF27DECA200970400062F0F1 /* APIProtocol.swift in Sources */,
 				AFA8CCF720140F7900E5916F /* Portal.swift in Sources */,
 				AF3DAB0D2008634A001A834F /* Session.swift in Sources */,
