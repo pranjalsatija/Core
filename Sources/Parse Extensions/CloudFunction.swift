@@ -23,3 +23,9 @@ extension CloudFunction {
         return CloudFunction(name: "finishPhoneNumberAuth")
     }
 }
+
+extension CloudFunction: Equatable {
+    public static func == (lhs: CloudFunction, rhs: CloudFunction) -> Bool {
+        return lhs.name == rhs.name
+    }
+}

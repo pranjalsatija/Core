@@ -12,18 +12,45 @@
 /// Use `MockAPI.onFileDownload`, `onSave`, and `onQuery` to catch and respond to API requests.
 struct MockAPI {
     typealias FileDownloadHandler = (PFFile) throws -> Data
+    typealias FunctionCallHandler = (CloudFunction, [AnyHashable : Any]?) throws -> Any
+    typealias LogInHandler = (String, String) throws -> PFUser
+    typealias LogOutHandler = () throws -> Void
     typealias SaveHandler = (PFObject) throws -> Void
     typealias QueryHandler<T: PFObject> = (PFQuery<T>) throws -> [T]
 
     static var fileDownloadHandler: FileDownloadHandler?
+    static var functionCallHandler: FunctionCallHandler?
+    static var logInHandler: LogInHandler?
+    static var logOutHandler: LogOutHandler?
     static var saveHandler: SaveHandler?
     static var queryHandler: QueryHandler<PFObject>?
 }
 
 // MARK: Catching API Requests
 extension MockAPI {
+    static func cleanUp() {
+        fileDownloadHandler = nil
+        functionCallHandler = nil
+        logInHandler = nil
+        logOutHandler = nil
+        saveHandler = nil
+        queryHandler = nil
+    }
+
     static func onFileDownload(_ block: @escaping FileDownloadHandler) {
         fileDownloadHandler = block
+    }
+
+    static func onFunctionCall(_ block: @escaping FunctionCallHandler) {
+        functionCallHandler = block
+    }
+
+    static func onLogIn(_ block: @escaping LogInHandler) {
+        logInHandler = block
+    }
+
+    static func onLogOut(_ block: @escaping LogOutHandler) {
+        logOutHandler = block
     }
 
     static func onSave(_ block: @escaping SaveHandler) {
@@ -38,7 +65,7 @@ extension MockAPI {
 // MARK: APIProtocol
 extension MockAPI: APIProtocol {
     static func call(_ function: CloudFunction, parameters: [AnyHashable : Any]?) throws -> Any {
-        throw Core.Error.unknown
+        return try functionCallHandler?(function, parameters) as Any
     }
 
     static func findFirstObject<T>(matching query: PFQuery<T>) throws -> T {
@@ -69,11 +96,15 @@ extension MockAPI: APIProtocol {
     }
 
     static func logIn(withUsername username: String, password: String) throws -> PFUser {
-        throw Core.Error.unknown
+        guard let logInHandler = logInHandler else {
+            throw Core.Error.missingData
+        }
+
+        return try logInHandler(username, password)
     }
 
     static func logOut() throws {
-
+        try logOutHandler?()
     }
 
     static func save(_ object: PFObject) throws {

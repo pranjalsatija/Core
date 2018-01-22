@@ -28,7 +28,7 @@ class PortalTests: XCTestCase {
             XCTFail()
         }
 
-        Portal(name: testName).postUpdate(value: 5)
+        Portal(name: testName).update(5)
     }
 
     func testOpeningMultiplePortals() {
@@ -49,7 +49,7 @@ class PortalTests: XCTestCase {
             portal2Expectation.fulfill()
         }
 
-        Portal(name: testName).postUpdate(value: testUpdate)
+        Portal(name: testName).update(testUpdate)
         waitForExpectations(timeout: 3)
     }
 }

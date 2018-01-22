@@ -56,7 +56,7 @@ public extension Portal {
         observationTokens.append(observer)
     }
 
-    func postUpdate(value: Value) {
+    func update(_ value: Value) {
         notificationCenter.post(name: Notification.Name(name), object: value)
         self.value = value
     }

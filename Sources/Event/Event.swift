@@ -72,7 +72,7 @@ public extension Event {
 // MARK: User API
 extension Event {
     func userIsPresent(_ user: User) -> Bool {
-        guard let location = user.location.value else {
+        guard let location = user.location?.value else {
             return false
         }
 

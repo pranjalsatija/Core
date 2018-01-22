@@ -8,16 +8,15 @@
 
 public class User: PFUser {
     static var current: User? {
-        return PFUser.current() as? User
-    }
-
-    var location: Portal<LocationType>! {
-        guard let username = username else {
+        guard let user = PFUser.current() as? User, let username = user.username else {
             return nil
         }
 
-        return Portal(name: "User.\(username).location")
+        user.location = Portal(name: "User.\(username).location")
+        return user
     }
+
+    var location: Portal<LocationType>!
 }
 
 // MARK: Authentication

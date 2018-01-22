@@ -251,4 +251,29 @@ class EventTests: XCTestCase {
         event["originURL"] = NSNull()
         XCTAssert(event.originURL == nil)
     }
+
+    func testUserIsPresent() {
+        let dallas = Location(latitude: 32.7767, longitude: -96.7970)
+
+        let event = Event()
+        event.location = PFGeoPoint(dallas)
+        event.radius = 500
+
+        let user = User()
+        user.location = Portal(name: "userLocationPortal")
+        user.location.update(dallas)
+
+        XCTAssert(event.userIsPresent(user))
+    }
+
+    func testUserIsPresentWithoutLocation() {
+        let dallas = Location(latitude: 32.7767, longitude: -96.7970)
+
+        let event = Event()
+        event.location = PFGeoPoint(dallas)
+        event.radius = 500
+
+        let user = User()
+        XCTAssert(!event.userIsPresent(user))
+    }
 }
