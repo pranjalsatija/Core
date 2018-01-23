@@ -7,7 +7,7 @@
 //
 
 public class User: PFUser {
-    static var current: User? {
+    public static var current: User? {
         guard let user = PFUser.current() as? User, let username = user.username else {
             return nil
         }
@@ -16,13 +16,13 @@ public class User: PFUser {
         return user
     }
 
-    var location: Portal<LocationType>!
+    public var location: Portal<LocationType>!
 }
 
 // MARK: Authentication
 public extension User {
     static func sendPIN(to phoneNumber: String,
-                        using api: APIProtocol.Type,
+                        using api: APIProtocol.Type = ParseAPI.self,
                         completion: @escaping CompletionHandler<User>) {
 
         api.call(.beginPhoneNumberAuthentication, parameters: [
@@ -36,7 +36,10 @@ public extension User {
         }
     }
 
-    func verifyPIN(_ pin: String, using api: APIProtocol.Type, completion: @escaping CompletionHandler<Bool>) {
+    func verifyPIN(_ pin: String,
+                   using api: APIProtocol.Type = ParseAPI.self,
+                   completion: @escaping CompletionHandler<Bool>) {
+        
         guard let username = username else {
             main { completion(Core.Error.missingData, false) }
             return
