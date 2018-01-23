@@ -15,7 +15,7 @@ class UserErrorTests: XCTestCase {
     }
 
     func testErrorCodes() {
-        XCTAssert(UserError.invalidPhoneNumber.code == 142)
+        XCTAssert(UserError.invalidPhoneNumber.code == 141)
         XCTAssert(UserError.invalidPIN.code == 101)
     }
 }

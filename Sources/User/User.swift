@@ -39,7 +39,7 @@ public extension User {
     func verifyPIN(_ pin: String,
                    using api: APIProtocol.Type = ParseAPI.self,
                    completion: @escaping CompletionHandler<Bool>) {
-        
+
         guard let username = username else {
             main { completion(Core.Error.missingData, false) }
             return

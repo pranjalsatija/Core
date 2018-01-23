@@ -8,7 +8,7 @@
 
 public enum UserError: Int, Swift.Error {
     case invalidPIN = 101
-    case invalidPhoneNumber = 142
+    case invalidPhoneNumber = 141
 
     var code: Int {
         return rawValue

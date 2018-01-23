@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AF1727C52013C1AE00DBDF33 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1727C42013C1AE00DBDF33 /* User.swift */; };
 		AF1727C72013C88A00DBDF33 /* CloudFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1727C62013C88A00DBDF33 /* CloudFunction.swift */; };
+		AF23269B2017144B00A9350E /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23269A2017144B00A9350E /* Countdown.swift */; };
+		AF23269D2017155300A9350E /* Countdown Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23269C201714FA00A9350E /* Countdown Tests.swift */; };
 		AF27DEC520096D680062F0F1 /* ParseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27DEC420096D680062F0F1 /* ParseAPI.swift */; };
 		AF27DEC720096E440062F0F1 /* Multithreading.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27DEC620096E440062F0F1 /* Multithreading.swift */; };
 		AF27DECA200970400062F0F1 /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27DEC9200970400062F0F1 /* APIProtocol.swift */; };
@@ -112,6 +114,8 @@
 /* Begin PBXFileReference section */
 		AF1727C42013C1AE00DBDF33 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF1727C62013C88A00DBDF33 /* CloudFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFunction.swift; sourceTree = "<group>"; };
+		AF23269A2017144B00A9350E /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
+		AF23269C201714FA00A9350E /* Countdown Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Countdown Tests.swift"; sourceTree = "<group>"; };
 		AF27DEC420096D680062F0F1 /* ParseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseAPI.swift; sourceTree = "<group>"; };
 		AF27DEC620096E440062F0F1 /* Multithreading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multithreading.swift; sourceTree = "<group>"; };
 		AF27DEC9200970400062F0F1 /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
@@ -475,6 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				AF9F8959200D5E6F002059AB /* CompletionHandler.swift */,
+				AF23269A2017144B00A9350E /* Countdown.swift */,
 				AF46A1B7200EC8D200CA47BE /* Date Extensions.swift */,
 				AF3DAAEF20085D45001A834F /* Error.swift */,
 				AF46A1B5200EC5F900CA47BE /* GeoBox.swift */,
@@ -565,6 +570,7 @@
 		AFEC2841200DDC4D003348DF /* Convenience */ = {
 			isa = PBXGroup;
 			children = (
+				AF23269C201714FA00A9350E /* Countdown Tests.swift */,
 				AF46A1BB200ECB5400CA47BE /* Date Extensions Tests.swift */,
 				AF4164D7200DA9F600613B27 /* LocationProtocol */,
 				AF39D9472009D00B003564C7 /* Multithreading Tests.swift */,
@@ -747,6 +753,7 @@
 				AF48F8C8200AE85500725F44 /* Referral.swift in Sources */,
 				AFC12E522013199600F396E3 /* Report.swift in Sources */,
 				AF6A2583200C5DE100C3E503 /* CLCircularRegion+Event.swift in Sources */,
+				AF23269B2017144B00A9350E /* Countdown.swift in Sources */,
 				AF1727C72013C88A00DBDF33 /* CloudFunction.swift in Sources */,
 				AFA03D492015ACBF0033A87B /* Core.swift in Sources */,
 				AF27DEC720096E440062F0F1 /* Multithreading.swift in Sources */,
@@ -801,6 +808,7 @@
 				AF39D9262009C2F7003564C7 /* MockAPI.swift in Sources */,
 				AF46A1BC200ECB5400CA47BE /* Date Extensions Tests.swift in Sources */,
 				AFDF0C6A201595F600B04C8E /* User Tests.swift in Sources */,
+				AF23269D2017155300A9350E /* Countdown Tests.swift in Sources */,
 				AF39D9232009BEDA003564C7 /* Session Tests.swift in Sources */,
 				AFC32DFD201413B0003E599D /* Portal Tests.swift in Sources */,
 				AFEC283C200DD1C5003348DF /* EventOrigin Tests.swift in Sources */,
