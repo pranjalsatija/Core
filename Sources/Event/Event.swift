@@ -98,7 +98,7 @@ public extension Event {
     }
 
     static func getRelevantEvents(in geoBox: GeoBox,
-                                  categories: [Category],
+                                  categories: [Category]?,
                                   limit: Int = 50,
                                   from api: APIProtocol.Type = ParseAPI.self,
                                   completion: @escaping CompletionHandler<[Event]>) {
@@ -115,7 +115,11 @@ public extension Event {
 
         let southwest = PFGeoPoint(geoBox.southwest), northeast = PFGeoPoint(geoBox.northeast)
         let combinedQuery = PFQuery.orQuery(withSubqueries: [currentlyOccuringQuery, upcomingQuery])
-        combinedQuery.whereKey("category", containedIn: categories)
+
+        if let categories = categories {
+            combinedQuery.whereKey("category", containedIn: categories)
+        }
+
         combinedQuery.whereKey("location", withinGeoBoxFromSouthwest: southwest, toNortheast: northeast)
         combinedQuery.addDescendingOrder("score")
         combinedQuery.includeKey("category")

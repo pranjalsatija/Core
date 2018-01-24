@@ -16,5 +16,7 @@ identifier_name:
   excluded:
     - id
 
+line_length: 140
+
 vertical_whitespace:
   max_empty_lines: 2
