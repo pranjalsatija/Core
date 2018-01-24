@@ -18,27 +18,27 @@ class CountdownTests: XCTestCase {
         let countdownExpectation = expectation(description: "Countdown")
         let duration = 3.0, startTime = CFAbsoluteTimeGetCurrent()
 
-        _ = Countdown(duration: duration) {
+        let countdown = Countdown(duration: duration) {
             let elapsedTime = CFAbsoluteTimeGetCurrent() - startTime
-            print(elapsedTime)
             XCTAssert((0.9 * duration...1.1 * duration).contains(elapsedTime))
             countdownExpectation.fulfill()
         }
 
         waitForExpectations(timeout: 10, handler: nil)
+        XCTAssert(!countdown.timer.isValid)
     }
 
     func testStart() {
         let countdownExpectation = expectation(description: "Countdown")
         let duration = 3.0, startTime = CFAbsoluteTimeGetCurrent()
 
-        Countdown.start(duration: duration) {
+        let countdown = Countdown.start(duration: duration) {
             let elapsedTime = CFAbsoluteTimeGetCurrent() - startTime
-            print(elapsedTime)
             XCTAssert((0.9 * duration...1.1 * duration).contains(elapsedTime))
             countdownExpectation.fulfill()
         }
 
         waitForExpectations(timeout: 10, handler: nil)
+        XCTAssert(!countdown.timer.isValid)
     }
 }

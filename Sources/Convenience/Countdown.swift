@@ -10,7 +10,7 @@ import Foundation
 
 public class Countdown {
     private var remainingTime: TimeInterval
-    private var timer: Timer!
+    var timer: Timer!
     public var duration: TimeInterval
 
     public init(duration: TimeInterval, granularity: TimeInterval = 0.1, completion: @escaping () -> Void) {
@@ -21,14 +21,16 @@ public class Countdown {
             self.remainingTime -= granularity
             if self.remainingTime <= 0 {
                 completion()
+                self.timer.invalidate()
             }
         }
     }
 
+    @discardableResult
     public static func start(duration: TimeInterval,
                              granularity: TimeInterval = 0.1,
-                             completion: @escaping () -> Void) {
+                             completion: @escaping () -> Void) -> Countdown {
 
-        _ = Countdown(duration: duration, granularity: granularity, completion: completion)
+        return Countdown(duration: duration, granularity: granularity, completion: completion)
     }
 }
