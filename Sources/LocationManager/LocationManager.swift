@@ -10,8 +10,8 @@ import CoreLocation
 
 /// Used to access the user's location.
 public class LocationManager: NSObject {
-    static let shared = LocationManager()
-    static public let sharedClLocationManager = CLLocationManager()
+    public static let shared = LocationManager()
+    public static let sharedClLocationManager = CLLocationManager()
 
 
     public typealias AuthorizationStatusChangeBlock = (CLAuthorizationStatus) -> Void
