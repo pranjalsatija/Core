@@ -65,6 +65,11 @@
 		AF6A2583200C5DE100C3E503 /* CLCircularRegion+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A2582200C5DE100C3E503 /* CLCircularRegion+Event.swift */; };
 		AF843F3D2015578E00869CC5 /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF843F3C2015578E00869CC5 /* Visit.swift */; };
 		AF843F3F2015589900869CC5 /* PFUser+Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF843F3E2015589900869CC5 /* PFUser+Visit.swift */; };
+		AF9C7C6B20198CE50040BF13 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C7C6A20198CE50040BF13 /* LocationManager.swift */; };
+		AF9C7C6D20198D610040BF13 /* LocationManagerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C7C6C20198D610040BF13 /* LocationManagerType.swift */; };
+		AF9C7C6F2019A1420040BF13 /* CLLocationManager+LocationManagerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C7C6E2019A1420040BF13 /* CLLocationManager+LocationManagerType.swift */; };
+		AF9C7C712019A6750040BF13 /* MockLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C7C702019A6750040BF13 /* MockLocationManager.swift */; };
+		AF9C7C742019A9E90040BF13 /* LocationManager Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C7C732019A9E90040BF13 /* LocationManager Tests.swift */; };
 		AF9EA5BB20125F4E000BAE78 /* NotificationCenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9EA5BA20125F4E000BAE78 /* NotificationCenterType.swift */; };
 		AF9EA5BD20126053000BAE78 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9EA5BC20126053000BAE78 /* NotificationManager.swift */; };
 		AF9F895A200D5E6F002059AB /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F8959200D5E6F002059AB /* CompletionHandler.swift */; };
@@ -174,6 +179,11 @@
 		AF6A2582200C5DE100C3E503 /* CLCircularRegion+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLCircularRegion+Event.swift"; sourceTree = "<group>"; };
 		AF843F3C2015578E00869CC5 /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
 		AF843F3E2015589900869CC5 /* PFUser+Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Visit.swift"; sourceTree = "<group>"; };
+		AF9C7C6A20198CE50040BF13 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		AF9C7C6C20198D610040BF13 /* LocationManagerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerType.swift; sourceTree = "<group>"; };
+		AF9C7C6E2019A1420040BF13 /* CLLocationManager+LocationManagerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+LocationManagerType.swift"; sourceTree = "<group>"; };
+		AF9C7C702019A6750040BF13 /* MockLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationManager.swift; sourceTree = "<group>"; };
+		AF9C7C732019A9E90040BF13 /* LocationManager Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationManager Tests.swift"; sourceTree = "<group>"; };
 		AF9EA5BA20125F4E000BAE78 /* NotificationCenterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterType.swift; sourceTree = "<group>"; };
 		AF9EA5BC20126053000BAE78 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		AF9F8959200D5E6F002059AB /* CompletionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
@@ -357,11 +367,13 @@
 			isa = PBXGroup;
 			children = (
 				AF39D9242009BEF6003564C7 /* MockAPI.swift */,
+				AF9C7C702019A6750040BF13 /* MockLocationManager.swift */,
 				AF5E087720126D070085F76A /* MockNotificationCenter.swift */,
 				AF39D9442009CD1F003564C7 /* Setup.swift */,
 				AF46A1C1200ED2F000CA47BE /* Resources */,
 				AFEC2841200DDC4D003348DF /* Convenience */,
 				AFF8AD82201191BE00CFC16B /* Like */,
+				AF9C7C722019A9D90040BF13 /* LocationManager */,
 				AFEC283A200DD1AC003348DF /* Event */,
 				AFACF8C9200AC76C0091DDF5 /* NotificationOpen */,
 				AF5E087620126CF40085F76A /* NotificationManager */,
@@ -386,6 +398,7 @@
 				AF9F8958200D4EEF002059AB /* Convenience */,
 				AF6A257D200C580A00C3E503 /* Event */,
 				AFF8AD7D20118B4F00CFC16B /* Like */,
+				AF9C7C6920198CD50040BF13 /* LocationManager */,
 				AFF8AD8B2011B61100CFC16B /* NotificationManager */,
 				AF39D95A200A957F003564C7 /* NotificationOpen */,
 				AF39D9492009D2FA003564C7 /* Parse Extensions */,
@@ -473,6 +486,24 @@
 				AF843F3C2015578E00869CC5 /* Visit.swift */,
 			);
 			path = Visit;
+			sourceTree = "<group>";
+		};
+		AF9C7C6920198CD50040BF13 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				AF9C7C6A20198CE50040BF13 /* LocationManager.swift */,
+				AF9C7C6C20198D610040BF13 /* LocationManagerType.swift */,
+				AF9C7C6E2019A1420040BF13 /* CLLocationManager+LocationManagerType.swift */,
+			);
+			path = LocationManager;
+			sourceTree = "<group>";
+		};
+		AF9C7C722019A9D90040BF13 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				AF9C7C732019A9E90040BF13 /* LocationManager Tests.swift */,
+			);
+			path = LocationManager;
 			sourceTree = "<group>";
 		};
 		AF9F8958200D4EEF002059AB /* Convenience */ = {
@@ -736,6 +767,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9C7C6B20198CE50040BF13 /* LocationManager.swift in Sources */,
 				AF38E6C0200BD41B006F9B02 /* CLLocation+LocationProtocol.swift in Sources */,
 				AFC12E54201319BB00F396E3 /* ReportReason.swift in Sources */,
 				AF39D95C200A9597003564C7 /* PFUser+NotificationOpen.swift in Sources */,
@@ -749,6 +781,7 @@
 				AF6A257F200C581700C3E503 /* EventOrigin.swift in Sources */,
 				AF46A1B4200EC20E00CA47BE /* EventCategory.swift in Sources */,
 				AF3DAAF420085DC5001A834F /* PFACL Extension.swift in Sources */,
+				AF9C7C6F2019A1420040BF13 /* CLLocationManager+LocationManagerType.swift in Sources */,
 				AF39D959200A9279003564C7 /* NotificationOpen.swift in Sources */,
 				AF48F8C8200AE85500725F44 /* Referral.swift in Sources */,
 				AFC12E522013199600F396E3 /* Report.swift in Sources */,
@@ -777,6 +810,7 @@
 				AF27DECA200970400062F0F1 /* APIProtocol.swift in Sources */,
 				AFA8CCF720140F7900E5916F /* Portal.swift in Sources */,
 				AF3DAB0D2008634A001A834F /* Session.swift in Sources */,
+				AF9C7C6D20198D610040BF13 /* LocationManagerType.swift in Sources */,
 				AF3DAB0F200864D1001A834F /* PFUser+Session.swift in Sources */,
 				AF1727C52013C1AE00DBDF33 /* User.swift in Sources */,
 				AFC12E5620131AD900F396E3 /* PFUser+Report.swift in Sources */,
@@ -799,6 +833,7 @@
 				AFACF8CB200AC77B0091DDF5 /* NotificationOpen Tests.swift in Sources */,
 				AF39D955200A909E003564C7 /* PFSubclassing Extension Tests.swift in Sources */,
 				AFDEEFE8200F05AD0053869A /* Event Tests.swift in Sources */,
+				AF9C7C712019A6750040BF13 /* MockLocationManager.swift in Sources */,
 				AF46A1C0200ED01E00CA47BE /* EventCategory Tests.swift in Sources */,
 				AFEC283E200DD296003348DF /* CLCircularRegion+Event Tests.swift in Sources */,
 				AF39D950200A8FD5003564C7 /* PFUser+Session Tests.swift in Sources */,
@@ -823,6 +858,7 @@
 				AFB4AAF2200BCFA8007EABCE /* Referral Tests.swift in Sources */,
 				AFB4AAF4200BD092007EABCE /* PFUser+Referral Tests.swift in Sources */,
 				AF4164E0200DAD3F00613B27 /* PFGeoPoint+LocationProtocol.swift in Sources */,
+				AF9C7C742019A9E90040BF13 /* LocationManager Tests.swift in Sources */,
 				AFDF0C5D2015929C00B04C8E /* PFUser+Visit Tests.swift in Sources */,
 				AF4164DE200DACCB00613B27 /* CLLocation+LocationProtocol Tests.swift in Sources */,
 				AF5E087820126D070085F76A /* MockNotificationCenter.swift in Sources */,
