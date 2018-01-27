@@ -50,9 +50,11 @@ public extension LocationManager {
 // MARK: Location Updates
 public extension LocationManager {
     func startLocationUpdates(with locationManager: LocationManagerType = sharedClLocationManager,
+                              distanceFilter: CLLocationDistance = 0,
                               handler: @escaping LocationUpdateBlock) {
 
         locationManager.delegate = self
+        locationManager.distanceFilter = distanceFilter
         locationUpdateBlocks.append(handler)
         locationManager.startUpdatingLocation()
     }
@@ -65,6 +67,10 @@ public extension LocationManager {
 // MARK: CLLocationManagerDelegate
 extension LocationManager: CLLocationManagerDelegate {
     public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        guard status != .notDetermined else {
+            return
+        }
+
         authorizationStatusChangeBlock?(status)
     }
 

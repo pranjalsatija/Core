@@ -7,7 +7,7 @@
 //
 
 public class User: PFUser {
-    public static var current: User? {
+    public static var current: User! {
         guard let user = PFUser.current() as? User, let username = user.username else {
             return nil
         }

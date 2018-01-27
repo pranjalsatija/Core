@@ -10,6 +10,7 @@ import CoreLocation
 
 public protocol LocationManagerType: class {
     var delegate: CLLocationManagerDelegate? { get set }
+    var distanceFilter: CLLocationDistance { get set }
 
     func requestAlwaysAuthorization()
     func requestWhenInUseAuthorization()

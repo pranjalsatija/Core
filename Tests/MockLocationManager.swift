@@ -10,6 +10,7 @@
 
 class MockLocationManager {
     weak var delegate: CLLocationManagerDelegate?
+    var distanceFilter: CLLocationDistance = 0
 
     typealias AuthorizationRequestHandler = (AuthorizationType) -> (CLAuthorizationStatus)
     typealias StartLocationUpdatesRequestHandler = () -> Void

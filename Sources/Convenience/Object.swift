@@ -17,7 +17,11 @@ public extension Object {
             return false
         }
 
-        return object.objectId == self.objectId
+        for key in allKeys where self[key] as? NSObject != object[key] as? NSObject {
+            return false
+        }
+
+        return true
     }
 
     convenience init(pointerWithObjectID objectID: String) {

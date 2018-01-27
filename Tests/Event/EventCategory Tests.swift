@@ -25,13 +25,14 @@ class EventCategoryTests: XCTestCase {
 
         let category = Event.Category()
         category.iconFile = PFFile(data: imageData)
+        category.iconFileScaleFactor = 2.0
 
         MockAPI.onFileDownload {(_) in
             return imageData
         }
 
         category.getIconImage(from: MockAPI.self) {(_, loadedImage) in
-            XCTAssert(loadedImage?.size == image.size)
+            XCTAssert(loadedImage != nil)
             XCTAssert(Thread.isMainThread)
             downloadExpectation.fulfill()
         }

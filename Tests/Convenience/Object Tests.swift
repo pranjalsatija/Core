@@ -28,7 +28,7 @@ class ObjectTests: XCTestCase {
 
         object1["someKey"] = "someOtherValue"
         object2["someKey"] = "someValue"
-        XCTAssert(object1 == object2)
+        XCTAssert(object1 != object2)
 
         object2.objectId = "foobaz"
         XCTAssert(object1 != object2)
