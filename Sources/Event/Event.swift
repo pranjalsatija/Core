@@ -67,6 +67,48 @@ public extension Event {
             }
         }
     }
+
+    var likeCountMessage: String? {
+        guard likeCount.intValue > 0 else {
+            return nil
+        }
+
+        if likeCount == 1 {
+            return "\(likeCount.intValue) person has liked this event."
+        } else {
+            return "\(likeCount.intValue) people have liked this event."
+        }
+    }
+
+    var mapsURL: URL? {
+        return URL.mapsURL(for: self)
+    }
+
+    var shareURL: URL? {
+        return URL.shareURL(for: self)
+    }
+
+    var statusMessage: String {
+        if isEndingSoon {
+            return "This event is ending soon."
+        } else if endDate > Date() {
+            return "This event is ending \(endDate.relativeDescription)."
+        } else {
+            return "This event ended \(endDate.relativeDescription)."
+        }
+    }
+
+    var visitCountMessage: String? {
+        guard visitCount.intValue > 0 else {
+            return nil
+        }
+
+        if visitCount == 1 {
+            return "\(visitCount.intValue) person has visited this event."
+        } else {
+            return "\(visitCount.intValue) people have visited this event."
+        }
+    }
 }
 
 // MARK: User API

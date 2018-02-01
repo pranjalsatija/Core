@@ -87,6 +87,7 @@
 		AFC12E5920131C6000F396E3 /* Report Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC12E5820131C6000F396E3 /* Report Tests.swift */; };
 		AFC12E5B20131CFF00F396E3 /* PFUser+Report Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC12E5A20131CFF00F396E3 /* PFUser+Report Tests.swift */; };
 		AFC32DFD201413B0003E599D /* Portal Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC32DFB20141396003E599D /* Portal Tests.swift */; };
+		AFD023312022AD7D00DF03C9 /* URL Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD023302022AD7D00DF03C9 /* URL Extension.swift */; };
 		AFDEEFE8200F05AD0053869A /* Event Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDEEFE7200F05AD0053869A /* Event Tests.swift */; };
 		AFDF0C5B2015915200B04C8E /* Visit Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF0C5A2015915200B04C8E /* Visit Tests.swift */; };
 		AFDF0C5D2015929C00B04C8E /* PFUser+Visit Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF0C5C2015929C00B04C8E /* PFUser+Visit Tests.swift */; };
@@ -201,6 +202,7 @@
 		AFC12E5820131C6000F396E3 /* Report Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Report Tests.swift"; sourceTree = "<group>"; };
 		AFC12E5A20131CFF00F396E3 /* PFUser+Report Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Report Tests.swift"; sourceTree = "<group>"; };
 		AFC32DFB20141396003E599D /* Portal Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Portal Tests.swift"; sourceTree = "<group>"; };
+		AFD023302022AD7D00DF03C9 /* URL Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL Extension.swift"; sourceTree = "<group>"; };
 		AFDEEFE7200F05AD0053869A /* Event Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event Tests.swift"; sourceTree = "<group>"; };
 		AFDF0C5A2015915200B04C8E /* Visit Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Visit Tests.swift"; sourceTree = "<group>"; };
 		AFDF0C5C2015929C00B04C8E /* PFUser+Visit Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Visit Tests.swift"; sourceTree = "<group>"; };
@@ -518,6 +520,7 @@
 				AF27DEC620096E440062F0F1 /* Multithreading.swift */,
 				AFEC283F200DD8FA003348DF /* Object.swift */,
 				AFA8CCF620140F7900E5916F /* Portal.swift */,
+				AFD023302022AD7D00DF03C9 /* URL Extension.swift */,
 			);
 			path = Convenience;
 			sourceTree = "<group>";
@@ -767,6 +770,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD023312022AD7D00DF03C9 /* URL Extension.swift in Sources */,
 				AF9C7C6B20198CE50040BF13 /* LocationManager.swift in Sources */,
 				AF38E6C0200BD41B006F9B02 /* CLLocation+LocationProtocol.swift in Sources */,
 				AFC12E54201319BB00F396E3 /* ReportReason.swift in Sources */,
