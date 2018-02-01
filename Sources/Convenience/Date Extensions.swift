@@ -39,29 +39,33 @@ extension Int {
 
 public extension Date {
     var relativeDescription: String {
-        var baseString = ""
-        let secondsFromNow = abs(Int(timeIntervalSinceNow))
-        let minutesFromNow = abs(Int(timeIntervalSinceNow / 1.minutes))
-        let hoursFromNow = abs(Int(timeIntervalSinceNow / 1.hours))
-        let daysFromNow = abs(Int(timeIntervalSinceNow / 1.days))
-        let monthsFromNow = abs(Int(timeIntervalSinceNow / 1.months))
-        let yearsFromNow = abs(Int(timeIntervalSinceNow / 1.years))
+        return relativeDescription(referenceDate: Date())
+    }
 
-        if abs(timeIntervalSinceNow) < 1.minutes {
+    func relativeDescription(referenceDate date: Date) -> String {
+        var baseString = ""
+        let secondsFromNow = abs(Int(timeIntervalSince(date)))
+        let minutesFromNow = abs(Int(timeIntervalSince(date) / 1.minutes))
+        let hoursFromNow = abs(Int(timeIntervalSince(date) / 1.hours))
+        let daysFromNow = abs(Int(timeIntervalSince(date) / 1.days))
+        let monthsFromNow = abs(Int(timeIntervalSince(date) / 1.months))
+        let yearsFromNow = abs(Int(timeIntervalSince(date) / 1.years))
+
+        if abs(timeIntervalSince(date)) < 1.minutes {
             baseString = "\(secondsFromNow) \(secondsFromNow == 1 ? "second" : "seconds")"
-        } else if abs(timeIntervalSinceNow) < 1.hours {
+        } else if abs(timeIntervalSince(date)) < 1.hours {
             baseString = "\(minutesFromNow) \(minutesFromNow == 1 ? "minute" : "minutes")"
-        } else if abs(timeIntervalSinceNow) < 1.days {
+        } else if abs(timeIntervalSince(date)) < 1.days {
             baseString = "\(hoursFromNow) \(hoursFromNow == 1 ? "hour" : "hour")"
-        } else if abs(timeIntervalSinceNow) < 1.months {
+        } else if abs(timeIntervalSince(date)) < 1.months {
             baseString = "\(daysFromNow) \(daysFromNow == 1 ? "day" : "days")"
-        } else if abs(timeIntervalSinceNow) < 1.years {
+        } else if abs(timeIntervalSince(date)) < 1.years {
             baseString = "\(monthsFromNow) \(monthsFromNow == 1 ? "month" : "months")"
         } else {
             baseString = "\(yearsFromNow) \(yearsFromNow == 1 ? "year" : "years")"
         }
 
-        if timeIntervalSinceNow < 0 {
+        if timeIntervalSince(date) < 0 {
             return baseString + " ago"
         } else {
             return "in " + baseString

@@ -21,9 +21,4 @@ class DateExtensionsTests: XCTestCase {
         XCTAssert(30.days == 30 * 60 * 60 * 24)
         XCTAssert(30.weeks == 30 * 60 * 60 * 24 * 7)
     }
-
-    func testRelativeDateDescriptions() {
-        let date = Date() + 2.minutes + 1.seconds
-        print(date.relativeDescription)
-    }
 }

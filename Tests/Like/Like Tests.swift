@@ -30,7 +30,7 @@ class LikeTests: XCTestCase {
             saveExpectation.fulfill()
         }
 
-        Like.create(event: event, user: user, using: MockAPI.self)
+        Like.create(event: event, user: user, using: MockAPI.self, completion: nil)
         waitForExpectations(timeout: 3)
     }
 

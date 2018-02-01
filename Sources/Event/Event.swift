@@ -68,6 +68,14 @@ public extension Event {
         }
     }
 
+    override var description: String {
+        guard let categoryName = category.name, let eventDescription = eventDescription else {
+            return super.description
+        }
+
+        return "\(categoryName) - \(eventDescription)"
+    }
+
     var likeCountMessage: String? {
         guard likeCount.intValue > 0 else {
             return nil

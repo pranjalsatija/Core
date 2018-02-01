@@ -6,8 +6,7 @@
 //  Copyright © 2018 Pranjal Satija. All rights reserved.
 //
 
-/// A common subclass of `PFObject` that provides better support for equality.
-/// All instances of `Object` are considered equal if they have the same `objectId` property.
+/// A common subclass of `PFObject` that provides deep equality and basic utility functions.
 public class Object: PFObject { }
 
 // MARK: Refreshing

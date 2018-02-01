@@ -30,6 +30,18 @@ class LocationManagerTests: XCTestCase {
         waitForExpectations(timeout: 3)
     }
 
+    func testNegativeTestOnAuthorizationStatusChange() {
+        let mockLocationManager = MockLocationManager()
+
+        let status = CLAuthorizationStatus.notDetermined
+
+        LocationManager.shared.onAuthorizationStatusChange(for: mockLocationManager) {(_) in
+            XCTFail()
+        }
+
+        mockLocationManager.updateAuthorizationStatus(status)
+    }
+
     func testRequestAlwaysAuthorization() {
         let mockLocationManager = MockLocationManager()
 

@@ -8,8 +8,8 @@
 
 public extension PFUser {
     /// Registers that this user liked a specified event.
-    func like(event: Event, api: APIProtocol.Type = ParseAPI.self) {
-        Like.create(event: event, user: self, using: api)
+    func like(event: Event, api: APIProtocol.Type = ParseAPI.self, completion: CompletionHandler<Bool>? = nil) {
+        Like.create(event: event, user: self, using: api, completion: completion)
     }
 
     /// Checks if this user has liked a specified event.
