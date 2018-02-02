@@ -7,7 +7,7 @@
 //
 
 public extension PFUser {
-    func markAsViewed(_ event: Event, using api: APIProtocol.Type) {
+    func markAsViewed(_ event: Event, using api: APIProtocol.Type = ParseAPI.self) {
         View.create(withEvent: event, user: self, using: api)
     }
 }

@@ -24,7 +24,6 @@ class PFUserSessionTests: XCTestCase {
                 return
             }
 
-            XCTAssert(session.acl == .onlyAccessibleByMasterKey)
             XCTAssert(session.user == user)
             saveExpectation.fulfill()
         }

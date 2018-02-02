@@ -16,7 +16,6 @@ class Referral: Object {
 extension Referral {
     convenience init(sender: PFUser, receiver: PFUser, event: Event) {
         self.init()
-        acl = .onlyAccessibleByMasterKey
         self.event = event
         self.sender = sender
         self.receiver = receiver

@@ -30,13 +30,11 @@
 		AF39D9482009D00B003564C7 /* Multithreading Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D9472009D00B003564C7 /* Multithreading Tests.swift */; };
 		AF39D94B2009D31B003564C7 /* PFSubclassingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D94A2009D31B003564C7 /* PFSubclassingExtension.swift */; };
 		AF39D950200A8FD5003564C7 /* PFUser+Session Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D94F200A8FD5003564C7 /* PFUser+Session Tests.swift */; };
-		AF39D953200A906A003564C7 /* PFACL Extension Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D952200A906A003564C7 /* PFACL Extension Tests.swift */; };
 		AF39D955200A909E003564C7 /* PFSubclassing Extension Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D954200A909E003564C7 /* PFSubclassing Extension Tests.swift */; };
 		AF39D959200A9279003564C7 /* NotificationOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D958200A9279003564C7 /* NotificationOpen.swift */; };
 		AF39D95C200A9597003564C7 /* PFUser+NotificationOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF39D95B200A9597003564C7 /* PFUser+NotificationOpen.swift */; };
 		AF3DAADD20085C03001A834F /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = AF3DAACF20085C03001A834F /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF3DAAF020085D45001A834F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DAAEF20085D45001A834F /* Error.swift */; };
-		AF3DAAF420085DC5001A834F /* PFACL Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DAAF320085DC5001A834F /* PFACL Extension.swift */; };
 		AF3DAB0D2008634A001A834F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DAB0C2008634A001A834F /* Session.swift */; };
 		AF3DAB0F200864D1001A834F /* PFUser+Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DAB0E200864D1001A834F /* PFUser+Session.swift */; };
 		AF4164DA200DAA4200613B27 /* Location Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4164D8200DAA0600613B27 /* Location Tests.swift */; };
@@ -141,7 +139,6 @@
 		AF39D9472009D00B003564C7 /* Multithreading Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Multithreading Tests.swift"; sourceTree = "<group>"; };
 		AF39D94A2009D31B003564C7 /* PFSubclassingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PFSubclassingExtension.swift; sourceTree = "<group>"; };
 		AF39D94F200A8FD5003564C7 /* PFUser+Session Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Session Tests.swift"; sourceTree = "<group>"; };
-		AF39D952200A906A003564C7 /* PFACL Extension Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFACL Extension Tests.swift"; sourceTree = "<group>"; };
 		AF39D954200A909E003564C7 /* PFSubclassing Extension Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFSubclassing Extension Tests.swift"; sourceTree = "<group>"; };
 		AF39D958200A9279003564C7 /* NotificationOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationOpen.swift; sourceTree = "<group>"; };
 		AF39D95B200A9597003564C7 /* PFUser+NotificationOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+NotificationOpen.swift"; sourceTree = "<group>"; };
@@ -151,7 +148,6 @@
 		AF3DAAD520085C03001A834F /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3DAADC20085C03001A834F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF3DAAEF20085D45001A834F /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		AF3DAAF320085DC5001A834F /* PFACL Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFACL Extension.swift"; sourceTree = "<group>"; };
 		AF3DAB0C2008634A001A834F /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		AF3DAB0E200864D1001A834F /* PFUser+Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Session.swift"; sourceTree = "<group>"; };
 		AF4164D8200DAA0600613B27 /* Location Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location Tests.swift"; sourceTree = "<group>"; };
@@ -302,7 +298,6 @@
 			isa = PBXGroup;
 			children = (
 				AF1727C62013C88A00DBDF33 /* CloudFunction.swift */,
-				AF3DAAF320085DC5001A834F /* PFACL Extension.swift */,
 				AF39D94A2009D31B003564C7 /* PFSubclassingExtension.swift */,
 			);
 			path = "Parse Extensions";
@@ -321,7 +316,6 @@
 			isa = PBXGroup;
 			children = (
 				AFDF0C5E2015931400B04C8E /* CloudFunction Tests.swift */,
-				AF39D952200A906A003564C7 /* PFACL Extension Tests.swift */,
 				AF39D954200A909E003564C7 /* PFSubclassing Extension Tests.swift */,
 			);
 			path = "Parse Extensions";
@@ -784,7 +778,6 @@
 				AF38E6BE200BD3DE006F9B02 /* LocationType.swift in Sources */,
 				AF6A257F200C581700C3E503 /* EventOrigin.swift in Sources */,
 				AF46A1B4200EC20E00CA47BE /* EventCategory.swift in Sources */,
-				AF3DAAF420085DC5001A834F /* PFACL Extension.swift in Sources */,
 				AF9C7C6F2019A1420040BF13 /* CLLocationManager+LocationManagerType.swift in Sources */,
 				AF39D959200A9279003564C7 /* NotificationOpen.swift in Sources */,
 				AF48F8C8200AE85500725F44 /* Referral.swift in Sources */,
@@ -832,7 +825,6 @@
 				AFC12E5B20131CFF00F396E3 /* PFUser+Report Tests.swift in Sources */,
 				AFC12E5920131C6000F396E3 /* Report Tests.swift in Sources */,
 				AF39D9482009D00B003564C7 /* Multithreading Tests.swift in Sources */,
-				AF39D953200A906A003564C7 /* PFACL Extension Tests.swift in Sources */,
 				AF38E6BB200BD269006F9B02 /* Share Tests.swift in Sources */,
 				AFACF8CB200AC77B0091DDF5 /* NotificationOpen Tests.swift in Sources */,
 				AF39D955200A909E003564C7 /* PFSubclassing Extension Tests.swift in Sources */,

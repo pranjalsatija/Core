@@ -56,7 +56,7 @@ public extension Date {
         } else if abs(timeIntervalSince(date)) < 1.hours {
             baseString = "\(minutesFromNow) \(minutesFromNow == 1 ? "minute" : "minutes")"
         } else if abs(timeIntervalSince(date)) < 1.days {
-            baseString = "\(hoursFromNow) \(hoursFromNow == 1 ? "hour" : "hour")"
+            baseString = "\(hoursFromNow) \(hoursFromNow == 1 ? "hour" : "hours")"
         } else if abs(timeIntervalSince(date)) < 1.months {
             baseString = "\(daysFromNow) \(daysFromNow == 1 ? "day" : "days")"
         } else if abs(timeIntervalSince(date)) < 1.years {

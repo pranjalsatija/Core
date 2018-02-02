@@ -16,7 +16,6 @@ class Share: Object {
 extension Share {
     convenience init(user: PFUser, event: Event) {
         self.init()
-        acl = .onlyAccessibleByMasterKey
         self.user = user
         self.event = event
     }

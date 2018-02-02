@@ -17,7 +17,6 @@ public class Report: Object {
 extension Report {
     convenience init(event: Event, reason: Reason, user: PFUser) {
         self.init()
-        acl = .onlyAccessibleByMasterKey
         self.event = event
         self.reason = reason.rawValue
         self.user = user

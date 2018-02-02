@@ -6,17 +6,14 @@
 //  Copyright © 2018 Pranjal Satija. All rights reserved.
 //
 
+private let locationPortal = Portal<LocationType>(name: "User.location")
+
 public class User: PFUser {
     public static var current: User! {
-        guard let user = PFUser.current() as? User, let username = user.username else {
-            return nil
-        }
-
-        user.location = Portal(name: "User.\(username).location")
-        return user
+        return User.current()
     }
 
-    public var location: Portal<LocationType>!
+    public let location = locationPortal
 }
 
 // MARK: Authentication

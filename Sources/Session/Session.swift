@@ -16,7 +16,6 @@ class Session: Object {
 extension Session {
     convenience init(user: PFUser, startDate: Date) {
         self.init()
-        acl = .onlyAccessibleByMasterKey
         self.startDate = startDate
         self.user = user
     }

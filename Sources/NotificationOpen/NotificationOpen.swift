@@ -29,7 +29,6 @@ extension NotificationOpen {
             event = Event(pointerWithObjectID: eventID)
         }
 
-        acl = .onlyAccessibleByMasterKey
         category = notificationInfo["category"] as? String
         self.user = user
     }

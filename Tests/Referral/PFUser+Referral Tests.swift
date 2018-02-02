@@ -25,7 +25,6 @@ class PFUserReferralTests: XCTestCase {
                 return
             }
 
-            XCTAssert(referral.acl == .onlyAccessibleByMasterKey)
             XCTAssert(referral.sender == sender)
             XCTAssert(referral.receiver == receiver)
             XCTAssert(referral.event == event)

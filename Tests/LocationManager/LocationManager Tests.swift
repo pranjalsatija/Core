@@ -88,7 +88,7 @@ class LocationManagerTests: XCTestCase {
             mockLocationManager.updateLocation(dallas)
         }
 
-        LocationManager.shared.startLocationUpdates(with: mockLocationManager) {(newLocations) in
+        LocationManager.shared.startLocationUpdates(with: mockLocationManager, shouldUpdateImmediately: false) {(newLocations) in
             guard let newLocation = newLocations.first else {
                 XCTFail()
                 return

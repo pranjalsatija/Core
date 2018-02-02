@@ -6,7 +6,7 @@
 //  Copyright © 2018 Pranjal Satija. All rights reserved.
 //
 
-/// Used to represent a user viewing an event on mark.
+/// Used to represent a user visiting an event on mark.
 public class Visit: Object {
     @NSManaged public var event: Event!
     @NSManaged public var user: PFUser!
@@ -16,7 +16,6 @@ public class Visit: Object {
 extension Visit {
     convenience init(event: Event, user: PFUser) {
         self.init()
-        self.acl = .onlyAccessible(to: user)
         self.event = event
         self.user = user
     }
@@ -36,6 +35,8 @@ extension Visit {
         let query = baseQuery()
         query.whereKey("user", equalTo: user)
         query.includeKey("event")
+        query.includeKey("event.category")
+        query.addDescendingOrder("createdAt")
         api.findObjects(matching: query) {(error, visits) in
             main { completion(error, visits) }
         }

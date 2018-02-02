@@ -122,11 +122,11 @@ public extension Event {
 // MARK: User API
 extension Event {
     func userIsPresent(_ user: User) -> Bool {
-        guard let location = user.location?.value else {
+        guard let location = user.location.value, let startDate = startDate, let endDate = endDate else {
             return false
         }
 
-        return location.distance(from: self.location) < radius.doubleValue
+        return (location.distance(from: self.location) < radius.doubleValue) && (startDate...endDate).contains(Date())
     }
 }
 

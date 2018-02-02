@@ -14,6 +14,8 @@ public class LocationManager: NSObject {
     public static let sharedClLocationManager = CLLocationManager()
 
 
+    private var lastLocationUpdate: LocationType?
+
     public typealias AuthorizationStatusChangeBlock = (CLAuthorizationStatus) -> Void
     private var authorizationStatusChangeBlock: AuthorizationStatusChangeBlock?
 
@@ -50,6 +52,7 @@ public extension LocationManager {
 // MARK: Location Updates
 public extension LocationManager {
     func startLocationUpdates(with locationManager: LocationManagerType = sharedClLocationManager,
+                              shouldUpdateImmediately: Bool,
                               distanceFilter: CLLocationDistance = 0,
                               handler: @escaping LocationUpdateBlock) {
 
@@ -57,6 +60,10 @@ public extension LocationManager {
         locationManager.distanceFilter = distanceFilter
         locationUpdateBlocks.append(handler)
         locationManager.startUpdatingLocation()
+
+        if shouldUpdateImmediately, let lastLocation = lastLocationUpdate {
+            handler([lastLocation])
+        }
     }
 
     func stopLocationUpdates(with locationManager: LocationManagerType = sharedClLocationManager) {
@@ -75,6 +82,7 @@ extension LocationManager: CLLocationManagerDelegate {
     }
 
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        lastLocationUpdate = locations.first
         locationUpdateBlocks.forEach { $0(locations) }
     }
 }

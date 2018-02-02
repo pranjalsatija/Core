@@ -24,7 +24,6 @@ class PFUserReportTests: XCTestCase {
                 return
             }
 
-            XCTAssert(report.acl == .onlyAccessibleByMasterKey)
             XCTAssert(report.event == event)
             XCTAssert(report.reason == reason.rawValue)
             XCTAssert(report.user == user)

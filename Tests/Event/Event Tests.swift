@@ -256,11 +256,12 @@ class EventTests: XCTestCase {
         let dallas = Location(latitude: 32.7767, longitude: -96.7970)
 
         let event = Event()
+        event.startDate = Date().addingTimeInterval(-30.minutes)
+        event.endDate = Date().addingTimeInterval(30.minutes)
         event.location = PFGeoPoint(dallas)
         event.radius = 500
 
         let user = User()
-        user.location = Portal(name: "userLocationPortal")
         user.location.update(dallas)
 
         XCTAssert(event.userIsPresent(user))

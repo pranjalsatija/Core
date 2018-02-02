@@ -24,7 +24,6 @@ class PFUserNotificationOpenTests: XCTestCase {
                 return
             }
 
-            XCTAssert(notificationOpen.acl == .onlyAccessibleByMasterKey)
             XCTAssert(notificationOpen.user == user)
             XCTAssert(notificationOpen.event == event)
             saveExpectation.fulfill()
