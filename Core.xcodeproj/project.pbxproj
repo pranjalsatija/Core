@@ -61,6 +61,8 @@
 		AF6A257C200C4F3A00C3E503 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A257B200C4F3A00C3E503 /* Event.swift */; };
 		AF6A257F200C581700C3E503 /* EventOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A257E200C581700C3E503 /* EventOrigin.swift */; };
 		AF6A2583200C5DE100C3E503 /* CLCircularRegion+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A2582200C5DE100C3E503 /* CLCircularRegion+Event.swift */; };
+		AF8428792024E5050019D29E /* Instabug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8428772024E5050019D29E /* Instabug.framework */; };
+		AF84287A2024E5050019D29E /* InstabugCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8428782024E5050019D29E /* InstabugCore.framework */; };
 		AF843F3D2015578E00869CC5 /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF843F3C2015578E00869CC5 /* Visit.swift */; };
 		AF843F3F2015589900869CC5 /* PFUser+Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF843F3E2015589900869CC5 /* PFUser+Visit.swift */; };
 		AF9C7C6B20198CE50040BF13 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C7C6A20198CE50040BF13 /* LocationManager.swift */; };
@@ -174,6 +176,8 @@
 		AF6A257B200C4F3A00C3E503 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		AF6A257E200C581700C3E503 /* EventOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOrigin.swift; sourceTree = "<group>"; };
 		AF6A2582200C5DE100C3E503 /* CLCircularRegion+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLCircularRegion+Event.swift"; sourceTree = "<group>"; };
+		AF8428772024E5050019D29E /* Instabug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Instabug.framework; path = "../Common Frameworks/Instabug.framework"; sourceTree = "<group>"; };
+		AF8428782024E5050019D29E /* InstabugCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InstabugCore.framework; path = "../Common Frameworks/InstabugCore.framework"; sourceTree = "<group>"; };
 		AF843F3C2015578E00869CC5 /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
 		AF843F3E2015589900869CC5 /* PFUser+Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Visit.swift"; sourceTree = "<group>"; };
 		AF9C7C6A20198CE50040BF13 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8428792024E5050019D29E /* Instabug.framework in Frameworks */,
+				AF84287A2024E5050019D29E /* InstabugCore.framework in Frameworks */,
 				AFA3334B2013258400DECD80 /* Bolts.framework in Frameworks */,
 				AFA3334C2013258400DECD80 /* Parse.framework in Frameworks */,
 				AF39D93B2009CB55003564C7 /* SystemConfiguration.framework in Frameworks */,
@@ -285,6 +291,8 @@
 		AF39D92A2009C625003564C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF8428772024E5050019D29E /* Instabug.framework */,
+				AF8428782024E5050019D29E /* InstabugCore.framework */,
 				AFA333492013258400DECD80 /* Bolts.framework */,
 				AFA3334A2013258400DECD80 /* Parse.framework */,
 				AF39D92F2009C633003564C7 /* AudioToolbox.framework */,
@@ -659,6 +667,7 @@
 				AF3DAAC920085C03001A834F /* Headers */,
 				AF39D9412009CC42003564C7 /* Resources */,
 				AF3DAB0620086224001A834F /* ShellScript */,
+				AF84287B2024E53C0019D29E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -756,6 +765,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		AF84287B2024E53C0019D29E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"../Common Frameworks/InstabugCore.framework/strip-frameworks.sh\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
