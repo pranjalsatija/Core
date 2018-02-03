@@ -30,10 +30,20 @@ public func initialize(withAppID appID: String, serverURL: String, instabugToken
     Instabug.setIntroMessageEnabled(false)
     Instabug.setPrimaryColor(UIColor(red: 61 / 255, green: 167 / 255, blue: 255 / 255, alpha: 1))
     Instabug.setPromptOptionsEnabledWithBug(true, feedback: true, chat: false)
+    Instabug.setShakingThresholdForiPhone(1.0, foriPad: 0.5)
 }
 
 public func clearFileCaches() {
     PFFile.clearAllCachedDataInBackground()
+}
+
+public func disableBugReporting() {
+    Instabug.setInvocationEvent(.none)
+}
+
+public func enableBugReporting() {
+    Instabug.setInvocationEvent(.shake)
+    Instabug.setShakingThresholdForiPhone(1.0, foriPad: 0.5)
 }
 
 public func provideFeedback() {

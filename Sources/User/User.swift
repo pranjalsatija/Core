@@ -54,7 +54,7 @@ public extension User {
         }
     }
 
-    func logOut(using api: APIProtocol.Type, completion: @escaping (Swift.Error?) -> Void) {
+    func logOut(using api: APIProtocol.Type = ParseAPI.self, completion: @escaping (Swift.Error?) -> Void) {
         api.logOut(completion: completion)
     }
 }
