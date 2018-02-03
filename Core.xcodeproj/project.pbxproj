@@ -61,8 +61,6 @@
 		AF6A257C200C4F3A00C3E503 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A257B200C4F3A00C3E503 /* Event.swift */; };
 		AF6A257F200C581700C3E503 /* EventOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A257E200C581700C3E503 /* EventOrigin.swift */; };
 		AF6A2583200C5DE100C3E503 /* CLCircularRegion+Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6A2582200C5DE100C3E503 /* CLCircularRegion+Event.swift */; };
-		AF8428792024E5050019D29E /* Instabug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8428772024E5050019D29E /* Instabug.framework */; };
-		AF84287A2024E5050019D29E /* InstabugCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8428782024E5050019D29E /* InstabugCore.framework */; };
 		AF843F3D2015578E00869CC5 /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF843F3C2015578E00869CC5 /* Visit.swift */; };
 		AF843F3F2015589900869CC5 /* PFUser+Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF843F3E2015589900869CC5 /* PFUser+Visit.swift */; };
 		AF9C7C6B20198CE50040BF13 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C7C6A20198CE50040BF13 /* LocationManager.swift */; };
@@ -74,8 +72,14 @@
 		AF9EA5BD20126053000BAE78 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9EA5BC20126053000BAE78 /* NotificationManager.swift */; };
 		AF9F895A200D5E6F002059AB /* CompletionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F8959200D5E6F002059AB /* CompletionHandler.swift */; };
 		AFA03D492015ACBF0033A87B /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA03D482015ACBF0033A87B /* Core.swift */; };
-		AFA3334B2013258400DECD80 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA333492013258400DECD80 /* Bolts.framework */; };
-		AFA3334C2013258400DECD80 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA3334A2013258400DECD80 /* Parse.framework */; };
+		AFA825DB202589ED00CE29BE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCFAC1A202564FD002BADF9 /* Bolts.framework */; };
+		AFA825DC202589ED00CE29BE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCFAC19202564FD002BADF9 /* Parse.framework */; };
+		AFA825F820258FA700CE29BE /* InstabugCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA825F620258FA700CE29BE /* InstabugCore.framework */; };
+		AFA825F920258FA700CE29BE /* Instabug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA825F720258FA700CE29BE /* Instabug.framework */; };
+		AFA8261820259C1100CE29BE /* Instabug.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AFA825F720258FA700CE29BE /* Instabug.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AFA8261920259C1100CE29BE /* InstabugCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AFA825F620258FA700CE29BE /* InstabugCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AFA8261A20259C1100CE29BE /* Bolts.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AFCFAC1A202564FD002BADF9 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AFA8261B20259C1100CE29BE /* Parse.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AFCFAC19202564FD002BADF9 /* Parse.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AFA8CCF720140F7900E5916F /* Portal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA8CCF620140F7900E5916F /* Portal.swift */; };
 		AFAB40692013F41B00891CDF /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAB40682013F41B00891CDF /* UserError.swift */; };
 		AFACF8CB200AC77B0091DDF5 /* NotificationOpen Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */; };
@@ -116,6 +120,22 @@
 			remoteInfo = Core;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AFA8261720259C0500CE29BE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AFA8261820259C1100CE29BE /* Instabug.framework in CopyFiles */,
+				AFA8261920259C1100CE29BE /* InstabugCore.framework in CopyFiles */,
+				AFA8261A20259C1100CE29BE /* Bolts.framework in CopyFiles */,
+				AFA8261B20259C1100CE29BE /* Parse.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AF1727C42013C1AE00DBDF33 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -176,8 +196,6 @@
 		AF6A257B200C4F3A00C3E503 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		AF6A257E200C581700C3E503 /* EventOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOrigin.swift; sourceTree = "<group>"; };
 		AF6A2582200C5DE100C3E503 /* CLCircularRegion+Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLCircularRegion+Event.swift"; sourceTree = "<group>"; };
-		AF8428772024E5050019D29E /* Instabug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Instabug.framework; path = "../Common Frameworks/Instabug.framework"; sourceTree = "<group>"; };
-		AF8428782024E5050019D29E /* InstabugCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InstabugCore.framework; path = "../Common Frameworks/InstabugCore.framework"; sourceTree = "<group>"; };
 		AF843F3C2015578E00869CC5 /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
 		AF843F3E2015589900869CC5 /* PFUser+Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Visit.swift"; sourceTree = "<group>"; };
 		AF9C7C6A20198CE50040BF13 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -189,8 +207,8 @@
 		AF9EA5BC20126053000BAE78 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		AF9F8959200D5E6F002059AB /* CompletionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandler.swift; sourceTree = "<group>"; };
 		AFA03D482015ACBF0033A87B /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
-		AFA333492013258400DECD80 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../Common Frameworks/Bolts.framework"; sourceTree = "<group>"; };
-		AFA3334A2013258400DECD80 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../Common Frameworks/Parse.framework"; sourceTree = "<group>"; };
+		AFA825F620258FA700CE29BE /* InstabugCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InstabugCore.framework; sourceTree = "<group>"; };
+		AFA825F720258FA700CE29BE /* Instabug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Instabug.framework; sourceTree = "<group>"; };
 		AFA8CCF620140F7900E5916F /* Portal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portal.swift; sourceTree = "<group>"; };
 		AFAB40682013F41B00891CDF /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		AFACF8CA200AC77B0091DDF5 /* NotificationOpen Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationOpen Tests.swift"; sourceTree = "<group>"; };
@@ -202,6 +220,8 @@
 		AFC12E5820131C6000F396E3 /* Report Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Report Tests.swift"; sourceTree = "<group>"; };
 		AFC12E5A20131CFF00F396E3 /* PFUser+Report Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PFUser+Report Tests.swift"; sourceTree = "<group>"; };
 		AFC32DFB20141396003E599D /* Portal Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Portal Tests.swift"; sourceTree = "<group>"; };
+		AFCFAC19202564FD002BADF9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		AFCFAC1A202564FD002BADF9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		AFD023302022AD7D00DF03C9 /* URL Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL Extension.swift"; sourceTree = "<group>"; };
 		AFDEEFE7200F05AD0053869A /* Event Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event Tests.swift"; sourceTree = "<group>"; };
 		AFDF0C5A2015915200B04C8E /* Visit Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Visit Tests.swift"; sourceTree = "<group>"; };
@@ -227,10 +247,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF8428792024E5050019D29E /* Instabug.framework in Frameworks */,
-				AF84287A2024E5050019D29E /* InstabugCore.framework in Frameworks */,
-				AFA3334B2013258400DECD80 /* Bolts.framework in Frameworks */,
-				AFA3334C2013258400DECD80 /* Parse.framework in Frameworks */,
+				AFA825F820258FA700CE29BE /* InstabugCore.framework in Frameworks */,
+				AFA825F920258FA700CE29BE /* Instabug.framework in Frameworks */,
+				AFA825DB202589ED00CE29BE /* Bolts.framework in Frameworks */,
+				AFA825DC202589ED00CE29BE /* Parse.framework in Frameworks */,
 				AF39D93B2009CB55003564C7 /* SystemConfiguration.framework in Frameworks */,
 				AF39D93C2009CB5B003564C7 /* libsqlite3.tbd in Frameworks */,
 				AF39D93A2009CB51003564C7 /* AudioToolbox.framework in Frameworks */,
@@ -291,15 +311,16 @@
 		AF39D92A2009C625003564C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AF8428772024E5050019D29E /* Instabug.framework */,
-				AF8428782024E5050019D29E /* InstabugCore.framework */,
-				AFA333492013258400DECD80 /* Bolts.framework */,
-				AFA3334A2013258400DECD80 /* Parse.framework */,
+				AFA825F720258FA700CE29BE /* Instabug.framework */,
+				AFA825F620258FA700CE29BE /* InstabugCore.framework */,
+				AFCFAC1A202564FD002BADF9 /* Bolts.framework */,
+				AFCFAC19202564FD002BADF9 /* Parse.framework */,
 				AF39D92F2009C633003564C7 /* AudioToolbox.framework */,
 				AF39D92D2009C62F003564C7 /* SystemConfiguration.framework */,
 				AF39D92B2009C625003564C7 /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
+			path = ../Frameworks;
 			sourceTree = "<group>";
 		};
 		AF39D9492009D2FA003564C7 /* Parse Extensions */ = {
@@ -665,9 +686,7 @@
 				AF3DAAC720085C03001A834F /* Sources */,
 				AF3DAAC820085C03001A834F /* Frameworks */,
 				AF3DAAC920085C03001A834F /* Headers */,
-				AF39D9412009CC42003564C7 /* Resources */,
 				AF3DAB0620086224001A834F /* ShellScript */,
-				AF84287B2024E53C0019D29E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -682,6 +701,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF3DAAE320085C03001A834F /* Build configuration list for PBXNativeTarget "CoreTests" */;
 			buildPhases = (
+				AFA8261720259C0500CE29BE /* CopyFiles */,
 				AF3DAAD120085C03001A834F /* Sources */,
 				AF46A1C3200ED35700CA47BE /* Resources */,
 			);
@@ -735,13 +755,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AF39D9412009CC42003564C7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AF46A1C3200ED35700CA47BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -765,19 +778,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-		AF84287B2024E53C0019D29E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "bash \"../Common Frameworks/InstabugCore.framework/strip-frameworks.sh\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1014,7 +1014,7 @@
 		AF3DAAE120085C03001A834F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1025,12 +1025,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"../Common\\ Frameworks",
+					"../Frameworks/**",
 				);
 				INFOPLIST_FILE = Config/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = events.mark.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1043,7 +1044,7 @@
 		AF3DAAE220085C03001A834F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -1054,12 +1055,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"../Common\\ Frameworks",
+					"../Frameworks/**",
 				);
 				INFOPLIST_FILE = Config/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = events.mark.Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1074,7 +1076,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X872NB7KGG;
-				FRAMEWORK_SEARCH_PATHS = "../Common\\ Frameworks";
+				FRAMEWORK_SEARCH_PATHS = ../Frameworks;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = events.mark.CoreTests;
@@ -1090,7 +1092,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X872NB7KGG;
-				FRAMEWORK_SEARCH_PATHS = "../Common\\ Frameworks";
+				FRAMEWORK_SEARCH_PATHS = ../Frameworks;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = events.mark.CoreTests;

@@ -6,6 +6,8 @@
 //  Copyright © 2018 Pranjal Satija. All rights reserved.
 //
 
+import Parse
+
 // MARK: PFGeoPoint Extension
 extension PFGeoPoint: LocationType {
     public convenience init(_ location: LocationType) {

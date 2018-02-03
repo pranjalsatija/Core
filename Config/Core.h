@@ -6,6 +6,7 @@
 //  Copyright © 2018 Pranjal Satija. All rights reserved.
 //
 
+#import <Bolts/Bolts.h>
 #import <Parse/Parse.h>
 
 //! Project version number for Core.
