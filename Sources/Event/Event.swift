@@ -163,7 +163,7 @@ public extension Event {
         upcomingQuery.whereKey("startDate", greaterThan: Date())
         upcomingQuery.whereKey("startDate", lessThan: Date().addingTimeInterval(24.hours))
 
-        let southwest = PFGeoPoint(geoBox.southwest), northeast = PFGeoPoint(geoBox.northeast)
+        let southwest = PFGeoPoint(geoBox.southwest.standardized()), northeast = PFGeoPoint(geoBox.northeast.standardized())
         let combinedQuery = PFQuery.orQuery(withSubqueries: [currentlyOccuringQuery, upcomingQuery])
 
         if let categories = categories {
