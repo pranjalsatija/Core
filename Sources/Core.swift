@@ -55,6 +55,7 @@ public func registerForNotifications(withToken token: Data) {
         return
     }
 
+    installation["user"] = User.current ?? NSNull()
     installation.setDeviceTokenFrom(token)
     installation.saveEventually()
 }
