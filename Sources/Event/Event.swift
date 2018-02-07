@@ -97,8 +97,10 @@ public extension Event {
     }
 
     var statusMessage: String {
-        if isEndingSoon {
-            return "This event is ending soon."
+        if Calendar.current.isDateInToday(startDate) {
+            return "This event is starting at \(startDate.timeString) today. That's \(startDate.relativeDescription)."
+        } else if startDate > Date() {
+            return "This event is starting at \(startDate.timeString) on \(startDate.dateString)."
         } else if endDate > Date() {
             return "This event is ending \(endDate.relativeDescription)."
         } else {

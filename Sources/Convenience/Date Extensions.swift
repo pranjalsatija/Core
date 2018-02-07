@@ -38,6 +38,20 @@ extension Int {
 }
 
 public extension Date {
+    var dateString: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM d"
+        return formatter.string(from: self)
+    }
+
+    var timeString: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "h:mm a"
+        return formatter.string(from: self)
+    }
+}
+
+public extension Date {
     var relativeDescription: String {
         return relativeDescription(referenceDate: Date())
     }
