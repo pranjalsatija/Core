@@ -29,7 +29,7 @@ public extension EventCategory {
                     cgImage: cgImage, scale:
                     CGFloat(truncating: self.iconFileScaleFactor),
                     orientation: image.imageOrientation
-                )
+                ).withRenderingMode(.alwaysTemplate)
 
                 main { completion(nil, rescaledImage) }
             } else {
